@@ -57,7 +57,7 @@ const testimonialVariants = {
 const CarouselTestimonials = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(0);
-  const autoplayInterval = useRef<any>(null);
+  const autoplayInterval = useRef<NodeJS.Timeout>(null);
   const autoplayDelay = 5000;
 
   const startAutoplay = () => {
@@ -106,7 +106,7 @@ const CarouselTestimonials = () => {
   useEffect(() => {
     startAutoplay();
     return stopAutoplay;
-  }, []);
+  });
 
   return (
     <div

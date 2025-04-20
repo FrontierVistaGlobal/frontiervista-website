@@ -83,10 +83,12 @@ export default function page() {
                   key={index}
                   className="relative overflow-hidden rounded-md shadow-md transition-shadow duration-300 hover:shadow-lg"
                 >
-                  <img
+                  <Image
                     src={service.image}
                     alt={service.title}
                     className="h-60 w-full object-cover transition-opacity duration-300 hover:opacity-80"
+                    width={500}
+                    height={500}
                   />
                   <div className="absolute bottom-0 left-0 h-22 w-full bg-black p-4 opacity-20"></div>
                   <h3 className="absolute bottom-0 z-10 w-2/3 p-4 text-left text-lg font-extralight text-white">
@@ -129,7 +131,9 @@ const ServiceCategories = () => {
 
       <div className="flex w-full items-center">
         <div className="relative w-1/2">
-          <img
+          <Image
+            width={500}
+            height={500}
             src="/images/vertical.png"
             alt="Vertical Services"
             className="h-[400px] w-full rounded object-cover"
@@ -166,7 +170,9 @@ const ServiceCategories = () => {
           </p>
         </div>
         <div className="relative w-1/2">
-          <img
+          <Image
+            width={500}
+            height={500}
             src="/images/horizontal.png"
             alt="Vertical Services"
             className="h-[400px] w-full rounded object-cover"
@@ -176,7 +182,9 @@ const ServiceCategories = () => {
 
       <div className="mt-30 flex w-full items-center">
         <div className="relative w-1/2">
-          <img
+          <Image
+            width={500}
+            height={500}
             src="/images/hybrid.png"
             alt="Vertical Services"
             className="h-[400px] w-full rounded object-cover"
@@ -191,7 +199,7 @@ const ServiceCategories = () => {
             create customized, comprehensive solutions. For instance, we might
             combine healthcare-focused cloud solutions with AI-powered data
             analytics, giving you a powerful, integrated solution that not only
-            meets your industry's specific needs but also scales your business
+            meets your industry&apos;s specific needs but also scales your business
             across various functions.
           </p>
         </div>
@@ -199,7 +207,7 @@ const ServiceCategories = () => {
 
       <div className="mt-20">
         <h4 className="text-4xl font-semibold lg:w-[60%]">
-          Let's partner together to unlock your full potential and drive growth.
+          Let&apos;s partner together to unlock your full potential and drive growth.
         </h4>
         <p className="mt-6 text-xl font-light text-[#3D4F60] lg:w-[90%]">
           Our personalized approach ensures that we deliver innovative,
@@ -514,7 +522,9 @@ const HealthCare = () => {
 
       <div className="mt-[10rem] flex items-center gap-14">
         <div className="relative w-1/2">
-          <img
+          <Image
+            width={500}
+            height={500}
             src="/images/healthcare.png"
             alt="Healthcare"
             className="w-[90%]"

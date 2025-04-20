@@ -339,7 +339,26 @@ export default function Hello() {
   );
 }
 
-const Accordion = ({ data }: any) => {
+type AccordionProps = {
+  data: {
+    header: string;
+    subTitle: string;
+    description: string;
+    items: {
+      title: string;
+      content: string;
+    }[];
+    theme: {
+      bg?: string;
+      cardBg?: string;
+      color?: string;
+      subHeader?: string;
+      btnClass?: string;
+    };
+  };
+};
+
+const Accordion = ({ data }: AccordionProps) => {
   const [activeIndex, setActiveIndex] = React.useState<number | null>(null);
 
   const toggleAccordion = (index: number) => {
@@ -348,7 +367,7 @@ const Accordion = ({ data }: any) => {
 
   return (
     <div className="mx-auto w-full space-y-4">
-      {data.items.map((item: any, index: number) => (
+      {data.items.map((item, index: number) => (
         <div key={index} className="rounded-lg shadow-sm">
           {/* Accordion Header */}
 

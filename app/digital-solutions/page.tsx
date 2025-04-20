@@ -1,12 +1,6 @@
 import React from "react";
 import { LuMoveRight } from "react-icons/lu";
-import { Covered_By_Your_Grace } from "next/font/google";
 import Image from "next/image";
-
-const coveredByYourGrace = Covered_By_Your_Grace({
-  subsets: ["latin"],
-  weight: "400",
-});
 
 export default function page() {
   return (
@@ -208,7 +202,7 @@ export default function page() {
             </div>
             <div className="flex w-full items-center justify-between">
               <h4 className="mb-6 w-[50%] text-4xl font-semibold text-[#FF9314]">
-                Let's Build Something Amazing Together
+                Let&apos;s Build Something Amazing Together
               </h4>
 
               <button className="flex h-[55px] w-fit items-center rounded-[10px] bg-[#479DDE] px-6 font-normal text-white hover:bg-[#479DDE] focus:outline-none">

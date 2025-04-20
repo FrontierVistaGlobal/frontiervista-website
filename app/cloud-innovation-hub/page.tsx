@@ -1,12 +1,6 @@
 import React from "react";
 import { LuMoveRight } from "react-icons/lu";
-import { Covered_By_Your_Grace } from "next/font/google";
 import Image from "next/image";
-
-const coveredByYourGrace = Covered_By_Your_Grace({
-  subsets: ["latin"],
-  weight: "400",
-});
 
 export default function page() {
   const supportItems = [

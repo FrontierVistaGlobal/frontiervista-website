@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import CountUp from "react-countup";
 import { LuMoveRight } from "react-icons/lu";
 import { motion, useAnimation } from "motion/react";
@@ -142,7 +142,7 @@ export default function Home() {
           growth.
         </p>
         <button className="mt-6 flex h-[55px] w-fit items-center rounded-[10px] bg-[#479DDE] px-6 text-xl font-normal text-white hover:bg-[#479DDE] focus:outline-none">
-          Let's Partner to Transform Your Business Today{" "}
+          Let&apos;s Partner to Transform Your Business Today{" "}
           <LuMoveRight className="ml-5 text-2xl" />
         </button>
       </div>
@@ -190,7 +190,7 @@ export default function Home() {
       <div className="wrap overflow-hidden pt-[5rem] pb-[8rem] text-center">
         <h4 className="mb-3 text-4xl font-[500]">Our Clients</h4>
         <p className="text-xl font-[200]">
-          We're proud to work with industry leaders across various sectors
+          We&apos;re proud to work with industry leaders across various sectors
         </p>
 
         <motion.div
