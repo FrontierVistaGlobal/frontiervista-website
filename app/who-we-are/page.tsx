@@ -260,14 +260,14 @@ export default function Hello() {
             </div>
           </div>
 
-          <div className="absolute top-[20rem] left-[-18rem] flex flex-col">
+          <div className="absolute top-[20rem] left-[-20rem] flex flex-col">
             <p className="mb-3 text-right text-white">JAN 2024</p>
-            <div className="w-[250px] rounded-md bg-[#EFFFEF] p-6 shadow-md">
-              <h3 className="text-sm font-semibold text-[#011D31]">
+            <div className="w-[300px] rounded-md bg-[#EFFFEF] p-6 shadow-md">
+              <h3 className="font-semibold text-[#011D31]">
                 Data analytics & AI
               </h3>
 
-              <p className="text-[#011D31 mt-2 text-sm font-extralight">
+              <p className="text-[#011D31 mt-2 font-extralight">
                 Achieved major success in data analytics and AI-driven insights
                 (ML/AI),empowering businesses with real-time analytics,
                 predictive modelling, and data-driven decision-making to
@@ -278,12 +278,12 @@ export default function Hello() {
 
           <div className="absolute top-[33rem] left-8 flex flex-col">
             <p className="text- mb-3 text-white">JAN 2025</p>
-            <div className="w-[250px] rounded-md bg-[#F7E8FF] p-6 shadow-md">
-              <h3 className="text-sm font-semibold text-[#011D31]">
+            <div className="w-[300px] rounded-md bg-[#F7E8FF] p-6 shadow-md">
+              <h3 className="font-semibold text-[#011D31]">
                 Frontier AI Agent
               </h3>
 
-              <p className="text-[#011D31 mt-2 text-sm font-extralight">
+              <p className="text-[#011D31 mt-2 font-extralight">
                 Developed and launched the Frontier AI Agent, now leveraged by
                 multiple small and medium-sized enterprises (SMEs) to automate
                 workflows, enhance productivity, and drive digital
