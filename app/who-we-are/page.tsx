@@ -192,7 +192,7 @@ export default function Hello() {
       </div>
 
       <div
-        className="flex h-fit min-h-[130vh] w-full flex-col items-center py-24"
+        className="flex h-[150vh] w-full flex-col items-center py-24 2xl:h-[130vh]"
         style={{ backgroundImage: "url('/milestone.png')" }}
       >
         <div className="text-center">

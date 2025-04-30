@@ -5,6 +5,7 @@ import CountUp from "react-countup";
 import { LuMoveRight } from "react-icons/lu";
 import { motion, useAnimation } from "motion/react";
 import CarouselTestimonials from "./_components/Testimonies";
+import { HealthCare } from "./what-we-do/page";
 
 export default function Home() {
   const controls = useAnimation();
@@ -107,29 +108,33 @@ export default function Home() {
           <div className="absolute bottom-[50px] flex w-full justify-between">
             <div className="flex flex-col items-center text-center">
               <p className="text-[60px] font-[100]">
-                <CountUp start={0} end={300} duration={2.5} suffix="%" />
+                <CountUp start={0} end={67} duration={2.5} suffix="%" />
               </p>
               <p className="w-2/3 text-center text-sm">
                 REVENUE GROWTH RATE FOR OUR CLIENTS
               </p>
             </div>
             <div className="text-center">
-              <p className="text-[60px] font-[100]">
+              <p className="w-[80%] text-[60px] font-[100]">
                 <CountUp start={0} end={400} duration={2.5} suffix="%" />
               </p>
-              <p className="text-sm">NEW CLIENT PERCENTAGE</p>
+              <p className="w-[80%] text-center text-sm">
+                GROWTH IN CLIENT BASE
+              </p>
             </div>
             <div className="text-center">
-              <p className="text-[60px] font-[100]">
+              <p className="w-[80%] text-[60px] font-[100]">
                 <CountUp start={0} end={90} duration={2.5} suffix="%" />
               </p>
-              <p className="text-sm">NPS SCORE</p>
+              <p className="w-[80%] text-center text-sm">
+                CLIENT SATISFACTION (NPS)
+              </p>
             </div>
             <div className="text-center">
-              <p className="text-[60px] font-[100]">
+              <p className="w-[80%] text-center text-[60px] font-[100]">
                 <CountUp start={0} end={5} duration={2.5} />
               </p>
-              <p className="text-sm">NEW MARKET</p>
+              <p className="w-[80%] text-center text-sm">NEW MARKET ENTERED</p>
             </div>
           </div>
         </div>
@@ -186,6 +191,8 @@ export default function Home() {
           ))}
         </div>
       </div>
+
+      <HealthCare />
 
       <div className="wrap overflow-hidden pt-[5rem] pb-[8rem] text-center">
         <h4 className="mb-3 text-4xl font-[500]">Our Clients</h4>
