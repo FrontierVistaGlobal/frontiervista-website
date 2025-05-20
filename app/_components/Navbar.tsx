@@ -94,6 +94,7 @@ const Navbar = () => {
     },
     {
       title: "Operational Excellence",
+      link: "operational-excellence",
       links: [
         "IT support and managed services",
         "Network and system administration",
@@ -117,6 +118,7 @@ const Navbar = () => {
     },
     {
       title: "Resource Management & Procurement",
+      link: "resource-management-procurement",
       links: [
         "IT asset management",
         "Software Procurement and Licensing",

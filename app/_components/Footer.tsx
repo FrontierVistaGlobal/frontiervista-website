@@ -16,35 +16,48 @@ export default function Footer() {
       title: "Corporate",
       items: [
         { name: "About Us", link: "/about-us" },
-        { name: "Careers", link: "/careers" },
-        { name: "Ambassadors", link: "/privacy-policy" },
-        { name: "Privacy", link: "/terms-of-use" },
+        { name: "Our Services", link: "/services" },
+        { name: "Lets Connect", link: "/connect" },
       ],
     },
     {
-      title: "Product",
+      title: "Our Solutions",
       items: [
-        { name: "Lorem Ipsum", link: "/stamper" },
-        { name: "Careers", link: "/careers" },
-        { name: "Ambassadors", link: "/privacy-policy" },
-        { name: "Privacy", link: "/terms-of-use" },
+        { name: "Data Analytics and Management", link: "/" },
+        { name: "Intelligent Chat Agent", link: "/" },
+        { name: "Retail Solution API", link: "/" },
       ],
     },
     {
-      title: "Product",
+      title: "Career",
       items: [
-        { name: "Lorem Ipsum", link: "/stamper" },
-        { name: "Careers", link: "/careers" },
-        { name: "Ambassadors", link: "/privacy-policy" },
-        { name: "Privacy", link: "/terms-of-use" },
+        { name: "Find Talent", link: "/" },
+        { name: "Search Job Opportunities", link: "/" },
+        { name: "Why Join Frontier Vista", link: "/" },
+      ],
+    },
+    {
+      title: "Legal",
+      items: [
+        { name: "Terms and Conditions", link: "/" },
+        { name: "Privacy Policy", link: "/" },
+        { name: "Security", link: "/" },
+      ],
+    },
+    {
+      title: "Contact Us",
+      items: [
+        { name: "Contact Sales", link: "/contact" },
+        { name: "Support", link: "/support" },
+        { name: "FAQ", link: "/faq" },
       ],
     },
   ];
   return (
     <div className="bg-[#011D31]">
-      <div className="mx-auto flex max-w-[1200px] justify-between px-3 py-[5rem]">
-        <div className="flex items-start gap-[8rem] md:w-[70%]">
-          <Image src="/logo-icon.svg" alt="Logo" width={90} height={50} />
+      <div className="mx-auto flex max-w-[1200px] px-3 py-[5rem]">
+        <div className="flex items-start gap-[2rem] md:w-[80%]">
+          <Image src="/logo-icon.svg" alt="Logo" width={50} height={50} />
 
           {footerData.map((section, index) => (
             <div key={index}>
@@ -62,7 +75,7 @@ export default function Footer() {
           ))}
         </div>
 
-        <div>
+        <div className="w-[20%]">
           <p className="mb-4 text-xl text-white">Subscribe to our newsletter</p>
 
           <div className="relative flex items-center rounded-md bg-white">

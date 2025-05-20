@@ -3,6 +3,7 @@
 import Image from "next/image";
 import React from "react";
 import { FiX, FiPlus } from "react-icons/fi";
+import { LuMoveRight } from "react-icons/lu";
 
 export default function Hello() {
   const [activeAccordion, setActiveAccordion] = React.useState<number>(0);
@@ -118,8 +119,8 @@ export default function Hello() {
       },
     },
     {
-      header: "Our CSR",
-      subTitle: "Our CSR",
+      header: "Our Corporate Social Responsibility (CSR)",
+      subTitle: "Our Corporate Social Responsibility (CSR)",
       description: "",
       items: [],
       theme: {
@@ -132,11 +133,15 @@ export default function Hello() {
 
   return (
     <div>
-      <div className="wrap flex min-h-[25rem] items-center justify-center text-center">
+      <div className="wrap flex min-h-[35rem] flex-col items-center justify-center text-center">
         <p className="w-[80%] text-5xl leading-[55px] font-medium text-[#000000]">
           We are <span className="text-[#479DDE]">Frontier Vista</span>, and the
           vision is to unlock new frontiers and accelerate sustainable growth.
         </p>
+
+        <button className="mx-auto mt-18 flex h-[55px] w-fit items-center rounded-[10px] bg-[#479DDE] px-6 font-normal text-white hover:bg-[#479DDE] focus:outline-none">
+          Discover How We Drive Growth <LuMoveRight className="ml-5 text-2xl" />
+        </button>
       </div>
 
       <div className="mb-5 w-full">
@@ -149,29 +154,8 @@ export default function Hello() {
         />
       </div>
 
-      <div className="wrap my-[5rem] rounded-lg bg-[#EFF6FF] p-12 px-[100px]">
-        <div className="text-center">
-          <h4 className="mb-8 text-3xl font-medium text-[#122231]">
-            Our Journey
-          </h4>
-
-          <p className="mb-10 text-center text-lg font-extralight text-[#3D4F60]">
-            Frontier Vista Global Inc. has evolved into a fast-growing
-            technology company, driving sustainable growth through innovation
-            and collaboration. With expertise in digital transformation, cloud
-            solutions, and AI, we empower businesses across industries to
-            navigate the evolving digital era and achieve lasting success.
-          </p>
-
-          <p className="text-center text-lg font-extralight text-[#3D4F60]">
-            Driven by excellence and co-creation of cutting-edge solutions, we
-            remain committed to delivering impactful solutions thajt unlock
-            opportunities, optimize operations, and accelerate growth. Leading
-            organizations to the next frontier of digital innovation.
-          </p>
-        </div>
-
-        <div className="mt-12 flex justify-between gap-10">
+      <div className="wrap my-[5rem] rounded-lg p-12">
+        <div className="mb-20 flex gap-30">
           <div>
             <h4 className="text-3xl font-medium text-[#122231]">Our Vision</h4>
             <p className="mt-5 text-lg font-extralight text-[#3D4F60]">
@@ -189,22 +173,44 @@ export default function Hello() {
             </p>
           </div>
         </div>
+
+        <button className="mx-auto mt-18 flex h-[55px] w-fit items-center rounded-[10px] bg-[#479DDE] px-6 font-normal text-white hover:bg-[#479DDE] focus:outline-none">
+          Discover Our Core Values <LuMoveRight className="ml-5 text-2xl" />
+        </button>
       </div>
 
       <div
-        className="flex h-[150vh] w-full flex-col items-center py-24 2xl:h-[130vh]"
+        className="flex w-full flex-col items-center py-34"
         style={{ backgroundImage: "url('/milestone.png')" }}
       >
+        <div className="wrap mb-38 text-center">
+          <h4 className="mb-10 text-4xl font-normal text-white">Our Journey</h4>
+          <p className="text-md font-extralight text-[#D9D9D9]">
+            Frontier Vista Global Inc. has evolved into a fast-growing
+            technology company, driving sustainable growth through innovation
+            and collaboration. With expertise in digital transformation, cloud
+            solutions, and AI, we empower businesses across industries to
+            navigate the evolving digital era and achieve lasting success.{" "}
+          </p>
+
+          <p className="text-md mt-10 font-extralight text-[#D9D9D9]">
+            Driven by excellence and co-creation of cutting-edge solutions, we
+            remain committed to delivering impactful solutions that unlock
+            opportunities, optimize operations, and accelerate growth. Leading
+            organizations to the next frontier of digital innovation.
+          </p>
+        </div>
+
         <div className="text-center">
           <h4 className="mb-1 text-4xl font-normal text-white">
             Our Milestone
           </h4>
-          <p className="text-lg font-extralight text-white">
+          <p className="text-lg font-extralight text-[#D9D9D9]">
             Our journey of growth and innovation
           </p>
         </div>
 
-        <div className="relative mt-18">
+        <div className="relative my-18 h-[250vh] 2xl:h-[70vh]">
           {/* Vertical Timeline Line */}
           <div className="mty-12 left-6 min-h-[80vh] w-0.5 bg-white"></div>
           <div
@@ -293,6 +299,10 @@ export default function Hello() {
             </div>
           </div>
         </div>
+
+        <button className="mx-auto mt-48 flex h-[55px] w-fit items-center rounded-[10px] bg-[#479DDE] px-6 py-6 font-normal text-white hover:bg-[#479DDE] focus:outline-none">
+          Explore Our Expertise <LuMoveRight className="ml-5 text-2xl" />
+        </button>
       </div>
 
       <div className={`${accordionData[activeAccordion].theme?.bg}`}>
@@ -326,12 +336,84 @@ export default function Hello() {
             </p>
           </div>
 
-          <div className="mt-8">
-            <Accordion
-              //   data={item}
-              data={accordionData[activeAccordion]}
-              key={accordionData[activeAccordion].header}
-            />
+          <div className="mt-4">
+            {activeAccordion === 3 ? (
+              <div className="flex flex-col">
+                <div>
+                  <span className="!text-[#011D31]">
+                    At Frontier Vista, driven by integrity and
+                    customer-centricity, we leverage our tech expertise for
+                    positive social change. We focus on creating sustainable
+                    impact by promoting digital empowerment and fostering
+                    inclusive growth for businesses and communities.
+                  </span>
+                </div>
+
+                <div className="mx-auto flex w-[80%] flex-col gap-6">
+                  <div className="mt-8 flex items-center justify-between rounded !bg-white p-6">
+                    <h4 className="text-6xl text-[#5D0059]">20</h4>
+                    <span className="w-1/3 text-xl font-light text-[#5D0059]">
+                      Grants for Digital Literacy Program
+                    </span>
+                    <span className="w-1/4 text-[#011D31]">
+                      We grant resources to EdTech to support digital skills
+                      training in underserved communities.
+                    </span>
+                    <Image
+                      src="/images/laptop.svg"
+                      alt="Logo"
+                      width={60}
+                      height={60}
+                    />
+                  </div>
+
+                  <div className="mt-8 flex items-center justify-between rounded !bg-white p-6">
+                    <h4 className="text-6xl text-[#5D0059]">16</h4>
+                    <span className="w-1/3 text-xl font-light text-[#5D0059]">
+                      Research Grant for Health Research Program
+                    </span>
+                    <span className="w-1/4 text-[#011D31]">
+                      We fund tech-driven research to advance medical knowledge
+                      and improve healthcare across 4 institutions.
+                    </span>
+                    <Image
+                      src="/images/brief.svg"
+                      alt="Logo"
+                      width={50}
+                      height={50}
+                    />
+                  </div>
+
+                  <div className="mt-8 flex items-center justify-between rounded !bg-white p-6">
+                    <h4 className="text-6xl text-[#5D0059]">50</h4>
+                    <span className="w-1/3 text-xl font-light text-[#5D0059]">
+                      Women Empowerment in Tech
+                    </span>
+                    <span className="w-1/4 text-[#011D31]">
+                      Empowering 20 women with essential tech skills through
+                      scholarships, mentorship and Networking.
+                    </span>
+                    <Image
+                      src="/images/people.svg"
+                      alt="Logo"
+                      width={50}
+                      height={50}
+                    />
+                  </div>
+                </div>
+
+                <button className="mx-auto my-18 flex h-[55px] w-fit items-center rounded-[10px] bg-[#5D0059] px-6 py-6 font-normal text-white hover:bg-[#479DDE] focus:outline-none">
+                  Partner With Us On CSR Intiatives{" "}
+                  <LuMoveRight className="ml-5 text-2xl" />
+                </button>
+              </div>
+            ) : (
+              <Accordion
+                //   data={item}
+                data={accordionData[activeAccordion]}
+                key={accordionData[activeAccordion].header}
+              />
+            )}
           </div>
         </div>
       </div>

@@ -190,20 +190,17 @@ export default function page() {
         className="relative flex h-[1100px] items-end bg-cover bg-center"
         style={{ backgroundImage: "url('images/DGSol-bg.png')" }}
       >
-        <div className="flex h-[250px] w-full flex-col justify-end bg-white pb-8 text-white">
+        <div className="flex h-[250px] w-full flex-col justify-end bg-white pb-16 text-white">
           <div className="wrap relative lg:min-w-[1200px]">
-            <div className="absolute top-[-230px] w-[450px] rounded bg-white p-6 px-10 font-light text-black">
-              <p>
-                We enable seamless connectivity with custom-built, secure, and
-                efficient APIs that allow your systems and applications to work
-                together effortlessly. Enhance functionality, automation, and
-                interoperability with APIs designed to fit your needs.
-              </p>
-            </div>
             <div className="flex w-full items-center justify-between">
-              <h4 className="mb-6 w-[50%] text-4xl font-semibold text-[#FF9314]">
-                Let&apos;s Build Something Amazing Together
-              </h4>
+              <div>
+                <h4 className="mb-6 w-[60%] text-4xl font-semibold text-[#FF9314]">
+                  Let&apos;s accelerate your growth and elevate your brand
+                </h4>
+                <p className="mt-4 text-[#011D31]">
+                  Ready to connect your systems and unlock new possibilities?
+                </p>
+              </div>
 
               <button className="flex h-[55px] w-fit items-center rounded-[10px] bg-[#479DDE] px-6 font-normal text-white hover:bg-[#479DDE] focus:outline-none">
                 Get in touch today <LuMoveRight className="ml-5 text-2xl" />

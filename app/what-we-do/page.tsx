@@ -33,12 +33,17 @@ export default function page() {
   return (
     <div>
       <div
-        className="relative flex h-[800px] items-center justify-center bg-cover bg-center"
+        className="relative flex h-[800px] flex-col items-center justify-center bg-cover bg-center"
         style={{ backgroundImage: "url('/wedo.png')" }}
       >
         <h4 className="w-[40%] text-center font-semibold text-white lg:text-5xl">
           Transforming Businesses with Bold, Customized Tech Solutions
         </h4>
+
+        <button className="mx-auto mt-18 flex h-[55px] w-fit items-center rounded-[10px] bg-[#479DDE] px-6 py-6 font-normal text-white hover:bg-[#479DDE] focus:outline-none">
+          Discover How We Can Transform Your Business{" "}
+          <LuMoveRight className="ml-5 text-2xl" />
+        </button>
       </div>
 
       <div className="wrap my-30 flex items-center justify-between py-12">
@@ -105,13 +110,19 @@ export default function page() {
                 </div>
               ))}
             </div>
+
+            <p className="mt-26 w-2/3 text-3xl font-[400] text-[#011D31]">
+              Our tailored solutions are delivered through a flexible service
+              approach encompassing both industry-specific Vertical Services,
+              cross-industry Horizontal Services, and integrated Hybrid
+              Services.
+            </p>
           </div>
         </div>
       </div>
 
       <ServiceCategories />
       <ServiceSpectrum />
-      {/* <HealthCare /> */}
     </div>
   );
 }
@@ -119,14 +130,19 @@ export default function page() {
 const ServiceCategories = () => {
   return (
     <div className="wrap flex flex-col items-center justify-center py-[10rem]">
-      <h4 className="mb-4 text-5xl font-semibold text-[#122231]">
+      <h4 className="mb-1 text-5xl leading-12 font-semibold text-[#122231]">
         Our Service Approach
       </h4>
-      <p className="mb-28 text-center text-xl font-extralight text-[#3D4F60] lg:w-1/2">
-        At Frontier Vista, we believe in providing personalized, impactful
-        solutions that address your unique business needs. Our approach is
-        designed around three core service models, each tailored to help you
-        achieve your goals.
+      <h4 className="mb-4 w-2/3 text-center text-5xl leading-14 font-semibold text-[#122231]">
+        Tailored Expertise for Your Success at Frontier Vista
+      </h4>
+      <p className="mt-5 mb-28 text-center text-xl font-extralight text-[#3D4F60] lg:w-2/3">
+        At Frontier Vista, we understand that achieving your business goals
+        requires a nuanced and adaptable approach. Our expertise is around these
+        service models: advisory, consulting, delivery, and managed services,
+        which are applied through our service delivery methods industry-focused
+        vertical services, technology-focused horizontal services, and
+        integrated hybrid services
       </p>
 
       <div className="flex w-full items-center">
@@ -462,93 +478,6 @@ const ServiceSpectrum = () => {
                 </div>
               </div>
             ))}
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export const HealthCare = () => {
-  return (
-    <div className="my-20 bg-[#011D31]">
-      <div className="wrap flex flex-col items-center justify-center py-[10rem]">
-        <div className="relative flex w-full justify-center overflow-hidden py-24 text-center">
-          <div className={`absolute top-4 w-full text-sm`}>
-            <div className="flex items-center overflow-hidden rounded">
-              <div className="font-bold` bg-[#79B3F9] p-3 px-6">CS</div>
-              <div className={`bg-[#EFF6FF] p-3 pr-7`}>
-                Consulting and Strategy
-              </div>
-            </div>
-          </div>
-
-          <div className={`absolute top-0 left-[40%] w-full text-sm`}>
-            <div className="flex items-center overflow-hidden rounded">
-              <div className="font-bold` bg-[#77D7A8] p-3 px-6">TI</div>
-              <div className={`bg-[#EFF6FF] p-3 pr-7`}>
-                Technology and System Implementation
-              </div>
-            </div>
-          </div>
-
-          <div className={`absolute top-[60%] w-full text-sm`}>
-            <div className="flex items-center overflow-hidden rounded">
-              <div className="font-bold` bg-[#FF9314] p-3 px-6">CF</div>
-              <div className={`bg-[#EFF6FF] p-3 pr-7`}>Cloud and FinOps</div>
-            </div>
-          </div>
-
-          <div className={`absolute top-[80%] left-[30%] w-full text-sm`}>
-            <div className="flex items-center overflow-hidden rounded">
-              <div className="font-bold` bg-[#FF4947] p-3 px-6">IS</div>
-              <div className={`bg-[#EFF6FF] p-3 pr-7`}>
-                IT Support and Managed Services
-              </div>
-            </div>
-          </div>
-
-          <div className={`absolute top-[60%] left-[70%] w-full text-sm`}>
-            <div className="flex items-center overflow-hidden rounded">
-              <div className="font-bold` bg-[#B3D13B] p-3 px-6">TU</div>
-              <div className={`bg-[#EFF6FF] p-3 pr-7`}>
-                Training and Upskilling
-              </div>
-            </div>
-          </div>
-
-          <h4 className="mb-4 text-5xl leading-[60px] font-semibold text-white lg:w-[60%]">
-            Transforming Healthcare with EHR Solutions
-          </h4>
-        </div>
-
-        <div className="mt-[10rem] flex items-center gap-14">
-          <div className="relative w-1/2">
-            <Image
-              width={500}
-              height={500}
-              src="/images/healthcare.png"
-              alt="Healthcare"
-              className="w-[90%]"
-            />
-          </div>
-          <div className="w-1/2">
-            <p className="font-light text-white">
-              We partner with the Ministry of Health to design and implement
-              secure, scalable Electronic Health Records (EHR) systems that
-              enhance patient care and streamline operations. Our expertise
-              spans strategy, system implementation, cloud optimization, IT
-              support, and training to ensure seamless adoption and long-term
-              success.
-            </p>
-
-            <a
-              href="#"
-              className="mt-5 flex h-full w-full items-center gap-3 font-light text-[#479DDE] underline focus:outline-none"
-            >
-              <span>Learn more</span>
-              <LuMoveRight />
-            </a>
           </div>
         </div>
       </div>
