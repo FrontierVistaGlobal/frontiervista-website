@@ -54,19 +54,20 @@ export default function page() {
                 }}
               >
                 <h5 className="mb-5 text-5xl font-light">
-                  Brand & Product Design
+                  Digital Branding & Product Design
                 </h5>
                 <p className="font-extralight">
-                  Great products start with great design. We craft intuitive,
-                  visually compelling digital experiences that enhance brand
-                  identity and product engagement. From UI/UX design to
-                  interactive prototypes, we ensure seamless user interactions.
+                  We craft intuitive and visually compelling digital experiences
+                  that enhance your brand identity and product engagement. From
+                  brand design to UI/UX design to interactive prototypes, we
+                  ensure seamless user interactions across all digital
+                  touchpoints
                 </p>
               </div>
 
               <div className="h-[450px]">
                 <Image
-                  src="/images/GDSol1.png"
+                  src="/images/GDSol10.png"
                   alt=""
                   height={1000}
                   width={1000}
@@ -82,7 +83,9 @@ export default function page() {
                   Your website is your digital storefront. Our web development
                   services focus on building modern, responsive, and
                   SEO-optimized websites that deliver outstanding user
-                  experiences and support business goals.
+                  experiences and support business goals. We utilize
+                  cutting-edge technologies to create high-performing web
+                  solutions
                 </p>
               </div>
 
@@ -98,13 +101,13 @@ export default function page() {
 
               <div className="flex h-[450px] flex-col items-center justify-center rounded bg-[#011D31] px-8 text-white">
                 <h5 className="mb-5 text-5xl font-light">
-                  Website Design & Development
+                  Web & Mobile App Development
                 </h5>
                 <p className="font-extralight">
-                  Your website is your digital storefront. Our web development
-                  services focus on building modern, responsive, and
-                  SEO-optimized websites that deliver outstanding user
-                  experiences and support business goals.
+                  Great products start with great design. We craft intuitive,
+                  visually compelling digital experiences that enhance brand
+                  identity and product engagement. From UI/UX design to
+                  interactive prototypes, we ensure seamless user interactions.
                 </p>
               </div>
 

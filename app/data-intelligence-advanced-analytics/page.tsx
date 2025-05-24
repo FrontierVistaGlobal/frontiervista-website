@@ -5,28 +5,28 @@ import Button from "../_components/Button";
 export default function page() {
   const whyItems = [
     {
-      title: "Optimized Resource Utilization:",
+      title: "Deep Expertise",
       description:
-        "We maximize the efficiency of your resources through strategic asset and vendor management, ensuring you get the most value from your investments.",
+        "Our team comprises seasoned data scientists, analysts, and engineers with a proven track record of delivering impactful results.",
       image: "/images/opex1.svg",
       color: "#FFEAD0",
     },
     {
-      title: "Cost-Effective Procurement:Cost-Effective Procurement:",
+      title: "Tailored Solutions",
       description:
-        "Reduce your procurement costs while acquiring best-in-class hardware, software, and services that meet your specific requirements.",
+        "We understand that every business is unique. We craft customized solutions that align with your specific goals and challenges",
       image: "/images/opex2.svg",
       color: "#E9F5FF",
     },
     {
-      title: "Expert Staffing Solutions:",
+      title: "Cutting-Edge Technologies",
       description:
-        "Gain access to top talent for both short-term and long-term needs, ensuring you have the right skills to drive your technology initiatives.",
+        "We leverage the latest advancements in data intelligence, advanced analytics, and AI/ML to deliver innovative solutions.",
       image: "/images/opex3.svg",
       color: "#E9F5FF",
     },
     {
-      title: "End-to-End Management:v",
+      title: "Client-Centric Approach",
       description:
         "From initial procurement to ongoing maintenance and optimization, we handle it all, providing comprehensive management that frees you to focus on your core business.",
       image: "/images/opex4.svg",
@@ -38,56 +38,43 @@ export default function page() {
     {
       title: "Asset Management",
       description:
-        "Ensure complete visibility and control over your IT assets. We track, maintain, and optimize hardware and software lifecycles to maximize value and minimize downtime.",
-      image: "/images/res1.svg",
-      color: "#F9FCFF",
-      btn: "Consult an Expert",
+        "Navigate the complexities of your data landscape with our data analytics consulting. We transform your raw information into actionable strategies that drive revenue growth, streamline operations, and give you a clear edge over your competitors. We help you identify hidden opportunities and make smarter decisions faster.",
+      image: "/images/DIA1.png",
+      subDescription: "Want a competitive advantage?",
+      color: "#454176",
+      btn: "Request Your discovery session",
       link: "#",
     },
     {
-      title: "Hardware Procurement & Maintenance",
+      title: "Data Architecture & Engineering",
       description:
-        "Leverage our experts to acquire high-performance hardware solutions with seamless integration, proactive maintenance, and timely upgrades, ensuring sustained performance and minimizing disruptions.",
-      image: "/images/res2.svg",
-      color: "#FFEAD0",
-      btn: "Discover Strategic Hardware Procurement",
+        "Lay the groundwork for effective data management and analysis with our robust data architecture and engineering services. We design and implement seamless, scalable, and secure data pipelines and architectures that allow your business to efficiently process and derive meaningful insights from your data, no matter the volume or complexity.",
+      image: "/images/DIA2.png",
+      subDescription: "Explore Our Architecture Solutions",
+      color: "#F80F6D",
+      btn: "Request Your discovery session",
       link: "#",
     },
     {
-      title: "Bid Packaging",
+      title: "Business Intelligence (BI) Solutions",
       description:
-        "Win more contracts with strategic, high-impact proposals. We turn complex requirements into clear, compliant, and compelling bids, saving you time and increasing your win rate. From RFP analysis to final submission, we handle it all. Ready to win your next bid?",
-      image: "/images/res3.svg",
-      color: "#EFFFEF",
-      btn: "Contact us today",
+        "Our BI solutions transform complex data into visual dashboards, providing real-time insights. Leveraging advanced reporting tools, we help businesses track key performance indicators (KPIs) and make data-driven decisions faster and more accurately.",
+      image: "/images/DIA3.png",
+      description2:
+        "Struggling to understand your key metrics? Our tailored BI solutions deliver crystal-clear, interactive dashboards that visualize your business performance in real-time. Empower your teams to identify trends, understand profitability drivers, and make informed decisions that directly impact your bottom line.",
+      subDescription: "Gain clearer business insights today",
+      color: "#F80F6D",
+      btn: "See a BI Demo",
       link: "#",
     },
     {
-      title: "Software Procurement & Licensing",
+      title: "Data Strategy, Governance, & Management",
       description:
-        "Acquire cost-effective software and SaaS licensing solutions that precisely meet your business needs and support your growth plans, ensuring compliance and avoiding unnecessary expenses.",
-      image: "/images/res4.svg",
-      color: "#F1D9FF",
-      btn: "Explore Software Procurement",
-      link: "#",
-    },
-
-    {
-      title: "Vendor Management",
-      description:
-        "Streamline your vendor management processes, ensuring you get the best contracts, pricing, service level agreements, and services that align with your business objectives while effectively mitigating risks.",
-      image: "/images/res5.svg",
-      color: "#EFFFEF",
-      btn: "Consult our Vendorship Experts",
-      link: "#",
-    },
-    {
-      title: "Staff Recruitment, Training & Augmentation",
-      description:
-        "Access skilled IT professionals who drive innovation and operational excellence within your organization. We handle IT staff augmentation, recruitment, and targeted training to build the perfect team for your needs.",
-      image: "/images/res6.svg",
-      color: "#F1D9FF",
-      btn: "Find Your Expert IT Team Members",
+        "Establish a strong data foundation with our comprehensive data strategy, governance, and management services. We design frameworks that uphold data integrity, regulatory compliance, and improved data quality and accessibility across your organization. Build trust in your data and mitigate risks effectively.",
+      image: "/images/DIA4.png",
+      subDescription: "Strengthen your data governance framework",
+      color: "#454176",
+      btn: "Discuss Your Data Strategy",
       link: "#",
     },
   ];
@@ -149,45 +136,85 @@ export default function page() {
             {supportItems.map((item) => (
               <div
                 key={item.title}
-                className=" mb-10 rounded-tl-[20px] rounded-tr-[20px] flex min-h-[200px] gap-8 overflow-hidden rounded-lg border border-[#454176] bg-[#030214]"
+                className="mb-10 flex min-h-[200px] flex-col overflow-hidden rounded-lg rounded-tl-[20px] rounded-tr-[20px] border border-[#454176] bg-[#030214]"
               >
-                <div className="flex h-[60px] w-full items-center bg-[#454176] pl-8">
-                  <p className="text-xl text-white">
-                    Data Analytics Consulting
-                  </p>
-                </div>
-                {/* <div
-                  className={`flex h-[60px] w-[200px] items-center justify-center rounded bg-white p-3`}
+                <div
+                  className="flex h-[60px] w-full items-center pl-8"
+                  style={{
+                    background: item.color,
+                  }}
                 >
-                  <Image
-                    src={item.image}
-                    width={100}
-                    height={100}
-                    alt=""
-                    className="h-[40px] w-[40px] object-contain"
-                  />
+                  <p className="text-xl text-white">{item.title}</p>
                 </div>
-                <div>
-                  <h5 className="mb-2 text-xl">{item.title}</h5>
-                  <p className="font-[300]">{item.description}</p>
-                  <button className="mt-6 flex h-[55px] w-fit cursor-pointer items-center rounded-[10px] bg-[#479DDE] px-6 font-normal text-white hover:bg-[#479DDE] focus:outline-none">
-                    {item.btn} <LuMoveRight className="ml-5 text-2xl" />
-                  </button>
-                </div> */}
+                <div className="p-3">
+                  <div className="w-full">
+                    <Image
+                      src={item.image}
+                      width={1000}
+                      height={1000}
+                      alt=""
+                      className="h-[250px] w-full"
+                    />
+                  </div>
+
+                  <p className="my-3 font-extralight text-white">
+                    {item.description}
+                  </p>
+
+                  {item.description2 && (
+                    <p className="my-3 font-extralight text-white">
+                      {item.description2}
+                    </p>
+                  )}
+
+                  <p className="my-4 text-white">{item.subDescription}</p>
+
+                  <Button text={item.btn} />
+                </div>
               </div>
             ))}
           </div>
 
-          <p className="mt-20 text-5xl font-light text-[#D55B5A] lg:w-1/2">
-            Partner with Us for Smarter Resource Management
+          <div
+            className="relative my-18 h-[600px]"
+            style={{ backgroundImage: "url('images/DIA5.png')" }}
+          >
+            <div className="absolute top-18 right-30 flex w-[500px] flex-col">
+              <div className="h-[90px] rounded bg-[#7166E2] p-3 text-white">
+                <p className="w-[350px] text-2xl">
+                  Artificial Intelligence (AI) & Machine Learning (ML)
+                </p>
+              </div>
+
+              <p className="my-5 text-white">
+                We clarify your needs, simplify solutions to eliminate
+                distractions, and implement the AI tool to help your business
+                automate decision-making, predict trends, and personalize
+                customer experiences. Our AI-driven models analyze patterns,
+                optimize workflows, and enhance industry efficiency.
+              </p>
+
+              <Button text="Unlock AI Insight Now" />
+            </div>
+          </div>
+
+          <div className="mt-[100px]">
+            <div className="w-fit rounded bg-[#F80F6D] p-4 text-2xl text-white">
+              How we empower your success
+            </div>
+          </div>
+
+          <p className="mt-20 text-5xl font-[100] text-white lg:w-[70%]">
+            At Frontier Vista we&apos;re more than just data experts. We&apos;re your
+            partners in achieving data-driven success.
           </p>
         </div>
       </div>
 
-      <div className="bg-[#011D31] py-[8rem]">
+      <div className="bg-[#030214] py-[8rem]">
         <div className="wrap flex flex-col justify-center">
           <h4 className="mb-6 text-center text-5xl font-medium text-white">
-            Why Frontier Vista is the ideal choice
+            Why businesses trust us
           </h4>
 
           <div className="mt-10 grid grid-cols-2 gap-3">
@@ -221,36 +248,38 @@ export default function page() {
             ))}
           </div>
 
-          <div className="mt-10 flex w-full flex-col items-center">
-            <p className="mt-20 mb-4 text-center text-4xl font-light text-white lg:w-2/3">
-              Ready to optimize your resources and procurement?
+          <div className="my-20">
+            <p className="w-1/2 font-[100] text-white lg:text-5xl">
+              Optimize Your Business with Data Intelligence
             </p>
-            <Button text="Contact Our Resource Management Experts Today " />
           </div>
         </div>
       </div>
 
       <div
         className="relative flex h-[1100px] flex-col justify-end bg-cover bg-center"
-        style={{ backgroundImage: "url('images/res7.png')" }}
+        style={{ backgroundImage: "url('images/DIA6.png')" }}
       >
-        <div className="flex h-[350px] w-full flex-col justify-center bg-[#D0F4FF] pt-10 pb-8 text-white">
+        <div className="flex h-[350px] w-full flex-col justify-center bg-[#030214] pt-10 pb-8 text-white">
           <div className="wrap relative lg:min-w-[1200px]">
-            <div className="flex w-full items-center justify-between gap-10">
-              <div className="w-[40%]">
-                <h4 className="mb-6 text-4xl font-normal text-[#011D31]">
-                  Take Control of Your Resources and Drive Business Success
+            <div className="flex w-full items-center justify-between gap-18">
+              <div className="mt-[-200px] w-[50%] rounded bg-[#030214] p-18">
+                <div className="mb-5">
+                  <p className="text-4xl font-[100] text-[#FFFFFF]">
+                    Ready to transform your business with the power of data?
+                  </p>
+                </div>
+
+                <h4 className="mb-6 text-xl font-[200] text-[#D9D9D9]">
+                  Stay ahead of the competition with our data intelligence,
+                  advanced analytics, and AI solutions. Discover growth
+                  opportunities, improve efficiency, and maximize ROI with
+                  data-driven decision-making.
                 </h4>
               </div>
 
               <div className="w-1/2">
-                <p className="text-[#011D31]">
-                  Streamline asset management, optimize procurement processes,
-                  and scale teams with confidence through Frontier Vista&apos;s
-                  expert resource management and procurement services.
-                </p>
-
-                <Button text="Schedule a Free Consultation on Your Resource Strategy" />
+                <Button text="Get in Touch Today for a Free Assessment" />
               </div>
             </div>
           </div>

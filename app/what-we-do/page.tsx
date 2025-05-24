@@ -352,7 +352,7 @@ const ServiceSpectrum = () => {
     },
   ];
   return (
-    <div className="bg-[#011D31] py-[10rem]">
+    <div className="border-b-[5px] border-[#eee] bg-[#011D31] py-[10rem]">
       <div className="wrap flex flex-col items-center justify-center">
         <h4 className="mb-4 text-5xl font-semibold text-white">
           Our Service Spectrum
