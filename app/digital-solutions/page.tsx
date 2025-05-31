@@ -1,12 +1,14 @@
+"use client";
 import React from "react";
 import { LuMoveRight } from "react-icons/lu";
 import Image from "next/image";
+import Button from "../_components/Button";
 
 export default function page() {
   return (
     <div className="w-full">
       <div
-        className="relative flex h-[900px] items-end bg-cover bg-center"
+        className="relative flex h-[800px] items-end bg-cover bg-center"
         style={{ backgroundImage: "url('images/digital-sol-bg.png')" }}
       >
         <div
@@ -21,16 +23,16 @@ export default function page() {
               Digital Solutions & Development
             </h4>
             <p className="mb-8 font-extralight lg:w-[60%]">
-              At FVG, we create cutting-edge digital solutions that empower
-              businesses to thrive in the digital landscape. From custom
-              software and mobile apps to web and SaaS solutions, we design and
-              develop secure, scalable, and high-performance technology tailored
-              to your business needs. Our expert team leverages the latest
-              technologies, programming languages, and frameworks to
+              At Frontier Vista, we create cutting-edge digital solutions that
+              empower your business to thrive and achieve its goals in the
+              digital landscape. From custom software to mobile apps and
+              web/SaaS solutions, we deliver secure, scalable, and
+              high-performance technology precisely tailored to your unique
+              needs. Our expert team leverages the latest technologies to
+              transform your vision into tangible results. Ready to unlock your
+              digital potential?
             </p>
-            <button className="flex h-[55px] w-fit items-center rounded-[10px] bg-[#479DDE] px-6 font-normal text-white hover:bg-[#479DDE] focus:outline-none">
-              Get in touch today <LuMoveRight className="ml-5 text-2xl" />
-            </button>
+            <Button text="Get a free consultation" path="/" />
           </div>
         </div>
       </div>

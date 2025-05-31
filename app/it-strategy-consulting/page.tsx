@@ -1,6 +1,8 @@
+"use client";
+
 import React from "react";
-import { LuMoveRight } from "react-icons/lu";
 import { Covered_By_Your_Grace } from "next/font/google";
+import Button from "../_components/Button";
 
 const coveredByYourGrace = Covered_By_Your_Grace({
   subsets: ["latin"],
@@ -11,23 +13,22 @@ export default function page() {
   return (
     <div className="w-full">
       <div
-        className="relative flex h-[900px] items-end bg-cover bg-center"
+        className="relative flex h-[700px] items-end bg-cover bg-center"
         style={{ backgroundImage: "url('images/it-strategy-bg.png')" }}
       >
         <div className="flex h-[350px] w-full flex-col justify-center bg-[#02303BE5] text-white">
           <div className="wrap">
             <h4 className="mb-6 text-4xl font-semibold">
-              IT Strategy and Consultancy{" "}
+              IT Strategy and Consulting{" "}
             </h4>
             <p className="mb-8 font-extralight lg:w-[60%]">
               We become your dedicated IT advisor, crafting winning strategies,
               actionable roadmaps, and detailed implementation plans to achieve
-              your business goals. Beyond the strategy, we provide the expertise
-              to deliver the solutions.
+              your business goals. Our client-focused approach ensures we are
+              building lasting solutions together. Beyond the strategy, we
+              provide the expertise to deliver the solutions.
             </p>
-            <button className="flex h-[55px] w-fit items-center rounded-[10px] bg-[#479DDE] px-6 font-normal text-white hover:bg-[#479DDE] focus:outline-none">
-              Get in touch today <LuMoveRight className="ml-5 text-2xl" />
-            </button>
+            <Button text={"Get Expert IT Consulting"} path="/" />
           </div>
         </div>
       </div>
@@ -274,9 +275,7 @@ export default function page() {
                 </h4>
               </div>
 
-              <button className="flex h-[55px] w-fit items-center rounded-[10px] bg-[#479DDE] px-6 font-normal text-white hover:bg-[#479DDE] focus:outline-none">
-                Get in touch today <LuMoveRight className="ml-5 text-2xl" />
-              </button>
+              <Button text="Discuss Your IT Strategy Today" path="/" />
             </div>
           </div>
         </div>

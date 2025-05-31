@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { LuMoveRight } from "react-icons/lu";
 import Image from "next/image";
@@ -38,8 +39,8 @@ export default function page() {
   return (
     <div className="w-full">
       <div
-        className="relative flex h-[900px] items-end bg-cover bg-center"
-        style={{ backgroundImage: "url('images/CI-bg.png')" }}
+        className="relative flex h-[700px] items-end bg-cover bg-center"
+        style={{ backgroundImage: "url('images/CLO-bg.png')" }}
       >
         <div className="flex h-[350px] w-full flex-col justify-center bg-[#000000C4] text-white">
           <div className="wrap">
@@ -47,14 +48,12 @@ export default function page() {
               Cloud Innovation Hub
             </h4>
             <p className="mb-8 font-extralight lg:w-[60%]">
-              Our Cloud Innovation Hub empowers businesses to leverage the full
-              potential of cloud computing. From strategy to execution, we
-              enable seamless cloud adoption, migration, and optimization,
-              ensuring scalability, security, and cost efficiency.
+              Unlock scalability, security, and cost savings with the cloud.
+              Frontier Vista provides the expertise you need for a successful
+              cloud transformation. Start your journey to a more efficient
+              cloud.
             </p>
-            <button className="flex h-[55px] w-fit items-center rounded-[10px] bg-[#479DDE] px-6 font-normal text-white hover:bg-[#479DDE] focus:outline-none">
-              Get in touch today <LuMoveRight className="ml-5 text-2xl" />
-            </button>
+            <Button text="Schedule a Consultation Now" path="/" />
           </div>
         </div>
       </div>

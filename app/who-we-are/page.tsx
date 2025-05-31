@@ -4,6 +4,7 @@ import Image from "next/image";
 import React, { ReactNode } from "react";
 import { FiX, FiPlus } from "react-icons/fi";
 import { LuMoveRight } from "react-icons/lu";
+import Button from "../_components/Button";
 
 export default function Hello() {
   const [activeAccordion, setActiveAccordion] = React.useState<number>(0);
@@ -139,6 +140,8 @@ export default function Hello() {
         subHeader: "text-[#23557A]",
         btnClass: "bg-[#479DDE]",
       },
+      btnText: "See How Our Value Dive Our Work",
+      btnLink: "/contact",
     },
     {
       header: "What Makes Us Different",
@@ -264,6 +267,8 @@ export default function Hello() {
         subHeader: "text-[#A05600]",
         btnClass: "bg-[#A05600]",
       },
+      btnText: "Talk to Our Experts About Your Need",
+      btnLink: "/contact",
     },
     {
       header: "How We Implement",
@@ -345,6 +350,8 @@ export default function Hello() {
         subHeader: "text-[#65B68E]",
         btnClass: "bg-[#65B68E]",
       },
+      btnText: "Request a Consultation on Your Project",
+      btnLink: "/contact",
     },
     {
       header: "Our Corporate Social Responsibility (CSR)",
@@ -438,7 +445,7 @@ export default function Hello() {
           </p>
         </div>
 
-        <div className="relative my-18 h-[250vh] 2xl:h-[70vh]">
+        <div className="relative my-18 h-[80vh] 2xl:h-[70vh]">
           {/* Vertical Timeline Line */}
           <div className="mty-12 left-6 min-h-[80vh] w-0.5 bg-white"></div>
           <div
@@ -618,7 +625,7 @@ export default function Hello() {
                       Women Empowerment in Tech
                     </span>
                     <span className="w-1/4 text-[#011D31]">
-                      Empowering 20 women with essential tech skills through
+                      Empowering 50 women with essential tech skills through
                       scholarships, mentorship and Networking.
                     </span>
                     <Image
@@ -651,6 +658,8 @@ export default function Hello() {
 
 type AccordionProps = {
   data: {
+    btnText?: string;
+    btnLink?: string;
     header: string;
     subTitle: string;
     description: string;
@@ -742,6 +751,14 @@ const Accordion = ({ data }: AccordionProps) => {
           </div>
         </div>
       ))}
+
+      {data.btnText && (
+        <Button
+          className={`${data.theme.btnClass} mx-auto mt-10`}
+          text={data.btnText}
+          path={data.btnLink}
+        />
+      )}
     </div>
   );
 };

@@ -5,7 +5,7 @@ import { LuMoveRight } from "react-icons/lu";
 export default function page() {
   const services = [
     {
-      title: "IT Strategy & Consultancy",
+      title: "IT Strategy & Consulting",
       image: "/images/services1.png",
     },
     {
@@ -33,7 +33,7 @@ export default function page() {
   return (
     <div>
       <div
-        className="relative flex h-[800px] flex-col items-center justify-center bg-cover bg-center"
+        className="relative flex h-[500px] flex-col items-center justify-center bg-cover bg-center"
         style={{ backgroundImage: "url('/wedo.png')" }}
       >
         <h4 className="w-[40%] text-center font-semibold text-white lg:text-5xl">
@@ -160,12 +160,13 @@ const ServiceCategories = () => {
             <h3 className="text-xl font-light text-white">Vertical Services</h3>
           </div>
           <p className="text-md font-light text-[#011D31]">
-            We specialize in industry-specific solutions for sectors like
-            Health, Fintech & Banking, E-commerce, Education, and Retail & AI.
-            Whether you need cloud migration for healthcare, data security for
-            financial services, or AI solutions for educational institutions, we
-            bring deep industry knowledge and expertise that drive compliance,
-            innovation, and growth.
+            We go beyond general IT services by specializing in key industries.
+            Our teams develop a deep understanding of the unique challenges and
+            opportunities within sectors like health, FinTech & banking,
+            e-commerce, education, and the public domain. By focusing on these
+            verticals, we bring deep industry knowledge and expertise that
+            address your industry needs, driving compliance, fostering
+            innovation, and enabling sustainable growth
           </p>
         </div>
       </div>
@@ -178,11 +179,13 @@ const ServiceCategories = () => {
             </h3>
           </div>
           <p className="text-md font-light text-[#011D31]">
-            Our cross-industry services help optimize the core functions that
-            drive your business forward. From IT infrastructure to
-            cybersecurity, data analytics, and cloud solutions, we focus on
-            streamlining processes, improving efficiency, and boosting your
-            bottom line—no matter your industry.
+            Our horizontal services provide essential technology capabilities
+            that are critical for success across all sectors. We offer deep
+            expertise in core areas such as IT infrastructure, cybersecurity,
+            data analytics, and cloud solutions. We focus on optimizing these
+            fundamental aspects of your business, streamlining processes,
+            improving efficiency, and positively impacting your bottom line,
+            regardless of your industry.
           </p>
         </div>
         <div className="relative w-1/2">
@@ -211,26 +214,25 @@ const ServiceCategories = () => {
             <h3 className="text-xl font-light text-white">Hybrid Services</h3>
           </div>
           <p className="text-md font-light text-[#011D31]">
-            We combine the best of both Vertical and Horizontal services to
-            create customized, comprehensive solutions. For instance, we might
-            combine healthcare-focused cloud solutions with AI-powered data
-            analytics, giving you a powerful, integrated solution that not only
-            meets your industry&apos;s specific needs but also scales your
-            business across various functions.
+            For truly comprehensive solutions, our hybrid services integrate our
+            deep vertical knowledge with our specialized horizontal
+            capabilities. This powerful combination allows us to create
+            customized solutions that address both your industry&apos;s unique
+            demands and your broader technology needs.
           </p>
         </div>
       </div>
 
-      <div className="mt-20">
-        <h4 className="text-4xl font-semibold lg:w-[60%]">
-          Let&apos;s partner together to unlock your full potential and drive
-          growth.
-        </h4>
-        <p className="mt-6 text-xl font-light text-[#3D4F60] lg:w-[90%]">
-          Our personalized approach ensures that we deliver innovative,
-          scalable, and sustainable solutions designed to help you succeed in an
-          ever-changing digital world.
+      <div className="mt-20 flex flex-col items-center justify-center gap-8 text-center lg:w-2/3">
+        <p className="mt-6 text-xl font-light text-[#3D4F60]">
+          At Frontier Vista, our commitment is to provide personalized,
+          innovative, and sustainable solutions that empower you to thrive in
+          the digital age
         </p>
+        <h4 className="text-3xl font-medium">
+          Let&apos;s explore how our tailored service approach can unlock your
+          full potential.
+        </h4>
       </div>
     </div>
   );
@@ -358,9 +360,10 @@ const ServiceSpectrum = () => {
           Our Service Spectrum
         </h4>
         <p className="mb-28 text-center text-xl font-extralight text-white lg:w-[60%]">
-          Our Service Spectrum offers a range of tailored solutions designed to
-          meet your unique needs, ensuring seamless alignment with your goals
-          and driving impactful results at every stage
+          Our comprehensive service spectrum encompasses a wide range of
+          tailored solutions within Our Services to meet your unique needs.
+          Explore the specific areas where we can drive impactful result for
+          your business
         </p>
 
         <div className="flex w-full flex-col gap-2">
@@ -372,7 +375,9 @@ const ServiceSpectrum = () => {
                 // style={{ transform: `skewY(${tag.angle})` }}
               >
                 <div className="flex h-full items-center gap-3">
-                  <div className={`${tag.tagColor} h-full p-4 px-6 font-bold`}>
+                  <div
+                    className={`${tag.tagColor} h-full p-4 px-6 font-bold text-black`}
+                  >
                     {tag.code}
                   </div>
                   <div className={`${tag.textColor}`}>{tag.label}</div>
@@ -384,7 +389,7 @@ const ServiceSpectrum = () => {
             {serviceTags.slice(3, 6).map((tag, index) => (
               <div
                 key={index}
-                className={`relative w-full rounded-md shadow-md ${tag.color} text-white`}
+                className={`relative w-full rounded-md shadow-md ${tag.color} text-black`}
                 // style={{ transform: `skewY(${tag.angle})` }}
               >
                 <div className="flex h-full items-center gap-3">
@@ -401,7 +406,7 @@ const ServiceSpectrum = () => {
             {serviceTags.slice(6, 9).map((tag, index) => (
               <div
                 key={index}
-                className={`relative w-full rounded-md shadow-md ${tag.color} text-white`}
+                className={`relative w-full rounded-md shadow-md ${tag.color} text-black`}
                 // style={{ transform: `skewY(${tag.angle})` }}
               >
                 <div className="flex h-full items-center gap-3">
@@ -417,7 +422,7 @@ const ServiceSpectrum = () => {
             {serviceTags.slice(9, 11).map((tag, index) => (
               <div
                 key={index}
-                className={`relative w-full rounded-md shadow-md ${tag.color} text-white`}
+                className={`relative w-full rounded-md shadow-md ${tag.color} text-black`}
                 // style={{ transform: `skewY(${tag.angle})` }}
               >
                 <div className="flex h-full items-center gap-3">
@@ -434,7 +439,7 @@ const ServiceSpectrum = () => {
             {serviceTags.slice(11, 13).map((tag, index) => (
               <div
                 key={index}
-                className={`relative w-full rounded-md shadow-md ${tag.color} text-white`}
+                className={`relative w-full rounded-md shadow-md ${tag.color} text-black`}
                 // style={{ transform: `skewY(${tag.angle})` }}
               >
                 <div className="flex h-full items-center gap-3">
@@ -451,7 +456,7 @@ const ServiceSpectrum = () => {
             {serviceTags.slice(13, 15).map((tag, index) => (
               <div
                 key={index}
-                className={`relative w-full rounded-md shadow-md ${tag.color} text-white`}
+                className={`relative w-full rounded-md shadow-md ${tag.color} text-black`}
                 // style={{ transform: `skewY(${tag.angle})` }}
               >
                 <div className="flex h-full items-center gap-3">
@@ -467,7 +472,7 @@ const ServiceSpectrum = () => {
             {serviceTags.slice(15).map((tag, index) => (
               <div
                 key={index}
-                className={`relative w-full rounded-md shadow-md ${tag.color} text-white`}
+                className={`relative w-full rounded-md shadow-md ${tag.color} text-black`}
                 // style={{ transform: `skewY(${tag.angle})` }}
               >
                 <div className="flex h-full items-center gap-3">

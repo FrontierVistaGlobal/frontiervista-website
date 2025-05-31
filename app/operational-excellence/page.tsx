@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 import Button from "../_components/Button";
@@ -37,7 +38,7 @@ export default function page() {
   return (
     <div className="w-full">
       <div
-        className="relative flex h-[900px] items-end bg-cover bg-center"
+        className="relative flex h-[700px] items-end bg-cover bg-center"
         style={{ backgroundImage: "url('images/op-excel.png')" }}
       >
         <div className="flex h-[350px] w-full flex-col justify-center bg-[#012724BF] text-white">
@@ -208,7 +209,7 @@ export default function page() {
 
       <div className="bg-[#011D31] py-[8rem]">
         <div className="wrap flex flex-col justify-center">
-          <h4 className="mb-6 text-center text-5xl font-medium text-white">
+          <h4 className="mx-auto mb-6 text-center text-5xl font-medium text-white lg:w-1/2">
             Why Choose Us for Operational Excellence?
           </h4>
 
@@ -271,7 +272,7 @@ export default function page() {
                 <p className="my-6 font-medium text-[#011D31]">
                   Discover How We Can Optimize Your IT
                 </p>
-                <Button text="Start Your Cloud Innovation Journey Now" />
+                <Button text="Schedule a Call" />
               </div>
             </div>
           </div>

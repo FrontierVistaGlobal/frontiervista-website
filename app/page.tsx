@@ -5,18 +5,19 @@ import CountUp from "react-countup";
 import { LuMoveRight } from "react-icons/lu";
 import { motion, useAnimation } from "motion/react";
 import CarouselTestimonials from "./_components/Testimonies";
+import Button from "./_components/Button";
 
 export default function Home() {
   const controls = useAnimation();
   const supportItems = [
     {
-      title: "Advisory",
+      title: "Advisory and Consulting",
       description:
         "Strategize your future with expert guidance, navigating complex challenges and driving impactful digital transformation",
       image: "/advisory.svg",
       color: "#F9FCFF",
       btn: "Explore Advisory Services",
-      link: "#",
+      link: "/it-strategy-consulting",
     },
     {
       title: "IT Managed Services",
@@ -25,7 +26,7 @@ export default function Home() {
       image: "/it-service.svg",
       color: "#FFEAD0",
       btn: "Secure your IT Infrastructure",
-      link: "#",
+      link: "/operational-excellence",
     },
     {
       title: "Delivery",
@@ -34,16 +35,16 @@ export default function Home() {
       image: "/delivery.svg",
       color: "#EFFFEF",
       btn: "Unlock your IT potential Now",
-      link: "#",
+      link: "/who-are-we",
     },
     {
-      title: "Consulting",
+      title: "Workforce Solutions",
       description:
-        "Transform ideas into reality with hands-on IT consulting, solution design, and seamless implementation",
+        "Connecting Top Talents with Opportunities. Discover your next great hire or dream job. We make the right connections happen, building stronger teams and great career",
       image: "/consulting.svg",
       color: "#F1D9FF",
-      btn: "Transform your Ideas",
-      link: "#",
+      btn: "Find your perfect fit",
+      link: "/talent-hub",
     },
   ];
 
@@ -86,10 +87,10 @@ export default function Home() {
   return (
     <div>
       <div
-        className="relative h-[800px] bg-cover bg-center"
+        className="relative h-[650px] bg-cover bg-center"
         style={{ backgroundImage: "url('/homebg.png')" }}
       >
-        <div className="relative z-10 mx-auto flex h-full max-w-[1200px] flex-col justify-center text-white">
+        <div className="relative z-10 mx-auto flex h-full max-w-[1200px] flex-col pt-[8rem] text-white">
           <div className="flex flex-col">
             <h3 className="mb-2 text-5xl font-[800] text-white">
               Unlock New Frontiers
@@ -99,9 +100,7 @@ export default function Home() {
               innovative solutions.
             </p>
 
-            <button className="flex h-[65px] w-fit items-center rounded-[10px] bg-[#479DDE] px-6 font-normal text-white hover:bg-[#479DDE] focus:outline-none">
-              Transform Today <LuMoveRight className="ml-5 text-2xl" />
-            </button>
+            <Button text="Explore Our Solutions" path="/what-we-do" />
           </div>
 
           <div className="absolute bottom-[50px] flex w-full justify-between">
@@ -145,10 +144,10 @@ export default function Home() {
           bold software, data, and AI solutions to accelerate and scale business
           growth.
         </p>
-        <button className="mt-6 flex h-[55px] w-fit items-center rounded-[10px] bg-[#479DDE] px-6 text-xl font-normal text-white hover:bg-[#479DDE] focus:outline-none">
-          Let&apos;s Partner to Transform Your Business Today{" "}
-          <LuMoveRight className="ml-5 text-2xl" />
-        </button>
+        <Button
+          text="Let's Partner to Transform Your Business Today"
+          path="/lets-connect"
+        />
       </div>
 
       <div className="wrap pb-[5rem]">
@@ -254,7 +253,7 @@ export default function Home() {
                     IT Strategy & Governance
                   </p>
                 </div>
-                <p className="text-xs text-[#479DDE]">January 8, 2023</p>
+                <p className="text-xs text-[#479DDE]">January 8, 2025</p>
               </div>
 
               <p className="mt-8 text-xl font-medium text-[#23557A]">
@@ -272,7 +271,7 @@ export default function Home() {
                     Operationalizing AI with DevSecFinOps
                   </p>
                 </div>
-                <p className="text-xs text-[#479DDE]">January 8, 2023</p>
+                <p className="text-xs text-[#479DDE]">January 8, 2025</p>
               </div>
 
               <p className="mt-8 text-xl font-medium text-[#23557A]">
@@ -288,7 +287,7 @@ export default function Home() {
                 <div className="rounded-3xl bg-white px-4 py-1">
                   <p className="text-xs text-[#479DDE]">New & Noteworthy</p>
                 </div>
-                <p className="text-xs text-[#479DDE]">January 8, 2023</p>
+                <p className="text-xs text-[#479DDE]">January 8, 2025</p>
               </div>
 
               <p className="mt-8 text-xl font-medium text-[#23557A]">
@@ -300,7 +299,7 @@ export default function Home() {
           </div>
 
           <button className="mx-auto mt-18 flex h-[55px] w-fit items-center rounded-[10px] bg-[#479DDE] px-6 font-normal text-white hover:bg-[#479DDE] focus:outline-none">
-            View More Insights <LuMoveRight className="ml-5 text-2xl" />
+            View More of Our Thinking <LuMoveRight className="ml-5 text-2xl" />
           </button>
         </div>
       </div>

@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -55,38 +56,45 @@ export default function Footer() {
   ];
   return (
     <div className="bg-[#011D31]">
-      <div className="mx-auto flex max-w-[1200px] px-3 py-[5rem]">
-        <div className="flex items-start gap-[2rem] md:w-[80%]">
-          <Image src="/logo-icon.svg" alt="Logo" width={50} height={50} />
+      <div className="wrap mx-auto flex flex-col px-3 pt-[5rem] pb-8">
+        <div className="mb-[50px] flex w-full gap-[5rem]">
+          <div className="w-[100px]">
+            <Image src="/logo-icon.svg" alt="Logo" width={100} height={100} />
+          </div>
 
-          {footerData.map((section, index) => (
-            <div key={index}>
-              <p className="font-semibold text-[#479DDE]">{section.title}</p>
-              <ul className="mt-7 flex flex-col gap-4">
-                {section.items.map((item, idx) => (
-                  <li key={idx} className="text-[13px] font-[100] text-white">
-                    <Link href={item.link} className="hover:underline">
-                      {item.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+          <div className="grid grid-cols-6 gap-3">
+            {footerData.map((section, index) => (
+              <div key={index} className="pl-5">
+                <p className="font-semibold text-[#479DDE]">{section.title}</p>
+                <ul className="mt-7 flex flex-col gap-4">
+                  {section.items.map((item, idx) => (
+                    <li key={idx} className="text-[13px] font-[100] text-white">
+                      <Link href={item.link} className="hover:underline">
+                        {item.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
         </div>
+        <div className="flex w-full items-end justify-between">
+          <div>
+            <p className="mb-4 text-xl text-white">
+              Subscribe to our newsletter
+            </p>
 
-        <div className="w-[20%]">
-          <p className="mb-4 text-xl text-white">Subscribe to our newsletter</p>
-
-          <div className="relative flex items-center rounded-md bg-white">
-            <input
-              type="email"
-              placeholder="Your email..."
-              className="h-[56px] w-[380px] rounded-[10px] py-1 pr-[170px] pl-4 text-sm text-gray-400 focus:outline-none"
-            />
-            <button className="absolute right-2 flex h-[45px] w-fit items-center rounded-[10px] bg-[#479DDE] px-4 py-3 text-sm font-normal text-white hover:bg-[#479DDE] focus:outline-none">
-              Get started <FiArrowUpRight className="ml-2 text-xl" />
-            </button>
+            <div className="relative flex items-center rounded-md bg-white">
+              <input
+                type="email"
+                placeholder="Your email..."
+                className="h-[56px] w-[400px] rounded-[10px] py-1 pr-[170px] pl-4 text-sm text-gray-400 focus:outline-none"
+              />
+              <button className="absolute right-2 flex h-[45px] w-fit items-center rounded-[10px] bg-[#479DDE] px-4 py-3 text-sm font-normal text-white hover:bg-[#479DDE] focus:outline-none">
+                Get started <FiArrowUpRight className="ml-2 text-xl" />
+              </button>
+            </div>
           </div>
 
           <div className="mt-6 flex gap-5 text-white">

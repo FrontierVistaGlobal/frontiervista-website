@@ -6,26 +6,23 @@ import Image from "next/image";
 const testimonials = [
   {
     id: 1,
-    text: `Partnering with Frontier Vista was one of our best business decisions. Their
-    expertise in the IT space helped us develop a highly effective management
-    system that not only saved us valuable time but also BOOSTED OUR
-    REVENUE AND ENHANCED CUSTOMER SATISFACTION. Their support
-    has been a game-changer for our business.`,
+    text: `Partnering with Frontier Vista was one of our best business decisions. Their expertise in the IT space helped us develop a highly effective management system that not only saved us valuable time but also boosted our revenue and enhanced customer satisfaction. Their support has been a game-changer for our business`,
     author: "Tolu (Club Hive)",
   },
   {
     id: 2,
-    text: `Frontier Vista's team is incredibly knowledgeable and responsive. They truly
-    understand our needs and have provided solutions that have significantly
-    improved our operational efficiency. We highly recommend their services.`,
-    author: "Kwame (Tech Solutions Inc.)",
+    text: `Transitioning to the cloud and migrating our system with Frontier Vista was seamless. We experienced zero downtime, and our service delivery to patients remained optimal throughout the process. Frontier Vista's expertise and delivery are unparalleled—truly exceptional!`,
+    author: "Mr Stephen (Ministry of Health)",
   },
   {
     id: 3,
-    text: `We've been working with Frontier Vista for over a year now, and their commitment
-    to excellence is evident in everything they do. Their proactive approach
-    and dedication to our success make them a valuable partner.`,
-    author: "Aisha (Global Innovations)",
+    text: `Frontier Vista stopped our money drain with smart process solutions. Now, we run smoother operations, deliver faster, and save money. Thanks to their expertise!`,
+    author: "Tayo (Toyosab Enterprises)",
+  },
+  {
+    id: 4,
+    text: `A faster, reliable and secure logistics was possible with Frontier’s tailored application for SpidLit, They are a truly reliable IT team.`,
+    author: " Chief Operations Officer (SpidLit)",
   },
 ];
 

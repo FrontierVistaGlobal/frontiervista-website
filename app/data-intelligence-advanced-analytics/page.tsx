@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 import Button from "../_components/Button";
@@ -82,7 +83,7 @@ export default function page() {
   return (
     <div className="w-full">
       <div
-        className="relative flex h-[900px] items-end bg-cover bg-center"
+        className="relative flex h-[700px] items-end bg-cover bg-center"
         style={{ backgroundImage: "url('images/data-bg.png')" }}
       >
         <div
@@ -92,7 +93,7 @@ export default function page() {
               "linear-gradient(358.6deg, rgba(3, 2, 20, 0.8) 10.69%, rgba(100, 0, 81, 0.8) 98.84%)",
           }}
         >
-          <div className="wrap">
+          <div className="wrap w-full">
             <h4 className="mb-6 text-4xl font-semibold">
               Data Intelligence & Advanced Analytics
             </h4>
@@ -169,7 +170,7 @@ export default function page() {
 
                   <p className="my-4 text-white">{item.subDescription}</p>
 
-                  <Button text={item.btn} />
+                  <Button text={item.btn} path="/" />
                 </div>
               </div>
             ))}
@@ -194,7 +195,7 @@ export default function page() {
                 optimize workflows, and enhance industry efficiency.
               </p>
 
-              <Button text="Unlock AI Insight Now" />
+              <Button text="Unlock AI Insight Now" path="/" />
             </div>
           </div>
 
@@ -205,8 +206,8 @@ export default function page() {
           </div>
 
           <p className="mt-20 text-5xl font-[100] text-white lg:w-[70%]">
-            At Frontier Vista we&apos;re more than just data experts. We&apos;re your
-            partners in achieving data-driven success.
+            At Frontier Vista we&apos;re more than just data experts. We&apos;re
+            your partners in achieving data-driven success.
           </p>
         </div>
       </div>

@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { LuMoveRight } from "react-icons/lu";
 import Image from "next/image";
@@ -96,7 +97,7 @@ export default function page() {
   return (
     <div className="w-full">
       <div
-        className="relative flex h-[900px] items-end bg-cover bg-center"
+        className="relative flex h-[700px] items-end bg-cover bg-center"
         style={{ backgroundImage: "url('images/resource-bg.png')" }}
       >
         <div className="flex h-[350px] w-full flex-col justify-center bg-[#730A09BF] text-white">

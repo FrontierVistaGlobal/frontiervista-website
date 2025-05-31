@@ -57,8 +57,8 @@ const Navbar = () => {
 
   const dropdown = [
     {
-      title: "IT Strategy and Consultancy",
-      link: "it-strategy-consultancy",
+      title: "IT Strategy and Consulting",
+      link: "it-strategy-consulting",
       links: [
         "IT Strategy Consult",
         "Business Strategy",
@@ -130,7 +130,7 @@ const Navbar = () => {
   ];
 
   return (
-    <div>
+    <div className="sticky top-0 z-50 bg-white shadow-md">
       <div className="mx-auto flex max-w-[1200px] items-center justify-between px-3 py-5">
         <div>
           <Image src="/logo.svg" alt="Logo" width={150} height={50} />
@@ -162,7 +162,7 @@ const Navbar = () => {
                       <div className="container mx-auto grid grid-cols-3 gap-4 p-6">
                         {dropdown.map((column, index) => (
                           <div key={index}>
-                            <h3 className="mb-2 font-semibold text-[#479DDE]">
+                            <h3 className="mb-2 font-semibold text-[#479DDE] underline">
                               <Link href={`/${column.link}`}>
                                 {column.title}
                               </Link>
