@@ -638,13 +638,12 @@ export default function Hello() {
                 </div>
 
                 <button className="mx-auto my-18 flex h-[55px] w-fit items-center rounded-[10px] bg-[#5D0059] px-6 py-6 font-normal text-white hover:bg-[#479DDE] focus:outline-none">
-                  Partner With Us On CSR Intiatives{" "}
+                  Partner With Us On CSR Initiatives{" "}
                   <LuMoveRight className="ml-5 text-2xl" />
                 </button>
               </div>
             ) : (
               <Accordion
-                //   data={item}
                 data={accordionData[activeAccordion]}
                 key={accordionData[activeAccordion].header}
               />
