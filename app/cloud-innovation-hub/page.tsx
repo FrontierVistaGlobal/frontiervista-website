@@ -8,32 +8,32 @@ import Button from "../_components/Button";
 export default function page() {
   const supportItems = [
     {
-      title: "Advisory",
+      title: "End-to-End Cloud Solutions",
       description:
-        "Provide expert strategic guidance to help businesses navigate complex challenges and drive digital transformation",
-      image: "/advisory.svg",
-      color: "#F9FCFF",
+        "From initial strategy to seamless execution, we provide comprehensive guidance throughout your cloud transformation.",
+      image: "/images/EECS-CLD1.svg",
+       color: "#FFEAD0",
     },
     {
-      title: "IT Managed Services",
+      title: "Optimized Cost & Performance",
       description:
-        "Proactive IT management, security, and optimization to enhance performance, scalability, and reduce downtime",
-      image: "/it-service.svg",
+        "Our Cloud FinOps expertise ensures cost efficiency while maximizing the performance of your cloud solutions.",
+      image: "/images/OCP-CLD2.svg",
+      color: "#E9F5FF",
+    },
+    {
+      title: "Robust Security & Compliance",
+      description:
+        "We implement robust cybersecurity frameworks to protect your valuable cloud environments & ensure regulatory compliance.",
+      image: "/images/RSC-CLD3.svg",
+      color: "#E9F5FF",
+    },
+    {
+      title: "Innovative & Scalable Solutions",
+      description:
+        "Our cloud services are designed for agility and provide the scalable cloud infrastructure you need for future growth.",
+      image: "/images/ISS-CLD4.svg",
       color: "#FFEAD0",
-    },
-    {
-      title: "Delivery",
-      description:
-        "Seamless IT solution delivery with ensuring timely deployment, efficiency, and business impact.",
-      image: "/delivery.svg",
-      color: "#EFFFEF",
-    },
-    {
-      title: "Consulting",
-      description:
-        "Transform ideas into reality with hands-on IT consulting, solution design, and seamless implementation",
-      image: "/consulting.svg",
-      color: "#F1D9FF",
     },
   ];
 

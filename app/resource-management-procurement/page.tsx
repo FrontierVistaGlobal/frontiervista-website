@@ -10,28 +10,28 @@ export default function page() {
       title: "Optimized Resource Utilization:",
       description:
         "We maximize the efficiency of your resources through strategic asset and vendor management, ensuring you get the most value from your investments.",
-      image: "/images/opex1.svg",
+      image: "/images/RMP-SVG1.svg",
       color: "#FFEAD0",
     },
     {
-      title: "Cost-Effective Procurement:Cost-Effective Procurement:",
+      title: "Cost-Effective Procurement:",
       description:
         "Reduce your procurement costs while acquiring best-in-class hardware, software, and services that meet your specific requirements.",
-      image: "/images/opex2.svg",
+      image: "/images/CEP-SVG2.svg",
       color: "#E9F5FF",
     },
     {
       title: "Expert Staffing Solutions:",
       description:
         "Gain access to top talent for both short-term and long-term needs, ensuring you have the right skills to drive your technology initiatives.",
-      image: "/images/opex3.svg",
+      image: "/images/ESS-SVG3.svg",
       color: "#E9F5FF",
     },
     {
-      title: "End-to-End Management:v",
+      title: "End-to-End Management:",
       description:
         "From initial procurement to ongoing maintenance and optimization, we handle it all, providing comprehensive management that frees you to focus on your core business.",
-      image: "/images/opex4.svg",
+      image: "/images/EEM-SVG4.svg",
       color: "#FFEAD0",
     },
   ];
@@ -177,7 +177,7 @@ export default function page() {
 
       <div className="bg-[#011D31] py-[8rem]">
         <div className="wrap flex flex-col justify-center">
-          <h4 className="mb-6 text-center text-5xl font-medium text-white">
+          <h4 className="mb-6 text-center text-5xl font-medium text-white lg:w-1/2 mx-auto">
             Why Frontier Vista is the ideal choice
           </h4>
 
@@ -188,7 +188,7 @@ export default function page() {
                 className="flex w-full items-center justify-center gap-6 rounded-lg bg-[#DCEAFD] p-8 text-center"
               >
                 <div
-                  className="mb-6 h-[60px] w-[80px] rounded p-4"
+                  className="mb-6 h-[60px] w-[100px] rounded p-4 "
                   style={{ backgroundColor: item.color }}
                 >
                   <Image
