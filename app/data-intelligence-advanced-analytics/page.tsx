@@ -9,28 +9,28 @@ export default function page() {
       title: "Deep Expertise",
       description:
         "Our team comprises seasoned data scientists, analysts, and engineers with a proven track record of delivering impactful results.",
-      image: "/images/opex1.svg",
+      image: "/images/DEP-DIAA1.svg",
       color: "#FFEAD0",
     },
     {
       title: "Tailored Solutions",
       description:
         "We understand that every business is unique. We craft customized solutions that align with your specific goals and challenges",
-      image: "/images/opex2.svg",
+      image: "/images/TS-DIAA2.svg",
       color: "#E9F5FF",
     },
     {
       title: "Cutting-Edge Technologies",
       description:
         "We leverage the latest advancements in data intelligence, advanced analytics, and AI/ML to deliver innovative solutions.",
-      image: "/images/opex3.svg",
+      image: "/images/CET-DIAA3.svg",
       color: "#E9F5FF",
     },
     {
       title: "Client-Centric Approach",
       description:
         "From initial procurement to ongoing maintenance and optimization, we handle it all, providing comprehensive management that frees you to focus on your core business.",
-      image: "/images/opex4.svg",
+      image: "/images/CCA-DIAA4.svg",
       color: "#FFEAD0",
     },
   ];
@@ -280,7 +280,7 @@ export default function page() {
               </div>
 
               <div className="w-1/2">
-                <Button text="Get in Touch Today for a Free Assessment" />
+                <Button text="Get in Touch Today for a Free Assessment"  path="/lets-connect#contact"/>
               </div>
             </div>
           </div>

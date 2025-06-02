@@ -10,28 +10,28 @@ export default function page() {
       title: "Optimized Resource Utilization:",
       description:
         "We maximize the efficiency of your resources through strategic asset and vendor management, ensuring you get the most value from your investments.",
-      image: "/images/opex1.svg",
+      image: "/images/RMP-SVG1.svg",
       color: "#FFEAD0",
     },
     {
-      title: "Cost-Effective Procurement:Cost-Effective Procurement:",
+      title: "Cost-Effective Procurement:",
       description:
         "Reduce your procurement costs while acquiring best-in-class hardware, software, and services that meet your specific requirements.",
-      image: "/images/opex2.svg",
+      image: "/images/CEP-SVG2.svg",
       color: "#E9F5FF",
     },
     {
       title: "Expert Staffing Solutions:",
       description:
         "Gain access to top talent for both short-term and long-term needs, ensuring you have the right skills to drive your technology initiatives.",
-      image: "/images/opex3.svg",
+      image: "/images/ESS-SVG3.svg",
       color: "#E9F5FF",
     },
     {
-      title: "End-to-End Management:v",
+      title: "End-to-End Management:",
       description:
         "From initial procurement to ongoing maintenance and optimization, we handle it all, providing comprehensive management that frees you to focus on your core business.",
-      image: "/images/opex4.svg",
+      image: "/images/EEM-SVG4.svg",
       color: "#FFEAD0",
     },
   ];
@@ -62,7 +62,7 @@ export default function page() {
       image: "/images/res3.svg",
       color: "#EFFFEF",
       btn: "Contact us today",
-      link: "#",
+      link: "/lets-connect#contact",
     },
     {
       title: "Software Procurement & Licensing",
@@ -81,7 +81,7 @@ export default function page() {
       image: "/images/res5.svg",
       color: "#EFFFEF",
       btn: "Consult our Vendorship Experts",
-      link: "#",
+      link: "/lets-connect#contact",
     },
     {
       title: "Staff Recruitment, Training & Augmentation",
@@ -90,7 +90,7 @@ export default function page() {
       image: "/images/res6.svg",
       color: "#F1D9FF",
       btn: "Find Your Expert IT Team Members",
-      link: "#",
+      link: "/lets-connect#contact",
     },
   ];
 
@@ -110,7 +110,7 @@ export default function page() {
               software, and personnel, significantly cutting costs. Gain control
               of your assets.
             </p>
-            <Button text="Get Started Today" />
+            <Button text="Get Started Today"  path="/lets-connect#contact"/>
           </div>
         </div>
       </div>
@@ -124,7 +124,7 @@ export default function page() {
                 resource management.
               </h4>
 
-              <Button text="Request For Resource Assessment Today" />
+              <Button text="Request For Resource Assessment Today"  path="/lets-connect#contact"/>
             </div>
           </div>
         </div>
@@ -177,7 +177,7 @@ export default function page() {
 
       <div className="bg-[#011D31] py-[8rem]">
         <div className="wrap flex flex-col justify-center">
-          <h4 className="mb-6 text-center text-5xl font-medium text-white">
+          <h4 className="mb-6 text-center text-5xl font-medium text-white lg:w-1/2 mx-auto">
             Why Frontier Vista is the ideal choice
           </h4>
 
@@ -188,7 +188,7 @@ export default function page() {
                 className="flex w-full items-center justify-center gap-6 rounded-lg bg-[#DCEAFD] p-8 text-center"
               >
                 <div
-                  className="mb-6 h-[60px] w-[80px] rounded p-4"
+                  className="mb-6 h-[60px] w-[100px] rounded p-4 "
                   style={{ backgroundColor: item.color }}
                 >
                   <Image
@@ -216,7 +216,7 @@ export default function page() {
             <p className="mt-20 mb-4 text-center text-4xl font-light text-white lg:w-2/3">
               Ready to optimize your resources and procurement?
             </p>
-            <Button text="Contact Our Resource Management Experts Today " />
+            <Button text="Contact Our Resource Management Experts Today "  path="/lets-connect#contact"/>
           </div>
         </div>
       </div>

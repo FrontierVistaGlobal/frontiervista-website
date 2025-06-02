@@ -4,35 +4,36 @@ import { LuMoveRight } from "react-icons/lu";
 import Image from "next/image";
 import Button from "../_components/Button";
 
+
 export default function page() {
   const supportItems = [
     {
-      title: "Advisory",
+      title: "End-to-End Cloud Solutions",
       description:
-        "Provide expert strategic guidance to help businesses navigate complex challenges and drive digital transformation",
-      image: "/advisory.svg",
-      color: "#F9FCFF",
+        "From initial strategy to seamless execution, we provide comprehensive guidance throughout your cloud transformation.",
+      image: "/images/EECS-CLD1.svg",
+       color: "#FFEAD0",
     },
     {
-      title: "IT Managed Services",
+      title: "Optimized Cost & Performance",
       description:
-        "Proactive IT management, security, and optimization to enhance performance, scalability, and reduce downtime",
-      image: "/it-service.svg",
+        "Our Cloud FinOps expertise ensures cost efficiency while maximizing the performance of your cloud solutions.",
+      image: "/images/OCP-CLD2.svg",
+      color: "#E9F5FF",
+    },
+    {
+      title: "Robust Security & Compliance",
+      description:
+        "We implement robust cybersecurity frameworks to protect your valuable cloud environments & ensure regulatory compliance.",
+      image: "/images/RSC-CLD3.svg",
+      color: "#E9F5FF",
+    },
+    {
+      title: "Innovative & Scalable Solutions",
+      description:
+        "Our cloud services are designed for agility and provide the scalable cloud infrastructure you need for future growth.",
+      image: "/images/ISS-CLD4.svg",
       color: "#FFEAD0",
-    },
-    {
-      title: "Delivery",
-      description:
-        "Seamless IT solution delivery with ensuring timely deployment, efficiency, and business impact.",
-      image: "/delivery.svg",
-      color: "#EFFFEF",
-    },
-    {
-      title: "Consulting",
-      description:
-        "Transform ideas into reality with hands-on IT consulting, solution design, and seamless implementation",
-      image: "/consulting.svg",
-      color: "#F1D9FF",
     },
   ];
 
@@ -53,7 +54,7 @@ export default function page() {
               cloud transformation. Start your journey to a more efficient
               cloud.
             </p>
-            <Button text="Schedule a Consultation Now" path="/" />
+            <Button text="Schedule a Consultation Now"  path="/lets-connect#contact" />
           </div>
         </div>
       </div>
@@ -69,10 +70,15 @@ export default function page() {
               journey, tailoring solutions to your unique business needs. Ready
               to unlock the power of the cloud for your business?
             </p>
-            <button className="flex h-[55px] w-fit items-center rounded-[10px] bg-[#479DDE] px-6 font-normal text-white hover:bg-[#479DDE] focus:outline-none">
+            {/* <Link href="/lets-connect#contact">
+            <button className="flex h-[55px] w-fit items-center rounded-[10px] bg-[#479DDE] px-6 font-normal text-white hover:bg-[#479DDE] cursor-pointer focus:outline-none">
               Request a Free Cloud Strategy Assessment Today{" "}
               <LuMoveRight className="ml-5 text-2xl" />
             </button>
+            </Link> */}
+            
+                     <Button text=" Request a Free Cloud Strategy Assessment Today" path="/lets-connect#contact" />
+            
           </div>
 
           <div className="mt-36">
@@ -100,10 +106,14 @@ export default function page() {
                     businesses streamline operations through system integration,
                     software updates, and automation.
                   </p>
-                  <button className="mt-5 flex h-[55px] w-fit items-center rounded-[10px] bg-[#479DDE] px-6 font-normal text-white hover:bg-[#479DDE] focus:outline-none">
+                  {/* <Link href="/lets-connect#contact">
+                  <button className="mt-5 flex h-[55px] w-fit items-center rounded-[10px] bg-[#479DDE] px-6 font-normal text-white hover:bg-[#479DDE] cursor-pointer focus:outline-none">
                     Schedule a Discovery Session{" "}
                     <LuMoveRight className="ml-5 text-2xl" />
                   </button>
+                  </Link> */}
+                  <Button text="Schedule a Discovery Session" path="/lets-connect#contact" />
+                  
                 </div>
               </div>
 
@@ -259,7 +269,7 @@ export default function page() {
             <p className="text-center text-4xl text-white lg:w-1/2">
               Ready to experience the Frontier Vista difference in the cloud?
             </p>
-            <Button text="Contact Our Cloud Experts for a Consultation" />
+            <Button text="Contact Our Cloud Experts for a Consultation" path="/lets-connect#contact"/>
           </div>
         </div>
       </div>
@@ -290,7 +300,7 @@ export default function page() {
                   transformation.
                 </p>
               </div>
-              <Button text="Start Your Cloud Innovation Journey Now" />
+              <Button text="Start Your Cloud Innovation Journey Now"  path="/lets-connect#contact"/>
             </div>
           </div>
         </div>

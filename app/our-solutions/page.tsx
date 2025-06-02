@@ -42,7 +42,7 @@ export default function page() {
                 agents, and drive sales with our retail and marketing solutions.
               </p>
 
-              <Button text="Request a Demo Now" />
+              <Button text="Request a Demo Now"  path="/lets-connect#contact"/>
             </div>
           </div>
         </div>
@@ -78,7 +78,7 @@ export default function page() {
                   interactive reports customized for your business needs.
                 </p>
 
-                <Button text="Request a BI Demo" />
+                <Button text="Request a BI Demo"  path="/lets-connect#contact"/>
               </div>
             </div>
 
@@ -101,7 +101,7 @@ export default function page() {
                   and building trust.
                 </p>
 
-                <Button text="Let's make your business compliant" />
+                <Button text="Let's make your business compliant"  path="/lets-connect#contact"/>
               </div>
             </div>
           </div>
@@ -123,7 +123,7 @@ export default function page() {
                 with AI-powered analytics.
               </p>
 
-              <Button text="Start Real-Time Analysis Today" />
+              <Button text="Start Real-Time Analysis Today"  path="/lets-connect#contact"/>
             </div>
           </div>
         </div>
@@ -158,7 +158,7 @@ export default function page() {
                 customer engagement with seamless conversational AI.
               </p>
 
-              <Button text="Explore our Chat Agents Solution" />
+              <Button text="Explore our Chat Agents Solution"  path="/lets-connect#contact"/>
             </div>
           </div>
         </div>
@@ -199,7 +199,7 @@ export default function page() {
                   and fintech businesses.
                 </p>
 
-                <Button text="Integrate our Retail API" />
+                <Button text="Integrate our Retail API"  path="/lets-connect#contact"/>
               </div>
             </div>
 

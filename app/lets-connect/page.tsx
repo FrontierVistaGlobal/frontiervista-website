@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Button from "../_components/Button";
 
+
 export default function LetsConnect() {
   const [activeTab, setActiveTab] = useState("job");
 
@@ -14,12 +15,14 @@ export default function LetsConnect() {
         "Discover a wide range of job postings from leading companies in the IT sector.",
       btn: "Browse",
       image: "/images/JOB1.png",
+      path: "/talent-hub",
     },
     {
       title: "Stay Updated with the Latest Job Openings in IT",
       description: "Sign up for alerts to never miss an opportunity.",
       btn: "Sign up",
       image: "/images/JOB2.png",
+      path: "#",
     },
     {
       title: "Join a Community of Talented Professionals and Employers",
@@ -27,6 +30,7 @@ export default function LetsConnect() {
         "Connect, collaborate, and grow your career in the thriving IT landscape.",
       btn: "Join",
       image: "/images/JOB3.png",
+      path: "#",
     },
   ];
 
@@ -75,7 +79,7 @@ export default function LetsConnect() {
           background: "#EFF6FF",
         }}
       >
-        <div className="wrap">
+        <div className="wrap" id="contact">
           <h4 className="text-5xl font-medium">
             Ready to launch your next big idea?
           </h4>
@@ -244,9 +248,12 @@ export default function LetsConnect() {
                     <h4 className="mt-3 text-xl text-[#479DDE]">{job.title}</h4>
                     <p className="mt-2 lg:w-[80%]">{job.description}</p>
 
-                    <button className="mt-5 w-[200px] rounded-xl border-[2px] border-[#479DDE] p-3 text-[#479DDE]">
+                    {/* <Link href={job.path}>
+                        <button className="mt-5 w-[200px] rounded-xl border-[2px] border-[#479DDE] p-3 text-[#479DDE] cursor-pointer">
                       {job.btn}
                     </button>
+                     </Link> */}
+                      <Button text={job.btn} path={job.path} />
                   </div>
                 ))}
 

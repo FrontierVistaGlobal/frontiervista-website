@@ -1,8 +1,8 @@
 "use client";
 import React from "react";
-import { LuMoveRight } from "react-icons/lu";
 import Image from "next/image";
 import Button from "../_components/Button";
+
 
 export default function page() {
   return (
@@ -32,7 +32,7 @@ export default function page() {
               transform your vision into tangible results. Ready to unlock your
               digital potential?
             </p>
-            <Button text="Get a free consultation" path="/" />
+            <Button text="Get a free consultation" path="/lets-connect#contact" />
           </div>
         </div>
       </div>
@@ -207,9 +207,13 @@ export default function page() {
                 </p>
               </div>
 
-              <button className="flex h-[55px] w-fit items-center rounded-[10px] bg-[#479DDE] px-6 font-normal text-white hover:bg-[#479DDE] focus:outline-none">
+                {/* <Link href="/lets-connect#contact">
+                <button className="flex h-[55px] w-fit items-center rounded-[10px] bg-[#479DDE] px-6 font-normal text-white hover:bg-[#479DDE] focus:outline-none cursor-pointer">
                 Get in touch today <LuMoveRight className="ml-5 text-2xl" />
               </button>
+                </Link> */}
+                 <Button text="Get in touch today" path="/lets-connect#contact" />
+              
             </div>
           </div>
         </div>

@@ -71,7 +71,7 @@ export default function page() {
                 activities. Explore our specialized services below to see how we
                 ensure seamless operations for our clients.
               </p>
-              <Button text="Request a Free Cloud Strategy Assessment Today" />
+              <Button text="Request a Free Cloud Strategy Assessment Today" path="/lets-connect#contact"/>
             </div>
           </div>
         </div>
@@ -97,7 +97,7 @@ export default function page() {
                 updates and consistent maintenance, maximizing uptime and
                 minimizing disruptions to your productivity.
               </p>
-              <Button text="Talk to our Experts" />
+              <Button text="Talk to our Experts" path="/who-we-are"/>
             </div>
           </div>
         </div>
