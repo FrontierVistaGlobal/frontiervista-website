@@ -541,11 +541,13 @@ export default function Hello() {
           </div>
         </div>
 
-        <Link href="/what-we-do">
+        {/* <Link href="/what-we-do">
          <button className="mx-auto mt-48 flex h-[55px] w-fit items-center rounded-[10px] bg-[#479DDE] px-6 py-6 font-normal text-white hover:bg-[#479DDE] focus:outline-none cursor-pointer">
           Explore Our Expertise <LuMoveRight className="ml-5 text-2xl" />
         </button>
-        </Link>
+        </Link> */}
+
+         <Button text=" Explore Our Expertise " path="/what-we-do"  className="mx-auto mt-48 flex h-[55px] w-fit items-center px-6 py-6 font-normal"/>
        
       </div>
 
@@ -652,6 +654,8 @@ export default function Hello() {
                   <LuMoveRight className="ml-5 text-2xl" />
                 </button>
               </Link>
+
+               {/* <Button text=" Partner With Us On CSR Intiatives" path="/lets-connect#contact" className="mx-auto my-18 flex h-[55px] w-fit items-center  bg-[#5D0059] px-6 py-6 font-normal text-white hover:bg-[#479DDE] focus:outline-none"/> */}
                
               </div>
             ) : (

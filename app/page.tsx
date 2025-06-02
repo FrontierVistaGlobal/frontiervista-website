@@ -6,7 +6,7 @@ import { LuMoveRight } from "react-icons/lu";
 import { motion, useAnimation } from "motion/react";
 import CarouselTestimonials from "./_components/Testimonies";
 import Button from "./_components/Button";
-import Link from "next/link";
+
 
 export default function Home() {
   const controls = useAnimation();
@@ -185,7 +185,7 @@ export default function Home() {
                 {/* <button className="mt-6 flex h-[55px] w-fit cursor-pointer items-center rounded-[10px] bg-[#479DDE] px-6 font-normal text-white hover:bg-[#479DDE] focus:outline-none">
                   {item.btn} <LuMoveRight className="ml-5 text-2xl" />
                 </button> */}
-                  <Button text= {item.btn} path= {item.link} />
+                  <Button text= {item.btn} path={item.link} />
               </div>
             </div>
           ))}
@@ -221,11 +221,13 @@ export default function Home() {
           ))}
         </motion.div>
 
-          <Link href="/stay-informed#case-studies">
-            <button className="mx-auto mt-16 flex h-[55px] w-fit cursor-pointer items-center rounded-[10px] bg-[#479DDE] px-6 text-xl font-normal text-white hover:bg-[#479DDE] focus:outline-none">
+           {/* <Link href="/stay-informed#case-studies">
+            <button className="mx-auto mt-16 cursor-pointer items-center rounded-[10px] bg-[#479DDE] px-6 text-xl font-normal text-white hover:bg-[#479DDE] focus:outline-none">
           Explore Our Portfolio <LuMoveRight className="ml-5 text-2xl" />
         </button>
-          </Link>
+          </Link> */}
+
+              <Button text="Explore Our Portfolio "  path="/stay-informed#case-studies" className="mx-auto mt-16 flex h-[55px] w-fit px-6 text-xl font-normal"/>
       
       </div>
 
@@ -238,11 +240,13 @@ export default function Home() {
 
         <CarouselTestimonials />
 
-        <Link href="/lets-connect#contact">
+        {/* <Link href="/lets-connect#contact">
          <button className="mx-auto mt-16 flex h-[55px] w-fit cursor-pointer items-center rounded-[10px] bg-[#479DDE] px-6 text-xl font-normal text-white hover:bg-[#479DDE] focus:outline-none">
           Request a Free Consultation <LuMoveRight className="ml-5 text-2xl" />
         </button>
-        </Link>
+        </Link> */}
+
+         <Button text="Request a Free Consultation" path="/lets-connect#contact" />
 
       </div>
 

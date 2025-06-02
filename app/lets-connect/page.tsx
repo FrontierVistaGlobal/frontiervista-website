@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Button from "../_components/Button";
-import Link from "next/link";
+
 
 export default function LetsConnect() {
   const [activeTab, setActiveTab] = useState("job");
@@ -248,11 +248,12 @@ export default function LetsConnect() {
                     <h4 className="mt-3 text-xl text-[#479DDE]">{job.title}</h4>
                     <p className="mt-2 lg:w-[80%]">{job.description}</p>
 
-                    <Link href={job.path}>
+                    {/* <Link href={job.path}>
                         <button className="mt-5 w-[200px] rounded-xl border-[2px] border-[#479DDE] p-3 text-[#479DDE] cursor-pointer">
                       {job.btn}
                     </button>
-                     </Link>
+                     </Link> */}
+                      <Button text={job.btn} path={job.path} />
                   </div>
                 ))}
 

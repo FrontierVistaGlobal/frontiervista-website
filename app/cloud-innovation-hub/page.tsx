@@ -3,7 +3,7 @@ import React from "react";
 import { LuMoveRight } from "react-icons/lu";
 import Image from "next/image";
 import Button from "../_components/Button";
-import Link from "next/link";
+
 
 export default function page() {
   const supportItems = [
@@ -70,12 +70,14 @@ export default function page() {
               journey, tailoring solutions to your unique business needs. Ready
               to unlock the power of the cloud for your business?
             </p>
-            <Link href="/lets-connect#contact">
+            {/* <Link href="/lets-connect#contact">
             <button className="flex h-[55px] w-fit items-center rounded-[10px] bg-[#479DDE] px-6 font-normal text-white hover:bg-[#479DDE] cursor-pointer focus:outline-none">
               Request a Free Cloud Strategy Assessment Today{" "}
               <LuMoveRight className="ml-5 text-2xl" />
             </button>
-            </Link>
+            </Link> */}
+            
+                     <Button text=" Request a Free Cloud Strategy Assessment Today" path="/lets-connect#contact" />
             
           </div>
 
@@ -104,12 +106,13 @@ export default function page() {
                     businesses streamline operations through system integration,
                     software updates, and automation.
                   </p>
-                  <Link href="/lets-connect#contact">
+                  {/* <Link href="/lets-connect#contact">
                   <button className="mt-5 flex h-[55px] w-fit items-center rounded-[10px] bg-[#479DDE] px-6 font-normal text-white hover:bg-[#479DDE] cursor-pointer focus:outline-none">
                     Schedule a Discovery Session{" "}
                     <LuMoveRight className="ml-5 text-2xl" />
                   </button>
-                  </Link>
+                  </Link> */}
+                  <Button text="Schedule a Discovery Session" path="/lets-connect#contact" />
                   
                 </div>
               </div>
