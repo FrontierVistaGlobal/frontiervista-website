@@ -23,7 +23,7 @@ export default function page() {
         </button>
       </div>
 
-      <div className="wrap my-20">
+      <div className="wrap my-20" id="case-studies">
         <h4 className="text-3xl font-medium text-[#1A7AC8]">
           Case Studies & Success Stories
         </h4>

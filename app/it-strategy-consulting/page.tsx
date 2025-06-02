@@ -28,7 +28,7 @@ export default function page() {
               building lasting solutions together. Beyond the strategy, we
               provide the expertise to deliver the solutions.
             </p>
-            <Button text={"Get Expert IT Consulting"} path="/" />
+            <Button text={"Get Expert IT Consulting"} path="/lets-connect#contact" />
           </div>
         </div>
       </div>
@@ -275,7 +275,7 @@ export default function page() {
                 </h4>
               </div>
 
-              <Button text="Discuss Your IT Strategy Today" path="/" />
+              <Button text="Discuss Your IT Strategy Today" path="/lets-connect#contact" />
             </div>
           </div>
         </div>

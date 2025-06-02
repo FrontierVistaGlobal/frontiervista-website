@@ -62,7 +62,7 @@ export default function page() {
       image: "/images/res3.svg",
       color: "#EFFFEF",
       btn: "Contact us today",
-      link: "#",
+      link: "/lets-connect#contact",
     },
     {
       title: "Software Procurement & Licensing",
@@ -81,7 +81,7 @@ export default function page() {
       image: "/images/res5.svg",
       color: "#EFFFEF",
       btn: "Consult our Vendorship Experts",
-      link: "#",
+      link: "/lets-connect#contact",
     },
     {
       title: "Staff Recruitment, Training & Augmentation",
@@ -90,7 +90,7 @@ export default function page() {
       image: "/images/res6.svg",
       color: "#F1D9FF",
       btn: "Find Your Expert IT Team Members",
-      link: "#",
+      link: "/lets-connect#contact",
     },
   ];
 
@@ -110,7 +110,7 @@ export default function page() {
               software, and personnel, significantly cutting costs. Gain control
               of your assets.
             </p>
-            <Button text="Get Started Today" />
+            <Button text="Get Started Today"  path="/lets-connect#contact"/>
           </div>
         </div>
       </div>
@@ -124,7 +124,7 @@ export default function page() {
                 resource management.
               </h4>
 
-              <Button text="Request For Resource Assessment Today" />
+              <Button text="Request For Resource Assessment Today"  path="/lets-connect#contact"/>
             </div>
           </div>
         </div>
@@ -216,7 +216,7 @@ export default function page() {
             <p className="mt-20 mb-4 text-center text-4xl font-light text-white lg:w-2/3">
               Ready to optimize your resources and procurement?
             </p>
-            <Button text="Contact Our Resource Management Experts Today " />
+            <Button text="Contact Our Resource Management Experts Today "  path="/lets-connect#contact"/>
           </div>
         </div>
       </div>

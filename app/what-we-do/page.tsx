@@ -1,6 +1,10 @@
+"use client";
+
 import Image from "next/image";
 import React from "react";
 import { LuMoveRight } from "react-icons/lu";
+import Button from "../_components/Button";
+import Link from "next/link";
 
 export default function page() {
   const services = [
@@ -39,11 +43,13 @@ export default function page() {
         <h4 className="w-[40%] text-center font-semibold text-white lg:text-5xl">
           Transforming Businesses with Bold, Customized Tech Solutions
         </h4>
-
-        <button className="mx-auto mt-18 flex h-[55px] w-fit items-center rounded-[10px] bg-[#479DDE] px-6 py-6 font-normal text-white hover:bg-[#479DDE] focus:outline-none">
+{/* 
+         <button className="mx-auto mt-18 flex h-[55px] w-fit items-center rounded-[10px] bg-[#479DDE] px-6 py-6 font-normal text-white hover:bg-[#479DDE] focus:outline-none">
           Discover How We Can Transform Your Business{" "}
           <LuMoveRight className="ml-5 text-2xl" />
-        </button>
+        </button>  */}
+         
+            <Button text="Discover How We Can Transform Your Business" path="/#support" />
       </div>
 
       <div className="wrap my-30 flex items-center justify-between py-12">
@@ -56,9 +62,13 @@ export default function page() {
             that align with your goals. Through collaboration, we create lasting
             partnerships that drive sustainable impact.
           </p>
-          <button className="flex h-[55px] w-fit items-center rounded-[10px] bg-[#479DDE] px-6 font-normal text-white hover:bg-[#479DDE] focus:outline-none">
+
+          <Link href="/who-we-are#what-makes-us-different">
+           <button className="flex h-[55px] w-fit items-center rounded-[10px] bg-[#479DDE] px-6 font-normal text-white hover:bg-[#479DDE] focus:outline-none">
             Discover More <LuMoveRight className="ml-5 text-2xl" />
           </button>
+          </Link>
+         
         </div>
         <div>
           <Image

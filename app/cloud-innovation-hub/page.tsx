@@ -3,6 +3,7 @@ import React from "react";
 import { LuMoveRight } from "react-icons/lu";
 import Image from "next/image";
 import Button from "../_components/Button";
+import Link from "next/link";
 
 export default function page() {
   const supportItems = [
@@ -53,7 +54,7 @@ export default function page() {
               cloud transformation. Start your journey to a more efficient
               cloud.
             </p>
-            <Button text="Schedule a Consultation Now" path="/" />
+            <Button text="Schedule a Consultation Now"  path="/lets-connect#contact" />
           </div>
         </div>
       </div>
@@ -69,10 +70,13 @@ export default function page() {
               journey, tailoring solutions to your unique business needs. Ready
               to unlock the power of the cloud for your business?
             </p>
-            <button className="flex h-[55px] w-fit items-center rounded-[10px] bg-[#479DDE] px-6 font-normal text-white hover:bg-[#479DDE] focus:outline-none">
+            <Link href="/lets-connect#contact">
+            <button className="flex h-[55px] w-fit items-center rounded-[10px] bg-[#479DDE] px-6 font-normal text-white hover:bg-[#479DDE] cursor-pointer focus:outline-none">
               Request a Free Cloud Strategy Assessment Today{" "}
               <LuMoveRight className="ml-5 text-2xl" />
             </button>
+            </Link>
+            
           </div>
 
           <div className="mt-36">
@@ -100,10 +104,13 @@ export default function page() {
                     businesses streamline operations through system integration,
                     software updates, and automation.
                   </p>
-                  <button className="mt-5 flex h-[55px] w-fit items-center rounded-[10px] bg-[#479DDE] px-6 font-normal text-white hover:bg-[#479DDE] focus:outline-none">
+                  <Link href="/lets-connect#contact">
+                  <button className="mt-5 flex h-[55px] w-fit items-center rounded-[10px] bg-[#479DDE] px-6 font-normal text-white hover:bg-[#479DDE] cursor-pointer focus:outline-none">
                     Schedule a Discovery Session{" "}
                     <LuMoveRight className="ml-5 text-2xl" />
                   </button>
+                  </Link>
+                  
                 </div>
               </div>
 
@@ -259,7 +266,7 @@ export default function page() {
             <p className="text-center text-4xl text-white lg:w-1/2">
               Ready to experience the Frontier Vista difference in the cloud?
             </p>
-            <Button text="Contact Our Cloud Experts for a Consultation" />
+            <Button text="Contact Our Cloud Experts for a Consultation" path="/lets-connect#contact"/>
           </div>
         </div>
       </div>
@@ -290,7 +297,7 @@ export default function page() {
                   transformation.
                 </p>
               </div>
-              <Button text="Start Your Cloud Innovation Journey Now" />
+              <Button text="Start Your Cloud Innovation Journey Now"  path="/lets-connect#contact"/>
             </div>
           </div>
         </div>

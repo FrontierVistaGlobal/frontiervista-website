@@ -5,11 +5,14 @@ import React, { ReactNode } from "react";
 import { FiX, FiPlus } from "react-icons/fi";
 import { LuMoveRight } from "react-icons/lu";
 import Button from "../_components/Button";
+import Link from "next/link";
+
 
 export default function Hello() {
   const [activeAccordion, setActiveAccordion] = React.useState<number>(0);
   const accordionData = [
     {
+      id: "core-values",
       header: "Our Core Values",
       subTitle: "Our Value and Culture",
       description:
@@ -140,10 +143,11 @@ export default function Hello() {
         subHeader: "text-[#23557A]",
         btnClass: "bg-[#479DDE]",
       },
-      btnText: "See How Our Value Dive Our Work",
-      btnLink: "/contact",
+      btnText: "See How Our Value Drive Our Work",
+      btnLink: "/stay-informed#case-studies",
     },
     {
+      id: "what-makes-us-different",
       header: "What Makes Us Different",
       subTitle: "What Makes Frontier Vista Global Inc. Different?",
       description:
@@ -268,9 +272,10 @@ export default function Hello() {
         btnClass: "bg-[#A05600]",
       },
       btnText: "Talk to Our Experts About Your Need",
-      btnLink: "/contact",
+      btnLink: "/lets-connect#contact",
     },
     {
+      id: "how-we-implement",
       header: "How We Implement",
       subTitle: "How We Implement",
       description:
@@ -351,9 +356,10 @@ export default function Hello() {
         btnClass: "bg-[#65B68E]",
       },
       btnText: "Request a Consultation on Your Project",
-      btnLink: "/contact",
+      btnLink: "/lets-connect#contact",
     },
     {
+      id: "our-csr",
       header: "Our Corporate Social Responsibility (CSR)",
       subTitle: "Our Corporate Social Responsibility (CSR)",
       description: "",
@@ -535,9 +541,12 @@ export default function Hello() {
           </div>
         </div>
 
-        <button className="mx-auto mt-48 flex h-[55px] w-fit items-center rounded-[10px] bg-[#479DDE] px-6 py-6 font-normal text-white hover:bg-[#479DDE] focus:outline-none">
+        <Link href="/what-we-do">
+         <button className="mx-auto mt-48 flex h-[55px] w-fit items-center rounded-[10px] bg-[#479DDE] px-6 py-6 font-normal text-white hover:bg-[#479DDE] focus:outline-none cursor-pointer">
           Explore Our Expertise <LuMoveRight className="ml-5 text-2xl" />
         </button>
+        </Link>
+       
       </div>
 
       <div className={`${accordionData[activeAccordion].theme?.bg}`}>
@@ -637,10 +646,13 @@ export default function Hello() {
                   </div>
                 </div>
 
-                <button className="mx-auto my-18 flex h-[55px] w-fit items-center rounded-[10px] bg-[#5D0059] px-6 py-6 font-normal text-white hover:bg-[#479DDE] focus:outline-none">
+              <Link href="/lets-connect#contact">
+               <button className="mx-auto my-18 flex h-[55px] w-fit items-center rounded-[10px] bg-[#5D0059] px-6 py-6 font-normal text-white hover:bg-[#479DDE] focus:outline-none">
                   Partner With Us On CSR Intiatives{" "}
                   <LuMoveRight className="ml-5 text-2xl" />
                 </button>
+              </Link>
+               
               </div>
             ) : (
               <Accordion

@@ -280,7 +280,7 @@ export default function page() {
               </div>
 
               <div className="w-1/2">
-                <Button text="Get in Touch Today for a Free Assessment" />
+                <Button text="Get in Touch Today for a Free Assessment"  path="/lets-connect#contact"/>
               </div>
             </div>
           </div>

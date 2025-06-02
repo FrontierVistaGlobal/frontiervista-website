@@ -6,6 +6,7 @@ import { LuMoveRight } from "react-icons/lu";
 import { motion, useAnimation } from "motion/react";
 import CarouselTestimonials from "./_components/Testimonies";
 import Button from "./_components/Button";
+import Link from "next/link";
 
 export default function Home() {
   const controls = useAnimation();
@@ -35,7 +36,7 @@ export default function Home() {
       image: "/delivery.svg",
       color: "#EFFFEF",
       btn: "Unlock your IT potential Now",
-      link: "/who-are-we",
+      link: "/who-we-are",
     },
     {
       title: "Workforce Solutions",
@@ -150,7 +151,7 @@ export default function Home() {
         />
       </div>
 
-      <div className="wrap pb-[5rem]">
+      <div className="wrap pb-[5rem]" id="support">
         <div className="flex flex-col items-center justify-center text-center">
           <h4 className="text-5xl font-[500]">How we support you</h4>
           <p className="mt-4 text-xl font-[200] lg:w-[70%]">
@@ -181,9 +182,10 @@ export default function Home() {
               <div>
                 <h5 className="text-xl">{item.title}</h5>
                 <p className="font-[300]">{item.description}</p>
-                <button className="mt-6 flex h-[55px] w-fit cursor-pointer items-center rounded-[10px] bg-[#479DDE] px-6 font-normal text-white hover:bg-[#479DDE] focus:outline-none">
+                {/* <button className="mt-6 flex h-[55px] w-fit cursor-pointer items-center rounded-[10px] bg-[#479DDE] px-6 font-normal text-white hover:bg-[#479DDE] focus:outline-none">
                   {item.btn} <LuMoveRight className="ml-5 text-2xl" />
-                </button>
+                </button> */}
+                  <Button text= {item.btn} path= {item.link} />
               </div>
             </div>
           ))}
@@ -219,9 +221,12 @@ export default function Home() {
           ))}
         </motion.div>
 
-        <button className="mx-auto mt-16 flex h-[55px] w-fit cursor-pointer items-center rounded-[10px] bg-[#479DDE] px-6 text-xl font-normal text-white hover:bg-[#479DDE] focus:outline-none">
+          <Link href="/stay-informed#case-studies">
+            <button className="mx-auto mt-16 flex h-[55px] w-fit cursor-pointer items-center rounded-[10px] bg-[#479DDE] px-6 text-xl font-normal text-white hover:bg-[#479DDE] focus:outline-none">
           Explore Our Portfolio <LuMoveRight className="ml-5 text-2xl" />
         </button>
+          </Link>
+      
       </div>
 
       <div className="wrap pt-[5rem] pb-[8rem] text-center">
@@ -233,9 +238,12 @@ export default function Home() {
 
         <CarouselTestimonials />
 
-        <button className="mx-auto mt-16 flex h-[55px] w-fit cursor-pointer items-center rounded-[10px] bg-[#479DDE] px-6 text-xl font-normal text-white hover:bg-[#479DDE] focus:outline-none">
+        <Link href="/lets-connect#contact">
+         <button className="mx-auto mt-16 flex h-[55px] w-fit cursor-pointer items-center rounded-[10px] bg-[#479DDE] px-6 text-xl font-normal text-white hover:bg-[#479DDE] focus:outline-none">
           Request a Free Consultation <LuMoveRight className="ml-5 text-2xl" />
         </button>
+        </Link>
+
       </div>
 
       <div className="mt-[3rem] bg-[#D0F4FF]">
@@ -425,7 +433,7 @@ const HealthCare = () => {
             </p>
 
             <a
-              href="#"
+             href="/stay-informed#case-studies"
               className="mt-5 flex h-full w-full items-center gap-3 font-light text-[#479DDE] underline focus:outline-none"
             >
               <span>Learn more</span>
