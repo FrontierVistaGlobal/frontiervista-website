@@ -660,7 +660,6 @@ export default function Hello() {
               </div>
             ) : (
               <Accordion
-                //   data={item}
                 data={accordionData[activeAccordion]}
                 key={accordionData[activeAccordion].header}
               />
