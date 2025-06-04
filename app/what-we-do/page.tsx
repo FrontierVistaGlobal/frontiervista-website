@@ -58,12 +58,12 @@ export default function page() {
             <Button text="Discover How We Can Transform Your Business" path="/#support" className="mx-auto mt-18 flex h-[55px] w-fit items-center"/>
       </div>
 
-      <div className="wrap my-30 flex items-center justify-between py-12">
-        <div className="w-1/2 px-10">
-          <h5 className="mb-8 text-5xl font-extralight text-[#011D31]">
+      <div className="wrap my-30 flex flex-col md:flex-row items-center justify-between px-4 py-12 gap-10 md:gap-0  ">
+        <div className="md:w-1/2 md:px-10 w-full ">
+          <h5 className="md:mb-8 mb-6 md:text-5xl text-3xl  font-extralight text-[#011D31]">
             Understanding your needs is at the heart of what we do.{" "}
           </h5>
-          <p className="mb-10">
+          <p className="md:mb-10 mb-6 text-base md:text-lg text-[#3D4F60]">
             We customize our approach to design, build, and deliver solutions
             that align with your goals. Through collaboration, we create lasting
             partnerships that drive sustainable impact.
@@ -77,7 +77,7 @@ export default function page() {
           <Button text="Discover More" path="/who-we-are#what-makes-us-different" />
          
         </div>
-        <div>
+        <div className="md:w-1/2 w-full">
           <Image
             src="/wedo1.png"
             alt="We Do"

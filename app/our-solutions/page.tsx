@@ -12,7 +12,7 @@ export default function page() {
         style={{ backgroundImage: "url('images/SOL1.png')" }}
       >
         <div className="flex h-[350px] w-full flex-col justify-center bg-[#190F54CC] text-white">
-          <div className="wrap">
+          <div className="wrap px-4 md:px-10">
             <h4 className="mb-2 text-4xl font-semibold">Our Solutions</h4>
             <p className="mb-3 text-2xl font-[100]">
               Drive growth with Intelligent Technology
@@ -67,7 +67,8 @@ export default function page() {
             className="lg:w-[15rem]"
           />
         </div>
-        <div className="wrap mb-20 flex flex-col">
+
+        <div className="wrap mb-20 flex flex-col px-4 ">
           <h4 className="text-3xl font-medium">Data Analytics & Management</h4>
           <p className="my-2 text-xl font-[400]">
             Unlock Actionable Insights with Our Data Analytics & Management
