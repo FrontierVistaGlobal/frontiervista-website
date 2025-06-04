@@ -11,6 +11,7 @@ import Button from "../_components/Button";
 export default function TalentHub() {
   const [isFilterOpen, setIsFilterOpen] = useState(true);
   const [isApply, setIsApply] = useState(false);
+  const [selectedJob, setSelectedJob] = useState(jobs[0]);
 
   return (
     <div>
@@ -169,29 +170,30 @@ export default function TalentHub() {
             <div
               className={`flex flex-col ${isFilterOpen ? "w-full" : "w-[50%]"}`}
             >
-              {[...Array(5)].map((item, index) => (
+              {jobs.map((item, index) => (
                 <div
                   key={index}
                   onClick={() => {
                     setIsFilterOpen(false);
                     setIsApply(false);
+                     setSelectedJob(item);
                   }}
                   className={`flex h-[100px] w-full cursor-pointer items-center justify-between border border-[#41556533] p-4 ${index % 2 === 0 ? "bg-[#4155650D]" : "bg-white"}`}
                 >
                   <div className="flex flex-col">
                     <div className="flex items-center gap-3">
-                      <p className="text-[#23557A]">Senior Product Designer</p>
+                      <p className="text-[#23557A]">{item.role}</p>
                       <div className="h-[7px] w-[7px] rounded-full bg-[#D9D9D9]" />
                       <span className="text-xs text-[#415565]">2 days ago</span>
                     </div>
                     <div className="flex items-center gap-3">
-                      <p>Nokia</p>
+                      <p>{item.organization}</p>
                       <div className="h-[7px] w-[7px] rounded-full bg-[#D9D9D9]" />
                       <p className="text-sm text-[#415565]">
-                        Norway (Full-time)
+                        {item.province} ({item.type})
                       </p>
                       <div className="h-[7px] w-[7px] rounded-full bg-[#D9D9D9]" />
-                      <p className="text-sm text-[#415565]">Remote</p>
+                      <p className="text-sm text-[#415565]">{item.type}</p>
                     </div>
                   </div>
 
@@ -204,14 +206,14 @@ export default function TalentHub() {
 
             <div className={`p-5 ${isFilterOpen ? "hidden" : "w-[50%]"}`}>
               <h4 className="text-2xl text-[#23557A]">
-                Senior Product Designer
+                {selectedJob?.role}
               </h4>
               <div className="flex w-full items-center gap-3">
-                <p>Nokia</p>
+                <p>{selectedJob?.organization}</p>
                 <div className="h-[7px] w-[7px] rounded-full bg-[#D9D9D9]" />
-                <p className="text-sm text-[#415565]">Norway (Full-time)</p>
+                <p className="text-sm text-[#415565]">{selectedJob?.province} ({selectedJob?.type})</p>
                 <div className="h-[7px] w-[7px] rounded-full bg-[#D9D9D9]" />
-                <p className="text-sm text-[#415565]">Remote</p>
+                <p className="text-sm text-[#415565]">{selectedJob?.type}</p>
               </div>
 
               <div className="mt-4 flex gap-4">
@@ -307,70 +309,23 @@ export default function TalentHub() {
                   <div className="mt-8">
                     <p className="text-xl">Job Overview</p>
                     <p className="mt-2 text-sm font-[200]">
-                      We&apos;re excited to welcome a UI/UX Designer who&apos;s
-                      passionate about crafting outstanding user experiences. In
-                      this role, you&apos;ll be a driving force in shaping the
-                      look and feel of our products. Working closely with
-                      various teams, you&apos;ll transform complex concepts into
-                      intuitive and engaging designs that truly resonate with
-                      our diverse community.
+                      {selectedJob?.overview}
                     </p>
                   </div>
                   <div className="mt-8">
                     <p className="text-xl">Job Duties</p>
                     <ul className="mt-2 list-disc pl-5 font-[200]">
-                      <li>
-                        Generate innovative design concepts and translate them
-                        into feasible product designs through sketches,
-                        wireframes, and prototypes.
-                      </li>
-                      <li>
-                        Conduct user research and usability testing to
-                        understand user needs, preferences, and pain points.
-                      </li>
-                      <li>
-                        Analyze feedback and data to inform design decisions.
-                      </li>
-                      <li>
-                        Create detailed design specifications, for product
-                        features, ensuring alignment with user experience
-                        principles and brand guidelines.
-                      </li>
-                      <li>
-                        Work closely with product managers, engineers, and other
-                        stakeholders to ensure designs are feasible and align
-                        with project goals.
-                      </li>
-                      <li>
-                        Collaborate with the engineering team during the
-                        development phase to ensure the final product meets
-                        design specifications and quality standards.s
-                      </li>
+                      {selectedJob?.duties.map((duty, index) => (
+                    <li key={index}>{duty}</li>
+           ))}
                     </ul>
                   </div>
                   <div className="mt-8">
                     <p className="text-xl">What we are looking for in you</p>
                     <ul className="mt-2 list-disc pl-5 font-[200]">
-                      <li>
-                        Degree in Product Design, Industrial Design, Graphic
-                        Design, or a related field.
-                      </li>
-                      <li>
-                        3-5 years of experience in product design, with a
-                        portfolio showcasing successful design projects.
-                      </li>
-                      <li>
-                        Proficiency in design and prototyping tools such as
-                        Sketch, Figma, or similar tools.
-                      </li>
-                      <li>
-                        Strong understanding of user-centered design principles
-                        and methodologies.
-                      </li>
-                      <li>
-                        Excellent visual design skills with a strong sense of
-                        aesthetics and attention to detail.
-                      </li>
+                     {selectedJob?.requirements.map((req, i) => (
+            <li key={i}>{req}</li>
+          ))}
                     </ul>
                   </div>
                 </>
@@ -382,3 +337,189 @@ export default function TalentHub() {
     </div>
   );
 }
+
+
+
+const jobs = [
+  {
+    role: "Financial and Contract Analyst",
+    organization: "Government of Alberta",
+    province: "Alberta",
+    type: "Contract",
+    model: "Hybrid",
+    overview:
+      "The candidate will apply their financial and accounting skills along with knowledge of IT to support financial and contract reporting. This includes conducting financial and contractual analyses, developing and implementing financial processes, and producing internal and external reports, including building dashboards. The role requires a hybrid work model, primarily based in Edmonton, Alberta.",
+    duties: [
+      "Review and interpret financial, contractual, and operational data to monitor performance and compliance.",
+      "Assist in preparing annual and project-based budgets and develop contract-level budget justifications in collaboration with program areas.",
+      "Maintain and update a comprehensive contract inventory and conduct detailed spend analysis to assess compliance with contractual terms and value received for funds expended.",
+      "Identify cost-saving opportunities through contract consolidation, renegotiation, and elimination of underperforming contracts.",
+      "Prepare and present comprehensive zero-based budgeting reports.",
+      "Evaluate contracts and programs from a zero-based perspective, and document justification for all expenditures.",
+      "Collect and analyze data related to grant funding and assess financial impact outcomes associated with grants to determine value for money.",
+      "Support compliance with internal and external grant reporting requirements.",
+      "Develop dashboards and reports to support internal and external decision-making.",
+      "Provide recommendations to update and maintain financial policies and procedures related to contracts and grants.",
+      "Identify and recommend process improvements to increase efficiency and accuracy.",
+      "Collaborate with cross-functional teams to gather, analyze, and disseminate budgeting and forecasting data.",
+      "Support variance analysis and investigate abnormalities in budget execution.",
+      "Perform other related duties as required."
+    ],
+    requirements: [
+      "Bachelor’s degree in Finance, Accounting, Economics, or a related field.",
+      "Minimum 3-5 years of experience in financial analysis, budgeting, and forecasting, especially in zero-based or performance-based budgeting environments.",
+      "Demonstrated expertise in contract cost analysis, spend analysis, and cost allocation methodologies.",
+      "Proficiency in financial modeling, forecasting, and scenario analysis.",
+      "Advanced skills in MS Excel and financial/budgeting software (experience with ERP systems preferred).",
+      "Excellent written and verbal communication skills for reporting and presenting budget analysis findings.",
+      "Experience in process documentation and supporting audit/traceability requirements."
+    ]
+  },
+  {
+    role: "Data Analyst",
+    organization: "Government of Alberta",
+    province: "Alberta",
+    type: "Contract",
+    model: "Hybrid",
+    overview:
+      "A Data Analyst is expected to provide expertise in data collection, data-driven storytelling, statistical analysis, data modelling and visualization, data policies, and governance standards. This role involves creating plans and strategies to identify linkages between data forms, integrating data models, developing data policies, and presenting statistical analysis and data visualizations to improve service delivery.",
+    duties: [
+      "Implement, develop, and share service metrics and service performance dashboards of IT projects related to spend, progress, and risk level.",
+      "Inform project team and leadership about current data trends and performance, and recommend performance metrics to support program delivery and monitoring.",
+      "Research best practices and make recommendations for data-driven governance policies to support the adoption of digital services.",
+      "Collaborate with Technology and Innovation (TI) program areas to investigate program needs, understand contract requirements, and support the achievement of program deliverables.",
+      "Develop comprehensive contract inventory and conduct spend analysis to support financial planning and decision-making.",
+      "Prepare contract-level budget justifications and develop optimized contractual spend plans aligned with program objectives.",
+      "Produce comprehensive zero-based budgeting reports to enhance financial transparency and resource allocation.",
+      "Support grants management through data collection and analysis, aiding in compliance and performance reporting.",
+      "Support corporate priorities and data-driven decision making by leveraging existing and new analytics, data visualizations, data models, and storytelling tools.",
+      "Perform other responsibilities as required or requested."
+    ],
+    requirements: [
+      "Bachelor’s degree in Data Science, Statistics, Computer Science, Finance, or a related field.",
+      "Minimum 3+ years of experience in data analysis, preferably supporting finance or procurement processes.",
+      "Experience with data extraction, cleansing, and preparing data sets related to contracts, spending, and budgeting.",
+      "Proficiency in data analysis/visualization tools (Excel, Power BI, Tableau) and working knowledge of SQL or other database tools.",
+      "Ability to translate complex financial/operational data into actionable insights for zero-based budgeting decisions.",
+      "Experience in preparing dashboards and reports tailored for various audiences.",
+      "Strong attention to detail and commitment to data accuracy and quality."
+    ]
+  }
+ 
+
+];
+
+jobs.push(
+  {
+    role: "Project Coordinator",
+    organization: "Government of Alberta",
+    province: "Alberta",
+    type: "Contract",
+    model: "Hybrid",
+    overview:
+      "The Project Coordinator will support the successful delivery of government IT projects by coordinating project activities, resources, and communication. The role requires managing timelines, budgets, and progress reporting to ensure alignment with project goals and government standards. Work is based in Alberta and follows a hybrid model.",
+    duties: [
+      "Support planning and coordination of project activities and resources across multiple departments.",
+      "Monitor project schedules, track progress, and ensure deliverables are completed on time.",
+      "Facilitate meetings and maintain documentation such as minutes, action items, and issue logs.",
+      "Coordinate with internal and external stakeholders to gather information and support project execution.",
+      "Maintain project documentation, including project charters, plans, schedules, and risk registers.",
+      "Assist in budget tracking and project reporting to leadership.",
+      "Support compliance with project management methodologies and tools used in the Government of Alberta.",
+      "Escalate project risks and issues as appropriate to ensure timely resolution."
+    ],
+    requirements: [
+      "Diploma or bachelor’s degree in Business Administration, Project Management, or related field.",
+      "2+ years experience supporting project management activities.",
+      "Strong organizational and multitasking skills.",
+      "Proficiency in MS Office Suite (especially Excel and MS Project).",
+      "Familiarity with project management software and tools.",
+      "Strong communication and documentation skills.",
+      "PMP/CAPM or similar certification is considered an asset."
+    ]
+  },
+  {
+    role: "Project Manager",
+    organization: "Government of Alberta",
+    province: "Alberta",
+    type: "Contract",
+    model: "Hybrid",
+    overview:
+      "The Project Manager oversees planning, execution, monitoring, and delivery of complex government IT and transformation projects. This includes stakeholder coordination, budget and resource management, and ensuring successful outcomes aligned with business and technical objectives. The role follows a hybrid model based in Alberta.",
+    duties: [
+      "Develop and manage project plans, timelines, scope, and budgets for IT and business transformation projects.",
+      "Lead cross-functional project teams, ensuring all project objectives are met.",
+      "Manage project risks, issues, and dependencies, escalating where necessary.",
+      "Ensure alignment with Government of Alberta project management frameworks.",
+      "Prepare and deliver executive-level status reports and presentations.",
+      "Manage stakeholder expectations and ensure clear communication across all levels.",
+      "Ensure quality control and risk mitigation strategies are applied throughout the project lifecycle.",
+      "Provide mentorship and support to junior project team members."
+    ],
+    requirements: [
+      "Bachelor’s degree in Computer Science, Business, or related field.",
+      "5+ years experience managing complex IT projects, ideally within government or large enterprise environments.",
+      "Demonstrated success delivering large-scale projects on time and within budget.",
+      "Strong leadership, interpersonal, and stakeholder management skills.",
+      "Advanced proficiency in project management tools and methodologies (Agile, Waterfall).",
+      "PMP or PRINCE2 certification is required; Agile certification is a plus.",
+      "Excellent communication, negotiation, and documentation skills."
+    ]
+  },
+  {
+    role: "Digital Architect",
+    organization: "Government of Alberta",
+    province: "Alberta",
+    type: "Contract",
+    model: "Hybrid",
+    overview:
+      "The Digital Architect is responsible for designing and guiding the implementation of digital systems that meet the strategic objectives of the Government of Alberta. The role involves defining system architectures, integration strategies, and ensuring alignment with digital transformation goals, enterprise architecture standards, and security requirements.",
+    duties: [
+      "Develop enterprise-level architecture models for digital government solutions.",
+      "Guide technical design and ensure alignment with architectural standards and best practices.",
+      "Collaborate with stakeholders to define system requirements, integrations, and digital services.",
+      "Support procurement by defining technical architecture requirements and evaluating vendor solutions.",
+      "Assess technical feasibility and provide direction on modernization and cloud strategies.",
+      "Ensure designs are scalable, secure, and cost-effective.",
+      "Review and approve design documentation and support solution implementation.",
+      "Contribute to the evolution of the government’s digital architecture framework."
+    ],
+    requirements: [
+      "Bachelor’s or master’s degree in Computer Science, Software Engineering, or related field.",
+      "8+ years experience in IT architecture, with focus on digital services and enterprise integration.",
+      "Strong understanding of cloud platforms (Azure, AWS), APIs, microservices, and security principles.",
+      "Experience working with government systems or large public-sector environments.",
+      "Proficiency in architecture modeling tools (e.g., ArchiMate, TOGAF frameworks).",
+      "Excellent stakeholder management, communication, and documentation skills.",
+      "TOGAF or other architecture certification is preferred."
+    ]
+  },
+  {
+    role: "Scrum Master",
+    organization: "Government of Alberta",
+    province: "Alberta",
+    type: "Contract",
+    model: "Hybrid",
+    overview:
+      "The Scrum Master facilitates agile processes for government technology teams. The role supports delivery of high-value digital services by removing impediments, enabling collaboration, and guiding teams in applying agile principles. It promotes continuous improvement and alignment with modern delivery practices.",
+    duties: [
+      "Serve as Scrum Master for one or more agile teams, facilitating Scrum ceremonies (stand-ups, planning, reviews, retrospectives).",
+      "Coach teams and stakeholders on Agile/Scrum practices and values.",
+      "Help identify and resolve team impediments and support productive team dynamics.",
+      "Foster transparency, collaboration, and open communication among team members and stakeholders.",
+      "Track team performance metrics (velocity, burndown, etc.) and ensure continuous improvement.",
+      "Promote alignment with broader organizational agile transformation goals.",
+      "Ensure effective delivery by maintaining a focus on priorities and scope.",
+      "Support product owners with backlog grooming and sprint planning."
+    ],
+    requirements: [
+      "Bachelor’s degree in Business, IT, or related discipline.",
+      "3+ years experience as a Scrum Master in an Agile environment.",
+      "Strong understanding of Agile frameworks (Scrum, Kanban) and team facilitation skills.",
+      "Certified ScrumMaster (CSM), SAFe, or equivalent Agile certification.",
+      "Excellent interpersonal, conflict resolution, and servant leadership qualities.",
+      "Experience working in large enterprise or government environments is an asset.",
+      "Strong communication and organizational skills."
+    ]
+  }
+);

@@ -97,7 +97,7 @@ export default function page() {
                 updates and consistent maintenance, maximizing uptime and
                 minimizing disruptions to your productivity.
               </p>
-              <Button text="Talk to our Experts" path="/who-we-are"/>
+              <Button text="Talk to our Experts" path="/who-we-are?active=1#accordion"/>
             </div>
           </div>
         </div>
