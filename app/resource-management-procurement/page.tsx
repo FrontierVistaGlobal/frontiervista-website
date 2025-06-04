@@ -110,7 +110,7 @@ export default function page() {
               software, and personnel, significantly cutting costs. Gain control
               of your assets.
             </p>
-            <Button text="Get Started Today"  path="/lets-connect#contact"/>
+            <Button text="Get Started Today" path="/lets-connect#contact" />
           </div>
         </div>
       </div>
@@ -124,60 +124,83 @@ export default function page() {
                 resource management.
               </h4>
 
-              <Button text="Request For Resource Assessment Today"  path="/lets-connect#contact"/>
+              <Button
+                text="Request For Resource Assessment Today"
+                path="/lets-connect#contact"
+              />
             </div>
           </div>
         </div>
       </div>
 
       <div
-        className="relative flex h-[900px] items-end bg-cover bg-center"
+        className="relative flex h-[700px] items-end bg-cover bg-center"
         style={{ backgroundImage: "url('images/resource-bg2.png')" }}
       ></div>
 
-      <div className="wrap py-[10rem] pb-[5rem]">
-        <div className="flex flex-col items-center justify-center text-center">
-          <h4 className="text-5xl font-[500] lg:w-2/3">
-            Unlock Efficiency and Savings with Our Expert Services
-          </h4>
+      <div className="relative">
+        <div className="absolute top-0 right-0 hidden lg:block">
+          <Image
+            src={"/images/line-bg1.png"}
+            height={1000}
+            width={1000}
+            alt=""
+            className="lg:w-[15rem]"
+          />
         </div>
+        <div className="absolute top-[20%] left-0 hidden lg:block">
+          <Image
+            src={"/images/line-bg2.png"}
+            height={1000}
+            width={1000}
+            alt=""
+            className="lg:w-[15rem]"
+          />
+        </div>
+        <div className="wrap py-[10rem] pb-[5rem]">
+          <div className="flex flex-col items-center justify-center text-center">
+            <h4 className="text-5xl font-[500] lg:w-2/3">
+              Unlock Efficiency and Savings with Our Expert Services
+            </h4>
+          </div>
 
-        <div className="mt-16 grid gap-4 md:grid-cols-2">
-          {supportItems.map((item) => (
-            <div
-              key={item.title}
-              className="flex min-h-[200px] gap-8 rounded-lg bg-[#FFEEED] p-10"
-            >
+          <div className="mt-16 grid gap-4 md:grid-cols-2">
+            {supportItems.map((item) => (
               <div
-                className={`flex h-[60px] w-[200px] items-center justify-center rounded bg-white p-3`}
+                key={item.title}
+                className="flex min-h-[200px] gap-8 rounded-lg bg-[#FFEEED] p-10"
               >
-                <Image
-                  src={item.image}
-                  width={100}
-                  height={100}
-                  alt=""
-                  className="h-[40px] w-[40px] object-contain"
-                />
+                <div
+                  className={`flex h-[60px] w-[200px] items-center justify-center rounded bg-white p-3`}
+                >
+                  <Image
+                    src={item.image}
+                    width={100}
+                    height={100}
+                    alt=""
+                    className="h-[40px] w-[40px] object-contain"
+                  />
+                </div>
+                <div>
+                  <h5 className="mb-2 text-xl">{item.title}</h5>
+                  <p className="font-[300]">{item.description}</p>
+                  <button className="mt-6 flex h-[55px] w-fit cursor-pointer items-center rounded-[10px] bg-[#479DDE] px-6 font-normal text-white hover:bg-[#479DDE] focus:outline-none">
+                    {item.btn} <LuMoveRight className="ml-5 text-2xl" />
+                  </button>
+                </div>
               </div>
-              <div>
-                <h5 className="mb-2 text-xl">{item.title}</h5>
-                <p className="font-[300]">{item.description}</p>
-                <button className="mt-6 flex h-[55px] w-fit cursor-pointer items-center rounded-[10px] bg-[#479DDE] px-6 font-normal text-white hover:bg-[#479DDE] focus:outline-none">
-                  {item.btn} <LuMoveRight className="ml-5 text-2xl" />
-                </button>
-              </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
 
-        <p className="mt-20 text-5xl font-light text-[#D55B5A] lg:w-1/2">
-          Partner with Us for Smarter Resource Management
-        </p>
+          <p className="mt-20 text-5xl font-light text-[#D55B5A] lg:w-1/2">
+            Partner with Us for Smarter Resource Management
+          </p>
+        </div>
       </div>
 
       <div className="bg-[#011D31] py-[8rem]">
         <div className="wrap flex flex-col justify-center">
-          <h4 className="mb-6 text-center text-5xl font-medium text-white lg:w-1/2 mx-auto">
+          <h4 className="mx-auto mb-6 text-center text-5xl font-medium text-white lg:w-1/2">
             Why Frontier Vista is the ideal choice
           </h4>
 
@@ -188,7 +211,7 @@ export default function page() {
                 className="flex w-full items-center justify-center gap-6 rounded-lg bg-[#DCEAFD] p-8 text-center"
               >
                 <div
-                  className="mb-6 h-[60px] w-[100px] rounded p-4 "
+                  className="mb-6 h-[60px] w-[100px] rounded p-4"
                   style={{ backgroundColor: item.color }}
                 >
                   <Image
@@ -216,7 +239,10 @@ export default function page() {
             <p className="mt-20 mb-4 text-center text-4xl font-light text-white lg:w-2/3">
               Ready to optimize your resources and procurement?
             </p>
-            <Button text="Contact Our Resource Management Experts Today "  path="/lets-connect#contact"/>
+            <Button
+              text="Contact Our Resource Management Experts Today "
+              path="/lets-connect#contact"
+            />
           </div>
         </div>
       </div>
