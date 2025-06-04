@@ -6,10 +6,16 @@ import { FiX, FiPlus } from "react-icons/fi";
 import { LuMoveRight } from "react-icons/lu";
 import Button from "../_components/Button";
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
+
+
 
 
 export default function Hello() {
-  const [activeAccordion, setActiveAccordion] = React.useState<number>(0);
+  const searchParams = useSearchParams();
+  const active = searchParams.get('active');
+  const [activeAccordion, setActiveAccordion] = React.useState<number>(active ? parseInt(active as string) : 0);
+  console.log( active);
   const accordionData = [
     {
       id: "core-values",
@@ -379,10 +385,13 @@ export default function Hello() {
           We are <span className="text-[#479DDE]">Frontier Vista</span>, and the
           vision is to unlock new frontiers and accelerate sustainable growth.
         </p>
+     
+        <Button text="Discover How We Drive Growth" path="/who-we-are?active=1#accordion" className="mx-auto mt-18 flex h-[55px] w-fit"/>
 
-        <button className="mx-auto mt-18 flex h-[55px] w-fit items-center rounded-[10px] bg-[#479DDE] px-6 font-normal text-white hover:bg-[#479DDE] focus:outline-none">
+
+        {/* <button className="mx-auto mt-18 flex h-[55px] w-fit items-center rounded-[10px] bg-[#479DDE] px-6 font-normal text-white hover:bg-[#479DDE] focus:outline-none">
           Discover How We Drive Growth <LuMoveRight className="ml-5 text-2xl" />
-        </button>
+        </button> */}
       </div>
 
       <div className="mb-5 w-full">
@@ -415,9 +424,11 @@ export default function Hello() {
           </div>
         </div>
 
-        <button className="mx-auto mt-18 flex h-[55px] w-fit items-center rounded-[10px] bg-[#479DDE] px-6 font-normal text-white hover:bg-[#479DDE] focus:outline-none">
+            <Button text="Discover Our Core Values" path="/who-we-are?active=0#accordion" className="mx-auto mt-18 flex h-[55px] w-fit"/>
+
+        {/* <button className="mx-auto mt-18 flex h-[55px] w-fit items-center rounded-[10px] bg-[#479DDE] px-6 font-normal text-white hover:bg-[#479DDE] focus:outline-none">
           Discover Our Core Values <LuMoveRight className="ml-5 text-2xl" />
-        </button>
+        </button> */}
       </div>
 
       <div
@@ -451,7 +462,7 @@ export default function Hello() {
           </p>
         </div>
 
-        <div className="relative my-18 h-[80vh] 2xl:h-[70vh]">
+        <div className="relative my-18 min-h-[95vh] ">
           {/* Vertical Timeline Line */}
           <div className="mty-12 left-6 min-h-[80vh] w-0.5 bg-white"></div>
           <div
@@ -551,7 +562,7 @@ export default function Hello() {
        
       </div>
 
-      <div className={`${accordionData[activeAccordion].theme?.bg}`}>
+      <div className={`${accordionData[activeAccordion].theme?.bg}`} id="accordion">
         <div className="wrap min-h-[80vh] py-12">
           <div className="flex justify-between">
             {accordionData.map((item, index) => (

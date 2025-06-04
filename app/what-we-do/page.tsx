@@ -3,6 +3,7 @@
 import Image from "next/image";
 import React from "react";
 import Button from "../_components/Button";
+import Link from "next/link";
 
 
 export default function page() {
@@ -10,26 +11,32 @@ export default function page() {
     {
       title: "IT Strategy & Consulting",
       image: "/images/services1.png",
+      link: "/it-strategy-consulting",
     },
     {
       title: "Digital Solutions & Development",
       image: "/images/services2.png",
+      link: "/digital-solutions",
     },
     {
       title: "Data Intelligence & Advanced Analytics",
       image: "/images/services3.png",
+      link: "/data-intelligence-advanced-analytics",
     },
     {
       title: "Operational Excellence",
       image: "/images/services4.png",
+      link: "/operational-excellence",
     },
     {
       title: "Cloud Innovation Hub",
       image: "/images/services5.png",
+      link: "/cloud-innovation-hub",
     },
     {
       title: "Resource Management & Procurement",
       image: "/images/services6.png",
+      link: "/resource-management-procurement",
     },
   ];
 
@@ -94,10 +101,10 @@ export default function page() {
 
             <div className="mt-[2rem] grid w-full grid-cols-1 gap-6 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
               {services.map((service, index) => (
-                <div
-                  key={index}
-                  className="relative overflow-hidden rounded-md shadow-md transition-shadow duration-300 hover:shadow-lg"
-                >
+                <Link key={index}
+                    href={service.link}
+                    className="relative overflow-hidden rounded-md shadow-md transition-shadow duration-300 hover:shadow-lg">
+                 <div>
                   <Image
                     src={service.image}
                     alt={service.title}
@@ -118,6 +125,8 @@ export default function page() {
                     </span>
                   </a>
                 </div>
+                </Link>
+               
               ))}
             </div>
 

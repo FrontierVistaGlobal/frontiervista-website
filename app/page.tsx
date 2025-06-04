@@ -37,7 +37,7 @@ export default function Home() {
       image: "/delivery.svg",
       color: "#EFFFEF",
       btn: "Unlock your IT potential Now",
-      link: "/who-we-are",
+      link: "/who-we-are?active=2#accordion",
     },
     {
       title: "Workforce Solutions",
@@ -89,15 +89,15 @@ export default function Home() {
   return (
     <div>
       <div
-        className="relative h-[650px] bg-cover bg-center"
+        className="relative min-h-[650px]   bg-cover bg-center"
         style={{ backgroundImage: "url('/homebg.png')" }}
       >
-        <div className="relative z-10 mx-auto flex h-full max-w-[1200px] flex-col pt-[8rem] text-white">
+        <div className="relative justify-between pb-[3rem] pt-[7rem] z-10 mx-auto flex h-full max-w-[1200px] flex-col  px-4 sm:px-6 md:px-8  text-white ">
           <div className="flex flex-col">
-            <h3 className="mb-2 text-5xl font-[800] text-white">
+            <h3 className="mb-2 text-3xl  lg:text-5xl font-[800] text-white">
               Unlock New Frontiers
             </h3>
-            <p className="mb-12 w-1/2 text-lg font-[200]">
+            <p className="mb-12 md:w-1/2 text-lg font-[200]">
               Empowering businesses to achieve transformative growth through
               innovative solutions.
             </p>
@@ -105,9 +105,9 @@ export default function Home() {
             <Button text="Explore Our Solutions" path="/what-we-do" />
           </div>
 
-          <div className="absolute bottom-[50px] flex w-full justify-between">
+          <div className="mt-[4rem] grid grid-cols-2 md:grid-cols-4 w-full justify-between">
             <div className="flex flex-col items-center text-center">
-              <p className="text-[60px] font-[100]">
+              <p className="lg:text-[60px] text-[50px]  font-[100]">
                 <CountUp start={0} end={67} duration={2.5} suffix="%" />
               </p>
               <p className="w-2/3 text-center text-sm">
@@ -115,15 +115,15 @@ export default function Home() {
               </p>
             </div>
             <div className="text-center">
-              <p className="w-[80%] text-[60px] font-[100]">
+            <p className="lg:text-[60px] text-[50px]  font-[100]">
                 <CountUp start={0} end={400} duration={2.5} suffix="%" />
               </p>
               <p className="w-[80%] text-center text-sm">
                 GROWTH IN CLIENT BASE
               </p>
             </div>
-            <div className="text-center">
-              <p className="w-[80%] text-[60px] font-[100]">
+            <div className="text-center min-w-[140px]">
+             <p className="lg:text-[60px] text-[50px]  font-[100]">
                 <CountUp start={0} end={90} duration={2.5} suffix="%" />
               </p>
               <p className="w-[80%] text-center text-sm">
@@ -131,7 +131,7 @@ export default function Home() {
               </p>
             </div>
             <div className="text-center">
-              <p className="w-[80%] text-center text-[60px] font-[100]">
+               <p className="lg:text-[60px] text-[50px] w-[80%]  font-[100]">
                 <CountUp start={0} end={5} duration={2.5} />
               </p>
               <p className="w-[80%] text-center text-sm">NEW MARKET ENTERED</p>
@@ -140,8 +140,8 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="wrap flex w-full flex-col items-center gap-6 py-[10rem] text-center">
-        <p className="mx-auto w-[70%] text-center text-5xl font-[300]">
+      <div className="wrap flex w-full  flex-col items-center gap-6 px-4 lg:py-[10rem] py-20 text-center">
+        <p className="mx-auto max-w-[750px] text-center lg:text-4xl text-3xl font-[300]">
           Frontier Vista is a business and technology consulting firm delivering
           bold software, data, and AI solutions to accelerate and scale business
           growth.
@@ -154,20 +154,20 @@ export default function Home() {
 
       <div className="wrap pb-[5rem]" id="support">
         <div className="flex flex-col items-center justify-center text-center">
-          <h4 className="text-5xl font-[500]">How we support you</h4>
-          <p className="mt-4 text-xl font-[200] lg:w-[70%]">
+          <h4 className="lg:text-5xl text-4xl font-[500]">How we support you</h4>
+          <p className="mt-4 text-xl font-[200]  lg:w-[70%]">
             We provide comprehensive solutions tailored to your business needs
           </p>
         </div>
 
-        <div className="mt-16 grid gap-4 md:grid-cols-2">
+        <div className="mt-16 grid lg:gap-4 gap-2 grid-cols-1 md:grid-cols-2">
           {supportItems.map((item) => (
             <div
               key={item.title}
-              className="flex min-h-[200px] gap-8 rounded-lg bg-[#EFF6FF] p-10"
+              className="flex flex-col lg:flex-row min-h-[200px] gap-4 lg:gap-8 rounded-lg bg-[#EFF6FF] p-6 lg:p-10"
             >
               <div
-                className={`flex h-[60px] w-[140px] items-center justify-center rounded`}
+                className={`flex lg:h-[60px] h-[50px] w-[50px] lg:w-[140px] items-center justify-center rounded`}
                 style={{
                   background: item.color,
                 }}
@@ -177,12 +177,12 @@ export default function Home() {
                   width={1000}
                   height={1000}
                   alt=""
-                  className="h-[35px] w-[35px] object-contain"
+                  className="lg:h-[35px] h-[25px] w-[25px] lg:w-[35px] object-contain"
                 />
               </div>
-              <div>
-                <h5 className="text-xl">{item.title}</h5>
-                <p className="font-[300]">{item.description}</p>
+              <div className="flex flex-col justify-between">
+                <h5 className="lg:text-xl text-lg font-semibold">{item.title}</h5>
+                <p className="font-[300] text-sm lg:text-base mt-2" >{item.description}</p>
                 {/* <button className="mt-6 flex h-[55px] w-fit cursor-pointer items-center rounded-[10px] bg-[#479DDE] px-6 font-normal text-white hover:bg-[#479DDE] focus:outline-none">
                   {item.btn} <LuMoveRight className="ml-5 text-2xl" />
                 </button> */}
@@ -363,3 +363,12 @@ export default function Home() {
     </div>
   );
 }
+
+
+
+
+
+
+
+
+
