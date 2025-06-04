@@ -83,8 +83,8 @@ export default function page() {
   return (
     <div className="w-full">
       <div
-        className="relative flex h-[700px] items-end bg-cover bg-center"
-        style={{ backgroundImage: "url('images/data-bg.png')" }}
+        className="relative flex min-h-[700px] items-end bg-cover bg-center"
+        style={{ backgroundImage: "url('images/DIA.png')" }}
       >
         <div
           className="flex h-[350px] w-full flex-col justify-center bg-[#030214] text-white"
@@ -280,7 +280,10 @@ export default function page() {
               </div>
 
               <div className="w-1/2">
-                <Button text="Get in Touch Today for a Free Assessment"  path="/lets-connect#contact"/>
+                <Button
+                  text="Get in Touch Today for a Free Assessment"
+                  path="/lets-connect#contact"
+                />
               </div>
             </div>
           </div>

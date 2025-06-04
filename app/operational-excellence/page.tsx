@@ -71,18 +71,40 @@ export default function page() {
                 activities. Explore our specialized services below to see how we
                 ensure seamless operations for our clients.
               </p>
-              <Button text="Request a Free Cloud Strategy Assessment Today" path="/lets-connect#contact"/>
+              <Button
+                text="Request a Free Cloud Strategy Assessment Today"
+                path="/lets-connect#contact"
+              />
             </div>
           </div>
         </div>
       </div>
 
       <div
-        className="relative flex h-[900px] items-end bg-cover bg-center"
+        className="relative flex h-[700px] items-end bg-cover bg-center"
         style={{ backgroundImage: "url('images/op-excel-2.png')" }}
       ></div>
 
-      <div className="flex flex-col gap-18 py-[8rem]">
+      <div className="relative flex flex-col gap-18 py-[8rem]">
+        <div className="absolute top-0 right-0 hidden lg:block">
+          <Image
+            src={"/images/line-bg1.png"}
+            height={1000}
+            width={1000}
+            alt=""
+            className="lg:w-[20rem]"
+          />
+        </div>
+
+        <div className="absolute top-[20%] left-0 hidden lg:block">
+          <Image
+            src={"/images/line-bg2.png"}
+            height={1000}
+            width={1000}
+            alt=""
+            className="lg:w-[20rem]"
+          />
+        </div>
         <div className="wrap">
           <div className="flex w-full gap-4 lg:w-1/2">
             <p className="text-8xl text-[#479DDE33]"> 01</p>
