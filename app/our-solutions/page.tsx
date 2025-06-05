@@ -11,7 +11,7 @@ export default function page() {
         className="relative flex min-h-[700px] items-end bg-cover bg-center"
         style={{ backgroundImage: "url('images/SOL1.png')" }}
       >
-        <div className="flex h-[350px] w-full flex-col justify-center bg-[#190F54CC] text-white">
+        <div className="flex min-h-[350px] py-[3rem] w-full flex-col justify-center bg-[#190F54CC] text-white">
           <div className="wrap px-4 md:px-10">
             <h4 className="mb-2 text-4xl font-semibold">Our Solutions</h4>
             <p className="mb-3 text-2xl font-[100]">
@@ -23,7 +23,10 @@ export default function page() {
               requirements and drive rapid growth and efficiency. Ready to
               explore
             </p>
-            <Button text="Discover Our Solutions Now" />
+            <div className="my-5">
+                <Button text="Discover Our Solutions Now" />
+            </div>
+           
           </div>
         </div>
       </div>
@@ -80,14 +83,14 @@ export default function page() {
           </p>
 
           <div className="mt-5">
-            <div className="grid grid-cols-2 gap-5">
+            <div className="grid md:grid-cols-2 grid-cols-1 gap-5">
               <div>
                 <Image
                   src={"/images/SOL2.png"}
                   width={1000}
                   height={100}
                   alt=""
-                  className="h-[200px] w-full"
+                  className="h-[200px] w-full object-cover"
                 />
 
                 <div className="bg-[#E8E6FF] p-8">
@@ -161,11 +164,11 @@ export default function page() {
           </div>
         </div>
 
-        <div className="wrap mb-20 flex flex-col">
-          <h4 className="text-3xl font-medium">
+        <div className="wrap mb-20 flex flex-col lg:px-0 px-4"> 
+          <h4 className="md:text-3xl text-2xl font-medium">
             Intelligent Chat Agent Solutions
           </h4>
-          <p className="my-2 text-xl font-[400]">
+          <p className="my-2 md:text-xl font-[400] text-lg">
             Enhance Customer Engagement with Intelligent Chat Agents
           </p>
 
@@ -176,12 +179,12 @@ export default function page() {
                 width={1000}
                 height={100}
                 alt=""
-                className="h-[200px] w-full"
+                className="h-[200px] w-full   "
               />
 
               <div className="bg-[#E8E6FF] p-8">
-                <h5 className="mb-4 text-xl">Chat Agents </h5>
-                <p className="mb-10 font-[200]">
+                <h5 className="mb-4 md:text-xl text-lg font-semibold ">Chat Agents </h5>
+                <p className="lg:mb-10 font-[200] text-sm mb-3 ">
                   Revolutionize your customer interactions with Frontier Vista
                   Global&apos;s AI-powered chat agents. Automate support,
                   deliver instant and personalized responses across multiple
@@ -199,35 +202,35 @@ export default function page() {
           </div>
         </div>
 
-        <div className="wrap mb-20 flex flex-col">
-          <h4 className="text-3xl font-medium">
+        <div className="wrap mb-20 flex flex-col px-4 lg:px-0">
+          <h4 className="md:text-3xl font-medium text-2xl">
             Retail Solutions & Marketing Solutions
           </h4>
-          <p className="my-2 text-xl font-[400]">
+          <p className="my-2 text-lg md:text-xl font-[400] ">
             Transform Your Retail and Marketing Strategies
           </p>
-          <p className="font-[100]">
+          <p className="font-[100] ">
             Drive sales, enhance customer loyalty, and personalize your
             marketing efforts with Frontier Vista Global&apos;s innovative
             retail solutions and marketing solutions.
           </p>
 
-          <div className="mt-5">
-            <div className="grid grid-cols-2 gap-5">
+          <div className="mt-5 space-y-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 ">
               <div>
                 <Image
                   src={"/images/SOL6.png"}
                   width={1000}
                   height={100}
                   alt=""
-                  className="h-[200px] w-full"
+                  className="md:h-[200px] h-48 w-full"
                 />
 
-                <div className="bg-[#E8E6FF] p-8">
-                  <h5 className="mb-4 text-xl">
+                <div className="bg-[#E8E6FF] p-6 md:p-8">
+                  <h5 className="mb-4 text-lg md:text-xl">
                     Retail APIs (Wallet API, Bill Pay API)
                   </h5>
-                  <p className="mb-10 font-[200]">
+                  <p className="md:mb-10 mb-8 font-[200]">
                     Integrate secure payment solutions effortlessly. Our retail
                     APIs power digital wallets, bill payments, and seamless fund
                     transfers, enabling frictionless transactions for retailers
@@ -250,11 +253,11 @@ export default function page() {
                   className="h-[200px] w-full"
                 />
 
-                <div className="bg-[#E8E6FF] p-8">
-                  <h5 className="mb-4 text-xl">
+                <div className="bg-[#E8E6FF] p-6 md:p-8 ">
+                  <h5 className="mb-4 text-lg md:text-xl">
                     Digital Loyalty & Rewards Platform
                   </h5>
-                  <p className="mb-10 font-[200]">
+                  <p className="md:mb-10 mb-8 font-[200] ">
                     Boost customer retention with our Digital Loyalty & Rewards
                     Platform. Create custom rewards programs, track customer
                     engagement, and increase brand loyalty with personalized
@@ -265,17 +268,17 @@ export default function page() {
                 </div>
               </div>
             </div>
-            <div className="mt-5">
+            <div className="mt-5 md:mt-8">
               <Image
                 src={"/images/SOL5.png"}
                 width={1000}
                 height={100}
                 alt=""
-                className="h-[200px] w-full"
+                className="md:h-[200px] w-full h-48 object-cover"
               />
 
-              <div className="bg-[#E8E6FF] p-8">
-                <h5 className="mb-4 text-xl">
+              <div className="bg-[#E8E6FF] p-6 md:p-8">
+                <h5 className=" text-lg md:text-xl  ">
                   Retail AI Solutions for Marketing
                 </h5>
                 <p className="mb-10 font-[200]">
@@ -293,27 +296,30 @@ export default function page() {
       </div>
 
       <div
-        className="relative flex h-[1100px] flex-col justify-end bg-cover bg-center"
+        className="relative flex min-h-[1100px] flex-col justify-end bg-cover bg-center"
         style={{ backgroundImage: "url('images/SOL9.png')" }}
       >
-        <div className="flex h-[300px] w-full flex-col justify-center bg-[#E8E6FF] pt-10 pb-8 text-white">
-          <div className="wrap relative lg:min-w-[1200px]">
-            <div className="flex w-full items-center justify-between gap-10">
-              <div className="w-[40%]">
-                <h4 className="mb-6 text-2xl font-normal text-[#011D31]">
+        <div className="flex min-h-[300px] w-full flex-col justify-center bg-[#E8E6FF] pt-10 pb-8 md:px-20 px-4 text-white">
+          <div className=" max-w-7xl mx-auto"> 
+            {/* wrap relative lg:min-w-[1200px] */}
+            <div className="flex flex-col lg:flex-row w-full lg:items-center lg:justify-between gap-10 ">
+              <div className="lg:w-[40%]">
+                <h4 className=" md:mt-20 text-xl md:text-2xl font-normal text-[#011D31]">
                   We offer a powerful suite of solutions, all designed to drive
                   efficiency, enhance customer engagement, and fuel growth.
                   However, our expertise doesn&apos;t end there.{" "}
                 </h4>
               </div>
 
-              <div className="w-1/2">
+              <div className=" lg:w-[50%]">
+                 {/* w-1/2 */}
+
                 <p className="text-xl font-[300] text-[#011D31]">
                   Don&apos;t see exactly what you&apos;re looking for?
                   Let&apos;s discuss your unique requirements and build the
                   perfect solution together.
                 </p>
-
+            
                 <Button text="Schedule a Free Consultation on Your Resource Strategy" />
               </div>
             </div>
