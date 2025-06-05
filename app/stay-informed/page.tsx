@@ -9,7 +9,7 @@ export default function page() {
   return (
     <div className="w-full">
       <div
-        className="relative flex h-[800px] flex-col items-center justify-center bg-cover bg-center"
+        className="relative flex min- h-[700px] flex-col items-center justify-center bg-cover bg-center"
         style={{ backgroundImage: "url('/images/SIN1.png')" }}
       >
         <h4 className="w-[40%] text-center font-semibold text-white lg:text-5xl">
@@ -347,9 +347,9 @@ export default function page() {
             <div className="flex items-end justify-between gap-10 p-4 px-8">
               <div>
                 <p className="text-sm text-[#FF9314]">SPEAKERS</p>
-                <p className="">William Agbakoba & Vigneswar Raj</p>
+                <p className="">William Agbakoba </p>
               </div>
-              <p className="">Thursday, 15th May 2025</p>
+              {/* <p className="">Thursday, 15th May 2025</p> */}
             </div>
           </div>
 
@@ -392,9 +392,9 @@ export default function page() {
             <div className="flex items-end justify-between gap-10 p-4 px-8">
               <div className="min-w-1/2">
                 <p className="text-sm text-[#FF9314]">SPEAKERS</p>
-                <p className="text-">Deb Olorunyomi & Ray Edwards</p>
+                <p className="text-">Deb Olorunyomi</p>
               </div>
-              <p className="">Thursday, 12th June 2025</p>
+              {/* <p className="">Thursday, 12th June 2025</p> */}
             </div>
           </div>
 
@@ -439,7 +439,7 @@ export default function page() {
                 <p className="text-sm text-[#FF9314]">SPEAKERS</p>
                 <p className="text-xl">Akin Ojelabi</p>
               </div>
-              <p className="">Thursday, 12th June 2025</p>
+              {/* <p className="">Thursday, 12th June 2025</p> */}
             </div>
           </div>
         </div>

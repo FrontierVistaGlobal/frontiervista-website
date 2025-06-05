@@ -1,12 +1,81 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Button from "../_components/Button";
-
+import sendEmail from "../_util/emailSend";
 
 export default function LetsConnect() {
   const [activeTab, setActiveTab] = useState("job");
+  const [formData, setFormData] = useState({
+    fullname: "",
+    email: "",
+    phone: "",
+    company: "",
+    message: "",
+    file: null as File | null,
+    agree: false,
+  });
+  const [sending, setSending] = useState(false);
+  const [message, setMessage] = useState("");
+  const [showSuccess, setShowSuccess] = useState(false);
+
+  const handleChange = (e: any) => {
+    const { name, value, type, checked = false } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: type === "checkbox" ? checked : value,
+    }));
+  };
+
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files?.[0]) {
+      setFormData((prev) => ({
+        ...prev,
+        file: e.target.files?.[0] as File,
+      }));
+    }
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+
+    if (!formData.agree) {
+      setMessage("Please agree to the Privacy Policy and Terms of Use.");
+      return;
+    } else {
+      setMessage("");
+    }
+
+    setSending(true);
+    sendEmail({
+      senderEmail: formData.email,
+      senderName: formData.fullname,
+      subject: "New Project Inquiry",
+      htmlContent: `
+        <p>Full Name: ${formData.fullname}</p>
+        <p>Email: ${formData.email}</p>
+        <p>Phone: ${formData.phone}</p>
+        <p>Company: ${formData.company}</p>
+        <p>Project Overview: ${formData.message}</p>
+      `,
+      receivers: ["info@frontiervista.com", "iclasschima@gmail.com"],
+      ...(formData.file && { file: formData.file }),
+    }).finally(() => {
+      setSending(false);
+      setFormData({
+        fullname: "",
+        email: "",
+        phone: "",
+        company: "",
+        message: "",
+        file: null,
+        agree: false,
+      });
+      setMessage("Your message has been sent successfully!");
+      setShowSuccess(true);
+    });
+  };
 
   const jobs = [
     {
@@ -95,7 +164,13 @@ export default function LetsConnect() {
               </button>
             </div>
             <div className="lg:w-2/3">
-              <form className="w-full">
+              <form
+                className="w-full"
+                onSubmit={(e) => {
+                  console.log(e);
+                  e.preventDefault();
+                }}
+              >
                 <div className="flex flex-col gap-1">
                   <label>
                     Fullname <span className="text-red-500">*</span>
@@ -103,6 +178,9 @@ export default function LetsConnect() {
                   <input
                     placeholder="Enter your name"
                     className="h-[50px] w-full rounded border border-[#0000001A] bg-white p-2"
+                    value={formData.fullname}
+                    onChange={handleChange}
+                    name="fullname"
                   />
                 </div>
 
@@ -114,6 +192,9 @@ export default function LetsConnect() {
                     <input
                       placeholder="Enter your email address"
                       className="h-[50px] w-full rounded border border-[#0000001A] bg-white p-2"
+                      value={formData.email}
+                      onChange={handleChange}
+                      name="email"
                     />
                   </div>
 
@@ -124,6 +205,10 @@ export default function LetsConnect() {
                     <input
                       placeholder="Enter your phone number"
                       className="h-[50px] w-full rounded border border-[#0000001A] bg-white"
+                      name="phone"
+                      type="tel"
+                      value={formData.phone}
+                      onChange={handleChange}
                     />
                   </div>
                 </div>
@@ -134,7 +219,10 @@ export default function LetsConnect() {
                     <span className="text-red-500">*</span>
                   </label>
                   <input
+                    name="company"
                     placeholder="Enter company name"
+                    value={formData.company}
+                    onChange={handleChange}
                     className="h-[50px] w-full rounded border border-[#0000001A] bg-white p-2"
                   />
                 </div>
@@ -145,7 +233,10 @@ export default function LetsConnect() {
                     <span className="text-red-500">*</span>
                   </label>
                   <textarea
+                    name="message"
                     placeholder="Enter project overview"
+                    value={formData.message}
+                    onChange={handleChange}
                     className="h-[100px] w-full rounded border border-[#0000001A] bg-white p-2"
                   />
                 </div>
@@ -157,17 +248,47 @@ export default function LetsConnect() {
                       (PDF, DOCX, XLSX—optional)
                     </span>
                   </label>
-                  <input className="h-[50px] w-full rounded border border-dashed border-[#479DDE] bg-white p-2" />
+                  <input
+                    type="file"
+                    accept=".jpg,.png,.pdf" // Specify allowed file types
+                    onChange={(e) => {
+                      if (e.target.files && e.target.files.length > 1) {
+                        alert("You can only upload one file.");
+                        e.target.value = ""; // Reset the input
+                      } else {
+                        handleFileChange(e);
+                      }
+                    }}
+                    className="h-[50px] w-full rounded border border-dashed border-[#479DDE] bg-white p-2"
+                  />
                 </div>
 
                 <div className="mt-4 flex gap-2">
-                  <input type="checkbox" />{" "}
+                  <input
+                    type="checkbox"
+                    name="agree"
+                    checked={formData.agree}
+                    onChange={handleChange}
+                  />{" "}
                   <span className="text-sm font-[300]">
                     I agree to the Privacy Policy and Terms of Use
                   </span>
                 </div>
 
-                <Button text="Send Message" showArrow={false} />
+                {message && !formData.agree && !showSuccess && (
+                  <p className="mt-2 text-red-500">{message}</p>
+                )}
+
+                <Button
+                  onClick={handleSubmit}
+                  loading={sending}
+                  text={sending ? "Sending..." : "Send Message"}
+                  showArrow={false}
+                  type="button"
+                />
+                {message && !sending && showSuccess && (
+                  <p className="mt-2 text-green-500">{message}</p>
+                )}
               </form>
             </div>
           </div>
@@ -253,7 +374,7 @@ export default function LetsConnect() {
                       {job.btn}
                     </button>
                      </Link> */}
-                      <Button text={job.btn} path={job.path} />
+                    <Button text={job.btn} path={job.path} />
                   </div>
                 ))}
 

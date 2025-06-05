@@ -7,7 +7,7 @@ import { motion, useAnimation } from "motion/react";
 import CarouselTestimonials from "./_components/Testimonies";
 import Button from "./_components/Button";
 import HealthCare from "./_components/Healthcare";
-
+import sendEmail from "./_util/emailSend";
 
 export default function Home() {
   const controls = useAnimation();
@@ -84,20 +84,30 @@ export default function Home() {
 
   useEffect(() => {
     handleMouseLeave();
+
+    console.log("Sending welcome email...");
+
+    // sendEmail({
+    //   subject: "Welcome to Frontier Vista",
+    //   senderName: "Frontier Vista",
+    //   senderEmail: "iclasschima@gmail.com",
+    //   htmlContent: `<h1>Welcome to Frontier Vista</h1><p>We are excited to have you on board! Explore our innovative solutions and let's transform your business together.</p>`,
+    //   receivers: ["iclasschima@gmail.com"],
+    // });
   });
 
   return (
     <div>
       <div
-        className="relative min-h-[650px]   bg-cover bg-center"
+        className="relative min-h-[650px] bg-cover bg-center"
         style={{ backgroundImage: "url('/homebg.png')" }}
       >
-        <div className="relative justify-between pb-[3rem] pt-[7rem] z-10 mx-auto flex h-full max-w-[1200px] flex-col  px-4 sm:px-6 md:px-8  text-white ">
+        <div className="relative z-10 mx-auto flex h-full max-w-[1200px] flex-col justify-between px-4 pt-[7rem] pb-[3rem] text-white sm:px-6 md:px-8">
           <div className="flex flex-col">
-            <h3 className="mb-2 text-3xl  lg:text-5xl font-[800] text-white">
+            <h3 className="mb-2 text-3xl font-[800] text-white lg:text-5xl">
               Unlock New Frontiers
             </h3>
-            <p className="mb-12 md:w-1/2 text-lg font-[200]">
+            <p className="mb-12 text-lg font-[200] md:w-1/2">
               Empowering businesses to achieve transformative growth through
               innovative solutions.
             </p>
@@ -105,9 +115,9 @@ export default function Home() {
             <Button text="Explore Our Solutions" path="/what-we-do" />
           </div>
 
-          <div className="mt-[4rem] grid grid-cols-2 md:grid-cols-4 w-full justify-between">
+          <div className="mt-[4rem] grid w-full grid-cols-2 justify-between md:grid-cols-4">
             <div className="flex flex-col items-center text-center">
-              <p className="lg:text-[60px] text-[50px]  font-[100]">
+              <p className="text-[50px] font-[100] lg:text-[60px]">
                 <CountUp start={0} end={67} duration={2.5} suffix="%" />
               </p>
               <p className="w-2/3 text-center text-sm">
@@ -115,15 +125,15 @@ export default function Home() {
               </p>
             </div>
             <div className="text-center">
-            <p className="lg:text-[60px] text-[50px]  font-[100]">
+              <p className="text-[50px] font-[100] lg:text-[60px]">
                 <CountUp start={0} end={400} duration={2.5} suffix="%" />
               </p>
               <p className="w-[80%] text-center text-sm">
                 GROWTH IN CLIENT BASE
               </p>
             </div>
-            <div className="text-center min-w-[140px]">
-             <p className="lg:text-[60px] text-[50px]  font-[100]">
+            <div className="min-w-[140px] text-center">
+              <p className="text-[50px] font-[100] lg:text-[60px]">
                 <CountUp start={0} end={90} duration={2.5} suffix="%" />
               </p>
               <p className="w-[80%] text-center text-sm">
@@ -131,7 +141,7 @@ export default function Home() {
               </p>
             </div>
             <div className="text-center">
-               <p className="lg:text-[60px] text-[50px] w-[80%]  font-[100]">
+              <p className="w-[80%] text-[50px] font-[100] lg:text-[60px]">
                 <CountUp start={0} end={5} duration={2.5} />
               </p>
               <p className="w-[80%] text-center text-sm">NEW MARKET ENTERED</p>
@@ -140,8 +150,8 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="wrap flex w-full  flex-col items-center gap-6 px-4 lg:py-[10rem] py-20 text-center">
-        <p className="mx-auto max-w-[750px] text-center lg:text-4xl text-3xl font-[300]">
+      <div className="wrap flex w-full flex-col items-center gap-6 px-4 py-20 text-center lg:py-[10rem]">
+        <p className="mx-auto max-w-[750px] text-center text-3xl font-[300] lg:text-4xl">
           Frontier Vista is a business and technology consulting firm delivering
           bold software, data, and AI solutions to accelerate and scale business
           growth.
@@ -154,20 +164,22 @@ export default function Home() {
 
       <div className="wrap pb-[5rem]" id="support">
         <div className="flex flex-col items-center justify-center text-center">
-          <h4 className="lg:text-5xl text-4xl font-[500]">How we support you</h4>
-          <p className="mt-4 text-xl font-[200]  lg:w-[70%]">
+          <h4 className="text-4xl font-[500] lg:text-5xl">
+            How we support you
+          </h4>
+          <p className="mt-4 text-xl font-[200] lg:w-[70%]">
             We provide comprehensive solutions tailored to your business needs
           </p>
         </div>
 
-        <div className="mt-16 grid lg:gap-4 gap-2 grid-cols-1 md:grid-cols-2">
+        <div className="mt-16 grid grid-cols-1 gap-2 md:grid-cols-2 lg:gap-4">
           {supportItems.map((item) => (
             <div
               key={item.title}
-              className="flex flex-col lg:flex-row min-h-[200px] gap-4 lg:gap-8 rounded-lg bg-[#EFF6FF] p-6 lg:p-10"
+              className="flex min-h-[200px] flex-col gap-4 rounded-lg bg-[#EFF6FF] p-6 lg:flex-row lg:gap-8 lg:p-10"
             >
               <div
-                className={`flex lg:h-[60px] h-[50px] w-[50px] lg:w-[140px] items-center justify-center rounded`}
+                className={`flex h-[50px] w-[50px] items-center justify-center rounded lg:h-[60px] lg:w-[140px]`}
                 style={{
                   background: item.color,
                 }}
@@ -177,16 +189,20 @@ export default function Home() {
                   width={1000}
                   height={1000}
                   alt=""
-                  className="lg:h-[35px] h-[25px] w-[25px] lg:w-[35px] object-contain"
+                  className="h-[25px] w-[25px] object-contain lg:h-[35px] lg:w-[35px]"
                 />
               </div>
               <div className="flex flex-col justify-between">
-                <h5 className="lg:text-xl text-lg font-semibold">{item.title}</h5>
-                <p className="font-[300] text-sm lg:text-base mt-2" >{item.description}</p>
+                <h5 className="text-lg font-semibold lg:text-xl">
+                  {item.title}
+                </h5>
+                <p className="mt-2 text-sm font-[300] lg:text-base">
+                  {item.description}
+                </p>
                 {/* <button className="mt-6 flex h-[55px] w-fit cursor-pointer items-center rounded-[10px] bg-[#479DDE] px-6 font-normal text-white hover:bg-[#479DDE] focus:outline-none">
                   {item.btn} <LuMoveRight className="ml-5 text-2xl" />
                 </button> */}
-                  <Button text= {item.btn} path={item.link} />
+                <Button text={item.btn} path={item.link} />
               </div>
             </div>
           ))}
@@ -222,14 +238,17 @@ export default function Home() {
           ))}
         </motion.div>
 
-           {/* <Link href="/stay-informed#case-studies">
+        {/* <Link href="/stay-informed#case-studies">
             <button className="mx-auto mt-16 cursor-pointer items-center rounded-[10px] bg-[#479DDE] px-6 text-xl font-normal text-white hover:bg-[#479DDE] focus:outline-none">
           Explore Our Portfolio <LuMoveRight className="ml-5 text-2xl" />
         </button>
           </Link> */}
 
-              <Button text="Explore Our Portfolio "  path="/stay-informed#case-studies" className="mx-auto mt-16 flex h-[55px] w-fit px-6 text-xl font-normal"/>
-      
+        <Button
+          text="Explore Our Portfolio "
+          path="/stay-informed#case-studies"
+          className="mx-auto mt-16 flex h-[55px] w-fit px-6 text-xl font-normal"
+        />
       </div>
 
       <div className="wrap pt-[5rem] pb-[8rem] text-center">
@@ -247,8 +266,10 @@ export default function Home() {
         </button>
         </Link> */}
 
-         <Button text="Request a Free Consultation" path="/lets-connect#contact" />
-
+        <Button
+          text="Request a Free Consultation"
+          path="/lets-connect#contact"
+        />
       </div>
 
       <div className="mt-[3rem] bg-[#D0F4FF]">
@@ -359,16 +380,9 @@ export default function Home() {
             />
           ))}
         </motion.div>
+
+        <p className="text-right italic">...and a lot more</p>
       </div>
     </div>
   );
 }
-
-
-
-
-
-
-
-
-

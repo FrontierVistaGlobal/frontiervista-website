@@ -8,14 +8,12 @@ import Button from "../_components/Button";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 
-
-
-
 export default function Hello() {
   const searchParams = useSearchParams();
-  const active = searchParams.get('active');
-  const [activeAccordion, setActiveAccordion] = React.useState<number>(active ? parseInt(active as string) : 0);
-  console.log( active);
+  const active = searchParams.get("active");
+  const [activeAccordion, setActiveAccordion] = React.useState<number>(
+    active ? parseInt(active as string) : 0
+  );
   const accordionData = [
     {
       id: "core-values",
@@ -385,9 +383,12 @@ export default function Hello() {
           We are <span className="text-[#479DDE]">Frontier Vista</span>, and the
           vision is to unlock new frontiers and accelerate sustainable growth.
         </p>
-     
-        <Button text="Discover How We Drive Growth" path="/who-we-are?active=1#accordion" className="mx-auto mt-18 flex h-[55px] w-fit"/>
 
+        <Button
+          text="Discover How We Drive Growth"
+          path="/who-we-are?active=1#accordion"
+          className="mx-auto mt-18 flex h-[55px] w-fit"
+        />
 
         {/* <button className="mx-auto mt-18 flex h-[55px] w-fit items-center rounded-[10px] bg-[#479DDE] px-6 font-normal text-white hover:bg-[#479DDE] focus:outline-none">
           Discover How We Drive Growth <LuMoveRight className="ml-5 text-2xl" />
@@ -424,7 +425,11 @@ export default function Hello() {
           </div>
         </div>
 
-            <Button text="Discover Our Core Values" path="/who-we-are?active=0#accordion" className="mx-auto mt-18 flex h-[55px] w-fit"/>
+        <Button
+          text="Discover Our Core Values"
+          path="/who-we-are?active=0#accordion"
+          className="mx-auto mt-18 flex h-[55px] w-fit"
+        />
 
         {/* <button className="mx-auto mt-18 flex h-[55px] w-fit items-center rounded-[10px] bg-[#479DDE] px-6 font-normal text-white hover:bg-[#479DDE] focus:outline-none">
           Discover Our Core Values <LuMoveRight className="ml-5 text-2xl" />
@@ -462,7 +467,7 @@ export default function Hello() {
           </p>
         </div>
 
-        <div className="relative my-18 min-h-[95vh] ">
+        <div className="relative my-18 min-h-[95vh]">
           {/* Vertical Timeline Line */}
           <div className="mty-12 left-6 min-h-[80vh] w-0.5 bg-white"></div>
           <div
@@ -558,11 +563,17 @@ export default function Hello() {
         </button>
         </Link> */}
 
-         <Button text=" Explore Our Expertise " path="/what-we-do"  className="mx-auto mt-48 flex h-[55px] w-fit items-center px-6 py-6 font-normal"/>
-       
+        <Button
+          text=" Explore Our Expertise "
+          path="/what-we-do"
+          className="mx-auto mt-48 flex h-[55px] w-fit items-center px-6 py-6 font-normal"
+        />
       </div>
 
-      <div className={`${accordionData[activeAccordion].theme?.bg}`} id="accordion">
+      <div
+        className={`${accordionData[activeAccordion].theme?.bg}`}
+        id="accordion"
+      >
         <div className="wrap min-h-[80vh] py-12">
           <div className="flex justify-between">
             {accordionData.map((item, index) => (
@@ -659,15 +670,14 @@ export default function Hello() {
                   </div>
                 </div>
 
-              <Link href="/lets-connect#contact">
-               <button className="mx-auto my-18 flex h-[55px] w-fit items-center rounded-[10px] bg-[#5D0059] px-6 py-6 font-normal text-white hover:bg-[#479DDE] focus:outline-none">
-                  Partner With Us On CSR Intiatives{" "}
-                  <LuMoveRight className="ml-5 text-2xl" />
-                </button>
-              </Link>
+                <Link href="/lets-connect#contact">
+                  <button className="mx-auto my-18 flex h-[55px] w-fit items-center rounded-[10px] bg-[#5D0059] px-6 py-6 font-normal text-white hover:bg-[#479DDE] focus:outline-none">
+                    Partner With Us On CSR Intiatives{" "}
+                    <LuMoveRight className="ml-5 text-2xl" />
+                  </button>
+                </Link>
 
-               {/* <Button text=" Partner With Us On CSR Intiatives" path="/lets-connect#contact" className="mx-auto my-18 flex h-[55px] w-fit items-center  bg-[#5D0059] px-6 py-6 font-normal text-white hover:bg-[#479DDE] focus:outline-none"/> */}
-               
+                {/* <Button text=" Partner With Us On CSR Intiatives" path="/lets-connect#contact" className="mx-auto my-18 flex h-[55px] w-fit items-center  bg-[#5D0059] px-6 py-6 font-normal text-white hover:bg-[#479DDE] focus:outline-none"/> */}
               </div>
             ) : (
               <Accordion
