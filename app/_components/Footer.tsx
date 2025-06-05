@@ -16,33 +16,39 @@ export default function Footer() {
     {
       title: "Corporate",
       items: [
-        { name: "About Us", link: "/about-us" },
-        { name: "Our Services", link: "/services" },
-        { name: "Lets Connect", link: "/connect" },
+        { name: "About Us", link: "/who-are-we" },
+        { name: "Our Services", link: "/our-solutions" },
+        { name: "Lets Connect", link: "/lets-connect" },
       ],
     },
     {
       title: "Our Solutions",
       items: [
-        { name: "Data Analytics and Management", link: "/" },
-        { name: "Intelligent Chat Agent", link: "/" },
-        { name: "Retail Solution API", link: "/" },
+        {
+          name: "Data Analytics and Management",
+          link: "/data-intelligence-advanced-analytics",
+        },
+        {
+          name: "Intelligent Chat Agent",
+          link: "/data-intelligence-advanced-analytics",
+        },
+        { name: "Retail Solution API", link: "/digital-solutions" },
       ],
     },
     {
       title: "Career",
       items: [
-        { name: "Find Talent", link: "/" },
-        { name: "Search Job Opportunities", link: "/" },
-        { name: "Why Join Frontier Vista", link: "/" },
+        { name: "Find Talent", link: "/talent-hub" },
+        { name: "Search Job Opportunities", link: "/talent-hub" },
+        { name: "Why Join Frontier Vista", link: "/what-we-do" },
       ],
     },
     {
       title: "Legal",
       items: [
-        { name: "Terms and Conditions", link: "/" },
-        { name: "Privacy Policy", link: "/" },
-        { name: "Security", link: "/" },
+        { name: "Terms and Conditions", link: "/terms-and-agreement" },
+        { name: "Privacy Policy", link: "/terms-and-agreement" },
+        { name: "Security", link: "/terms-and-agreement" },
       ],
     },
     {
