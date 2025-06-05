@@ -86,7 +86,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="flex w-full flex-col justify-between md:flex-row lg:items-end">
-          <div>
+          {/* <div>
             <p className="mb-4 text-xl text-white">
               Subscribe to our newsletter
             </p>
@@ -101,7 +101,7 @@ export default function Footer() {
                 Get started <FiArrowUpRight className="ml-2 text-xl" />
               </button>
             </div>
-          </div>
+          </div> */}
 
           <div className="mt-6 flex gap-5 text-white">
             <Link href="#" target="_blank">

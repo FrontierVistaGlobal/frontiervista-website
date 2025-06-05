@@ -4,6 +4,12 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Button from "../_components/Button";
 import sendEmail from "../_util/emailSend";
+import {
+  InlineWidget,
+  PopupButton,
+  PopupModal,
+  PopupWidget,
+} from "react-calendly";
 
 export default function LetsConnect() {
   const [activeTab, setActiveTab] = useState("job");
@@ -19,6 +25,7 @@ export default function LetsConnect() {
   const [sending, setSending] = useState(false);
   const [message, setMessage] = useState("");
   const [showSuccess, setShowSuccess] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -127,15 +134,15 @@ export default function LetsConnect() {
   return (
     <div className="w-full">
       <div
-        className="relative flex h-[600px] flex-col items-center justify-center bg-cover bg-center"
+        className="relative flex min-h-[600px] flex-col items-center justify-center bg-cover bg-center"
         style={{ backgroundImage: "url('/images/CON1.png')" }}
       >
-        <h4 className="w-[40%] text-center font-semibold text-white lg:text-5xl">
+        <h4 className="text-center text-3xl font-semibold text-white md:w-[40%] lg:text-5xl">
           Let&apos;s Build Extraordinary Solutions Together
         </h4>
       </div>
 
-      <div className="wrap my-20 flex justify-end">
+      <div className="wrap my-20 flex px-3 md:justify-end">
         <div className="lg:w-1/2">
           <p className="text-5xl font-[100] text-[#1A7AC8]">
             Every great project starts with a conversation. Let&apos;s build
@@ -155,13 +162,23 @@ export default function LetsConnect() {
             Ready to launch your next big idea?
           </h4>
 
-          <div className="mt-18 flex w-full gap-10">
+          <div className="mt-18 flex w-full flex-col gap-10 md:flex-row">
             <div className="lg:w-1/3">
               <p>
                 Our experts are ready to co-create a scalable solution for you
                 that meets your needs and is future-proof.
               </p>
-              <button className="mt-5 rounded-xl border-[2px] border-[#479DDE] p-3 text-[#479DDE]">
+
+              <PopupModal
+                url="https://calendly.com/info-a8b5"
+                rootElement={document.body}
+                open={isOpen}
+                onModalClose={() => setIsOpen(false)}
+              />
+              <button
+                className="mt-5 cursor-pointer rounded-xl border-[2px] border-[#479DDE] p-3 text-[#479DDE]"
+                onClick={() => setIsOpen(true)}
+              >
                 Schedule a Call
               </button>
             </div>
@@ -303,7 +320,7 @@ export default function LetsConnect() {
         }}
       >
         <div className="wrap flex">
-          <div className="flex w-1/2 flex-col justify-center p-14">
+          <div className="flex flex-col justify-center p-14 md:w-1/2">
             <h4 className="mb-2 text-4xl font-semibold text-white">
               Vista Talent Hub
             </h4>
@@ -312,7 +329,7 @@ export default function LetsConnect() {
             </p>
           </div>
 
-          <div className="w-1/2">
+          <div className="hidden w-1/2 md:flex">
             <Image
               src="/images/CON2.png"
               alt=""
@@ -325,7 +342,7 @@ export default function LetsConnect() {
       </div>
 
       <div className="bg-[#EFF6FF] py-[5rem]">
-        <div className="wrap">
+        <div className="wrap flex flex-col">
           <div className="mx-auto flex h-[50px] w-[300px] items-center rounded-lg bg-[#D8E2EA] p-1">
             <div
               onClick={() => setActiveTab("job")}
@@ -342,12 +359,14 @@ export default function LetsConnect() {
             </div>
           </div>
 
-          <div className="m-10 w-full">
-            <h4 className="mx-auto w-[70%] text-center text-4xl font-semibold">
-              {activeTab === "job"
-                ? "Explore Exciting Job Opportunities Tailored for IT Professionals Like You"
-                : "Your Gateway to Exceptional Talent"}
-            </h4>
+          <div className="my-10 flex w-full flex-col">
+            <div className="flex w-full">
+              <h4 className="w-full text-center font-semibold md:w-[70%] lg:text-4xl">
+                {activeTab === "job"
+                  ? "Explore Exciting Job Opportunities Tailored for IT Professionals Like You"
+                  : "Your Gateway to Exceptional Talent"}
+              </h4>
+            </div>
             {activeTab === "talent" && (
               <p className="mx-auto mt-2 w-[80%] text-center">
                 At Vista Hub, we bridge the gap between companies and skilled
@@ -356,13 +375,13 @@ export default function LetsConnect() {
               </p>
             )}
 
-            <div className="mt-10 grid grid-cols-3 gap-6">
+            <div className="mt-10 grid grid-cols-1 gap-6 overflow-hidden px-4 md:px-0 lg:grid-cols-3">
               {activeTab === "job" &&
                 jobs.map((job) => (
-                  <div className="flex flex-col" key={job.title}>
+                  <div className="flex w-full flex-col" key={job.title}>
                     <Image
                       alt=""
-                      className="rounded"
+                      className="w-full rounded"
                       src={job.image}
                       width={1000}
                       height={1000}
@@ -371,11 +390,6 @@ export default function LetsConnect() {
                     <h4 className="mt-3 text-xl text-[#479DDE]">{job.title}</h4>
                     <p className="mt-2 lg:w-[80%]">{job.description}</p>
 
-                    {/* <Link href={job.path}>
-                        <button className="mt-5 w-[200px] rounded-xl border-[2px] border-[#479DDE] p-3 text-[#479DDE] cursor-pointer">
-                      {job.btn}
-                    </button>
-                     </Link> */}
                     <Button text={job.btn} path={job.path} />
                   </div>
                 ))}
@@ -385,7 +399,7 @@ export default function LetsConnect() {
                   <div key={talent.title}>
                     <Image
                       alt=""
-                      className="rounded"
+                      className="w-fit rounded"
                       src={talent.image}
                       width={1000}
                       height={1000}
@@ -410,11 +424,11 @@ export default function LetsConnect() {
       </div>
 
       <div className="wrap my-20 flex flex-col items-center justify-center">
-        <h4 className="my-10 text-4xl font-medium">
+        <h4 className="my-10 px-3 text-4xl font-medium">
           Why join Vista Talent Hub
         </h4>
 
-        <div className="mb-10 grid grid-cols-2 gap-6">
+        <div className="mb-10 grid gap-6 px-3 md:grid-cols-2">
           <div className="flex flex-col gap-4">
             <Image
               alt=""
