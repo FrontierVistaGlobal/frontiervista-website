@@ -21,7 +21,6 @@ const Navbar = () => {
     { label: "Lets Connect", path: "/lets-connect" },
   ];
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  // const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const closeMenu = () => {
