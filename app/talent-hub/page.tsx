@@ -86,7 +86,7 @@ export default function TalentHub() {
         }}
       >
         <div className="wrap flex">
-          <div className="flex w-1/2 flex-col justify-center p-14">
+          <div className="flex md:w-1/2 flex-col justify-center p-14">
             <h4 className="mb-3 text-5xl font-semibold text-white">
               Vista Talent Hub
             </h4>
@@ -104,7 +104,7 @@ export default function TalentHub() {
             </div>
           </div>
 
-          <div className="w-1/2">
+          <div className="hidden w-1/2 md:flex">
             <Image
               src="/images/CON2.png"
               alt=""
@@ -116,8 +116,8 @@ export default function TalentHub() {
         </div>
       </div>
 
-      <div className="wrap m-10">
-        <div className="flex items-center gap-4">
+      <div className="wrap m-10 px-3">
+        <div className="hidden items-center gap-4 md:flex">
           <div
             onClick={() => setIsFilterOpen(!isFilterOpen)}
             className={` ${isFilterOpen ? "bg-[#479DDE] text-white" : "bg-[#4155650D]"} flex h-[45px] cursor-pointer items-center gap-2 rounded border border-[#41556533] px-4 text-[#415565]`}
@@ -136,7 +136,7 @@ export default function TalentHub() {
 
         <div className="mt-10 flex">
           <div
-            className={`${isFilterOpen ? "flex" : "hidden"} w-[30%] flex-col gap-4`}
+            className={`${isFilterOpen ? "md:flex" : "md:hidden"} hidden w-[30%] flex-col gap-4`}
           >
             <div className="flex flex-col">
               <p className="font-medium">Type of Employment</p>
@@ -231,9 +231,11 @@ export default function TalentHub() {
             </div>
           </div>
 
-          <div className={`flex ${isFilterOpen ? "w-full" : "w-full"}`}>
+          <div
+            className={`flex flex-col md:flex-row ${isFilterOpen ? "w-full" : "w-full"}`}
+          >
             <div
-              className={`flex flex-col ${isFilterOpen ? "w-full" : "w-[50%]"}`}
+              className={`flex flex-col ${isFilterOpen ? "w-full" : "md:w-[50%]"} ${isApply ? "" : ""}`}
             >
               {jobs.map((item, index) => (
                 <div
@@ -262,14 +264,16 @@ export default function TalentHub() {
                     </div>
                   </div>
 
-                  <div className="cursor-pointer">
+                  <div className="hidden cursor-pointer">
                     <IoMdCloseCircleOutline />
                   </div>
                 </div>
               ))}
             </div>
 
-            <div className={`p-5 ${isFilterOpen ? "hidden" : "w-[50%]"}`}>
+            <div
+              className={`p-5 ${isFilterOpen ? "hidden" : "w-full md:w-[50%]"}`}
+            >
               <h4 className="text-2xl text-[#23557A]">{selectedJob?.role}</h4>
               <div className="flex w-full items-center gap-3">
                 <p>{selectedJob?.organization}</p>
@@ -288,9 +292,9 @@ export default function TalentHub() {
                 >
                   Apply for job
                 </button>
-                <button className="rounded-xl border border-[#479DDE] px-5 py-2 text-sm text-[#479DDE]">
+                {/* <button className="rounded-xl border border-[#479DDE] px-5 py-2 text-sm text-[#479DDE]">
                   Share
-                </button>
+                </button> */}
               </div>
 
               {isApply ? (
