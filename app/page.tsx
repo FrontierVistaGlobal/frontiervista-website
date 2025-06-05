@@ -346,6 +346,7 @@ export default function Home() {
           height={100}
         />
       </div>
+      <p className="text-right italic">...and a lot more</p>
 
       <div className="wrap wrap overflow-hidden py-[9rem] text-center">
         <h4 className="mb-8 text-4xl font-[500]">Partners</h4>
@@ -370,8 +371,6 @@ export default function Home() {
             />
           ))}
         </motion.div>
-
-        <p className="text-right italic">...and a lot more</p>
       </div>
     </div>
   );
