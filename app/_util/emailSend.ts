@@ -20,7 +20,7 @@ const sendEmail = async ({
   file?: File;
 }) => {
   try {
-    let attachments = [];
+    const attachments = [];
 
     // If a file is provided, convert it to base64 and add to attachments
     if (file) {

@@ -13,7 +13,7 @@ export default function Button({
 }: {
   text?: string;
   className?: string;
-  onClick?: (e: any) => void;
+  onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
   showArrow?: boolean;
   path?: string;
   loading?: boolean;

@@ -7,7 +7,6 @@ import { motion, useAnimation } from "motion/react";
 import CarouselTestimonials from "./_components/Testimonies";
 import Button from "./_components/Button";
 import HealthCare from "./_components/Healthcare";
-import sendEmail from "./_util/emailSend";
 
 export default function Home() {
   const controls = useAnimation();
@@ -84,16 +83,6 @@ export default function Home() {
 
   useEffect(() => {
     handleMouseLeave();
-
-    console.log("Sending welcome email...");
-
-    // sendEmail({
-    //   subject: "Welcome to Frontier Vista",
-    //   senderName: "Frontier Vista",
-    //   senderEmail: "iclasschima@gmail.com",
-    //   htmlContent: `<h1>Welcome to Frontier Vista</h1><p>We are excited to have you on board! Explore our innovative solutions and let's transform your business together.</p>`,
-    //   receivers: ["iclasschima@gmail.com"],
-    // });
   });
 
   return (
@@ -172,7 +161,7 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="mt-16 grid grid-cols-1 gap-2 md:grid-cols-2 lg:gap-4">
+        <div className="mt-16 grid grid-cols-1 gap-2 px-3 md:grid-cols-2 lg:gap-4">
           {supportItems.map((item) => (
             <div
               key={item.title}
@@ -269,6 +258,7 @@ export default function Home() {
         <Button
           text="Request a Free Consultation"
           path="/lets-connect#contact"
+          className="mx-auto"
         />
       </div>
 
@@ -278,7 +268,7 @@ export default function Home() {
             Trending Insights
           </h4>
 
-          <div className="mt-5 mb-8 grid grid-cols-3 gap-12">
+          <div className="mt-5 mb-8 grid grid-cols-1 gap-12 px-5 lg:grid-cols-3">
             <div className="flex flex-col">
               <Image src="/insight1.png" alt="" width={400} height={200} />
               <div className="mt-2 flex items-center justify-between">

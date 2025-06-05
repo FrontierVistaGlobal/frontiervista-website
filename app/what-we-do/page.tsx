@@ -5,7 +5,6 @@ import React from "react";
 import Button from "../_components/Button";
 import Link from "next/link";
 
-
 export default function page() {
   const services = [
     {
@@ -43,27 +42,26 @@ export default function page() {
   return (
     <div>
       <div
-        className="relative flex h-[500px] flex-col items-center justify-center bg-cover bg-center"
+        className="relative flex h-[500px] flex-col items-center justify-center bg-cover bg-center px-3"
         style={{ backgroundImage: "url('/wedo.png')" }}
       >
-        <h4 className="w-[40%] text-center font-semibold text-white lg:text-5xl">
+        <h4 className="text-center text-3xl font-semibold text-white md:w-[40%] md:text-5xl">
           Transforming Businesses with Bold, Customized Tech Solutions
         </h4>
-{/* 
-         <button className="mx-auto mt-18 flex h-[55px] w-fit items-center rounded-[10px] bg-[#479DDE] px-6 py-6 font-normal text-white hover:bg-[#479DDE] focus:outline-none">
-          Discover How We Can Transform Your Business{" "}
-          <LuMoveRight className="ml-5 text-2xl" />
-        </button>  */}
-         
-            <Button text="Discover How We Can Transform Your Business" path="/#support" className="mx-auto mt-18 flex h-[55px] w-fit items-center"/>
+
+        <Button
+          text="Discover How We Can Transform Your Business"
+          path="/#support"
+          className="mx-auto mt-18 flex h-[55px] w-fit items-center"
+        />
       </div>
 
-      <div className="wrap my-30 flex items-center justify-between py-12">
-        <div className="w-1/2 px-10">
-          <h5 className="mb-8 text-5xl font-extralight text-[#011D31]">
+      <div className="wrap my-30 flex flex-col items-center justify-between gap-10 px-4 py-12 md:flex-row md:gap-0">
+        <div className="w-full md:w-1/2 md:px-10">
+          <h5 className="mb-6 text-3xl font-extralight text-[#011D31] md:mb-8 md:text-5xl">
             Understanding your needs is at the heart of what we do.{" "}
           </h5>
-          <p className="mb-10">
+          <p className="mb-6 text-base text-[#3D4F60] md:mb-10 md:text-lg">
             We customize our approach to design, build, and deliver solutions
             that align with your goals. Through collaboration, we create lasting
             partnerships that drive sustainable impact.
@@ -74,10 +72,12 @@ export default function page() {
             Discover More <LuMoveRight className="ml-5 text-2xl" />
           </button>
           </Link> */}
-          <Button text="Discover More" path="/who-we-are#what-makes-us-different" />
-         
+          <Button
+            text="Discover More"
+            path="/who-we-are#what-makes-us-different"
+          />
         </div>
-        <div>
+        <div className="w-full md:w-1/2">
           <Image
             src="/wedo1.png"
             alt="We Do"
@@ -101,32 +101,33 @@ export default function page() {
 
             <div className="mt-[2rem] grid w-full grid-cols-1 gap-6 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
               {services.map((service, index) => (
-                <Link key={index}
-                    href={service.link}
-                    className="relative overflow-hidden rounded-md shadow-md transition-shadow duration-300 hover:shadow-lg">
-                 <div>
-                  <Image
-                    src={service.image}
-                    alt={service.title}
-                    className="h-60 w-full object-cover transition-opacity duration-300 hover:opacity-80"
-                    width={500}
-                    height={500}
-                  />
-                  <div className="absolute bottom-0 left-0 h-22 w-full bg-black p-4 opacity-20"></div>
-                  <h3 className="absolute bottom-0 z-10 w-2/3 p-4 text-left text-lg font-extralight text-white">
-                    {service.title}
-                  </h3>
-                  <a
-                    href="#"
-                    className="absolute top-0 left-0 h-full w-full focus:outline-none"
-                  >
-                    <span className="sr-only">
-                      Learn more about {service.title}
-                    </span>
-                  </a>
-                </div>
+                <Link
+                  key={index}
+                  href={service.link}
+                  className="relative overflow-hidden rounded-md shadow-md transition-shadow duration-300 hover:shadow-lg"
+                >
+                  <div>
+                    <Image
+                      src={service.image}
+                      alt={service.title}
+                      className="h-60 w-full object-cover transition-opacity duration-300 hover:opacity-80"
+                      width={500}
+                      height={500}
+                    />
+                    <div className="absolute bottom-0 left-0 h-22 w-full bg-black p-4 opacity-20"></div>
+                    <h3 className="absolute bottom-0 z-10 w-2/3 p-4 text-left text-lg font-extralight text-white">
+                      {service.title}
+                    </h3>
+                    <a
+                      href="#"
+                      className="absolute top-0 left-0 h-full w-full focus:outline-none"
+                    >
+                      <span className="sr-only">
+                        Learn more about {service.title}
+                      </span>
+                    </a>
+                  </div>
                 </Link>
-               
               ))}
             </div>
 

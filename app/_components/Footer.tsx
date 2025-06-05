@@ -57,12 +57,12 @@ export default function Footer() {
   return (
     <div className="bg-[#011D31]">
       <div className="wrap mx-auto flex flex-col px-3 pt-[5rem] pb-8">
-        <div className="mb-[50px] flex w-full gap-[5rem]">
-          <div className="w-[100px]">
+        <div className="mb-[50px] flex w-full flex-col gap-[5rem] md:flex-row">
+          <div className="hidden w-[100px] md:flex">
             <Image src="/logo-icon.svg" alt="Logo" width={100} height={100} />
           </div>
 
-          <div className="grid grid-cols-6 gap-3">
+          <div className="grid grid-cols-2 gap-3 lg:grid-cols-6">
             {footerData.map((section, index) => (
               <div key={index} className="pl-5">
                 <p className="font-semibold text-[#479DDE]">{section.title}</p>
@@ -79,7 +79,7 @@ export default function Footer() {
             ))}
           </div>
         </div>
-        <div className="flex w-full items-end justify-between">
+        <div className="flex w-full flex-col justify-between md:flex-row lg:items-end">
           <div>
             <p className="mb-4 text-xl text-white">
               Subscribe to our newsletter
