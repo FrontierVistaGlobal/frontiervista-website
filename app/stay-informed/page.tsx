@@ -9,21 +9,21 @@ export default function page() {
   return (
     <div className="w-full">
       <div
-        className="relative flex h-[800px] flex-col items-center justify-center bg-cover bg-center"
+        className="relative flex md-h-800 min-h-[500px] flex-col items-center justify-center bg-cover bg-center px-5"
         style={{ backgroundImage: "url('/images/SIN1.png')" }}
       >
-        <h4 className="w-[40%] text-center font-semibold text-white lg:text-5xl">
+        <h4 className="md:w-[40%] text-center font-semibold text-white text-2xl lg:text-5xl">
           Innovations, Insights, and Success Stories
         </h4>
 
-        <button className="mx-auto mt-18 flex h-[55px] w-fit items-center rounded-[10px] bg-[#479DDE] px-6 py-6 font-normal text-white hover:bg-[#479DDE] focus:outline-none">
+        <button className="mx-auto mt-18 flex min-h-[55px] w-fit items-center rounded-[10px] bg-[#479DDE] px-6 py-6 font-normal text-white hover:bg-[#479DDE] focus:outline-none">
           Explore trends, watch webinars, and see how our innovations are
           transforming industries
           <LuMoveRight className="ml-5 text-2xl" />
         </button>
       </div>
 
-      <div className="wrap my-20" id="case-studies">
+      <div className="wrap my-20  px-4 md:px-8" id="case-studies">
         <h4 className="text-3xl font-medium text-[#1A7AC8]">
           Case Studies & Success Stories
         </h4>
@@ -34,9 +34,9 @@ export default function page() {
           delivery, and adoption of secure, scalable, and co-created solutions
           that produce measurable results.
         </p>
-        <div className="my-10 grid grid-cols-2 gap-4">
+        <div className="my-10 grid grid-cols-1 md:grid-cols-2 gap-5">
           <div>
-            <Image src={"/images/SIN2.png"} alt="" width={1000} height={500} />
+            <Image src={"/images/SIN2.png"} alt="" width={1000} height={500}  />
           </div>
 
           <div className="px-8">
@@ -70,8 +70,8 @@ export default function page() {
             <Button text="Get in touch today" />
           </div>
         </div>
-        <div className="mt-20 grid grid-cols-2 gap-4">
-          <div className="px-8">
+        <div className="mt-20 grid grid-cols-1  lg:grid-cols-2 gap-4">
+          <div className="px-8 order-2 lg:order-1">
             <p className="mt-4 text-xl font-medium">
               IT Recruitment for GoA: Driving Service Excellence and Speed to
               Market
@@ -88,11 +88,11 @@ export default function page() {
             <Button text="Let's connect" />
           </div>
 
-          <div>
+          <div className="order-1 lg:order-2">
             <Image src={"/images/SIN3.png"} alt="" width={1000} height={500} />
           </div>
         </div>
-        <div className="mt-20 grid grid-cols-2 gap-4">
+        <div className="mt-20 grid grid-cols-1 lg:grid-cols-2 gap-4">
           <div>
             <Image src={"/images/SIN4.png"} alt="" width={1000} height={500} />
           </div>
@@ -118,8 +118,8 @@ export default function page() {
             <Button text="Contact us today" />
           </div>
         </div>
-        <div className="mt-20 grid grid-cols-2 gap-4">
-          <div className="px-8">
+        <div className="mt-20 grid grid-cols-1 lg:grid-cols-2 gap-4">
+          <div className="px-8  order-2 lg:order-1">
             <p className="mt-4 text-xl font-medium">
               Scaling Smart with IT Resource Management
             </p>
@@ -136,17 +136,17 @@ export default function page() {
 
             <Button text="Schedule a business consultation " />
           </div>
-          <div>
+          <div className="order-1 lg:order-2">
             <Image src={"/images/SIN5.png"} alt="" width={1000} height={500} />
           </div>
         </div>
       </div>
 
-      <div className="relative pt-[300px] pb-[100px]">
+      <div className="relative pt-[100px] lg:pt-[300px] pb-[100px]">
         <div className="bg-[#DAEBF8] pb-[5rem]">
           <div className="wrap relative">
             <div className="relative min-h-[400px]">
-              <div className="absolute right-0 left-0 mt-[-100px]">
+              <div className="absolute right-0 left-0  lg:mt-[-100px]">
                 <Image
                   src={"/images/SIN6.png"}
                   className="mt-[-40px] w-full"
@@ -156,13 +156,13 @@ export default function page() {
                 />
               </div>
 
-              <div className="mb-[6rem] pt-[250px]">
-                <div className="flex justify-end pr-[10%]">
-                  <div className="w-1/2">
-                    <p className="text-5xl font-[300] text-[#011D31]">
+              <div className="mb-[6rem] px-4 pt-[150px] md:pt-[250px]">
+                <div className="flex justify-center  md:justify-end pr-4 md:pr-[10%]">
+                  <div className="md:w-1/2 w-full">
+                    <p className="md:text-5xl text-3xl  font-[300] text-[#011D31]">
                       Expert Knowledge, On Demand
                     </p>
-                    <p className="mt-4 font-extralight">
+                    <p className="mt-4 font-extralight text-sm md:text-base">
                       Ensure you stay ahead of industry trend with engaging
                       webinars featuring industry thought Leaders discussing
                       real-world challenges and solutions in data strategy,
@@ -172,12 +172,12 @@ export default function page() {
                 </div>
               </div>
 
-              <div className="mt-[4rem] flex flex-col">
+              <div className="mt-[4rem] flex flex-col px-4">
                 <p className="mb-[2rem] text-center text-3xl font-medium text-[#122231]">
                   Featured Webinars
                 </p>
 
-                <div className="grid grid-cols-3 gap-6">
+                <div className="grid sm:grid-cols-2 lg:grid-cols-3 grid-cols-1 gap-6">
                   <div className="relative">
                     <Image
                       src={"/images/SIN7.png"}
@@ -237,7 +237,7 @@ export default function page() {
                   </div>
                 </div>
 
-                <div className="mt-10 grid grid-cols-2 gap-6">
+                <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="relative">
                     <Image
                       src={"/images/SIN10.png"}
@@ -284,18 +284,18 @@ export default function page() {
           </div>
         </div>
       </div>
-
-      <div className="wrap mt-[3rem] mb-[10rem]">
-        <div className="flex gap-[10rem]">
-          <div className="w-1/2">
-            <p className="text-6xl font-[200]">
+           
+      <div className="wrap mt-3 lg:mt-[3rem] mb-[10rem] md:px-8 px-4">
+        <div className="flex flex-col md:flex-row gap-10 md:gap-[10rem] item-ceter md:items:start">
+          <div className="md:w-1/2 w-full text-center  ">
+            <p className="md:text-6xl text-4xl  font-[200] text-center md:text-left">
               Connect.
               <br /> Collaborate. <br /> Learn.
             </p>
           </div>
 
-          <div>
-            <p className="mb-10">
+          <div className="w-full md:w-1/2">
+            <p className="md:mb-10 mb-6 text-base md:text-lg text-center md:text-left"> 
               Join our well-crafted webinars and workshops designed to empower
               professionals like you and foster innovation across digital,
               cloud, and operational domains. Connect with experts and enhance
@@ -303,13 +303,16 @@ export default function page() {
               strategy.
             </p>
 
-            <Button text="Download Event Flyers" />
+                <div className="flex justify-center md:justify-start">
+        <Button text="Download Event Flyers" />
+      </div>
+
           </div>
         </div>
 
         <div className="mt-20 flex gap-6 overflow-x-auto">
           <div
-            className="flex min-h-[450px] w-[450px] flex-col justify-between"
+            className="flex flex-row min-h-[450px] w-[450px] md:grid-col justify-between"
             style={{
               background:
                 "linear-gradient(180deg, #0895FF 1.48%, #AEDCFF 75.13%)",

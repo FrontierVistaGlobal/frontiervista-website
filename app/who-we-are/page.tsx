@@ -381,7 +381,7 @@ export default function Hello() {
   return (
     <div>
       <div className="wrap flex min-h-[35rem] flex-col items-center justify-center text-center">
-        <p className="w-[80%] text-5xl leading-[55px] font-medium text-[#000000]">
+        <p className="max-w-[80%] w-full  leading-9 text-3xl lg:text-5xl lg:leading-[55px] md:text-4xl font-medium text-[#000000]">
           We are <span className="text-[#479DDE]">Frontier Vista</span>, and the
           vision is to unlock new frontiers and accelerate sustainable growth.
         </p>
@@ -394,7 +394,7 @@ export default function Hello() {
         </button> */}
       </div>
 
-      <div className="mb-5 w-full">
+      <div className="mb-5 w-full px-4 md:px-0">
         <Image
           src="/who-we-are.png"
           alt="who-are-we"
@@ -404,19 +404,19 @@ export default function Hello() {
         />
       </div>
 
-      <div className="wrap my-[5rem] rounded-lg p-12">
-        <div className="mb-20 flex gap-30">
-          <div>
-            <h4 className="text-3xl font-medium text-[#122231]">Our Vision</h4>
-            <p className="mt-5 text-lg font-extralight text-[#3D4F60]">
+      <div className="wrap my-[5rem] rounded-lg md:p-12 py-10 px-4">
+        <div className="mb-20 flex flex-col gap-12 md:flex-row md:gap-30">
+          <div className="flex-1">
+            <h4 className="md:text-3xl text-2xl font-medium text-[#122231]">Our Vision</h4>
+            <p className="mt-5 md:text-lg text-base font-extralight text-[#3D4F60]">
               Driving business transformation through collaborative innovation
               and cutting-edge technology to unlock new frontiers and accelerate
               sustainable growth.
             </p>
           </div>
-          <div>
-            <h4 className="text-3xl font-medium text-[#122231]">Our Mission</h4>
-            <p className="mt-5 text-lg font-extralight text-[#3D4F60]">
+          <div className="flex-1">
+            <h4 className="md:text-3xl text-2xl font-medium text-[#122231]">Our Mission</h4>
+            <p className="mt-5 text-base md:text-lg font-extralight text-[#3D4F60]">
               We empower businesses by fostering collaborative innovation and
               leveraging cutting-edge technology to drive transformation,
               enhance efficiency, and achieve sustainable growth.
