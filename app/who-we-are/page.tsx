@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import React, { ReactNode, Suspense } from "react";
+import React, { ReactNode } from "react";
 import { FiX, FiPlus } from "react-icons/fi";
 import { LuMoveRight } from "react-icons/lu";
 import Button from "../_components/Button";
@@ -377,7 +377,7 @@ export default function Hello() {
   ];
 
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <div>
       <div className="wrap flex min-h-[35rem] flex-col items-center justify-center text-center">
         <p className="w-full max-w-[80%] text-3xl leading-9 font-medium text-[#000000] md:text-4xl lg:text-5xl lg:leading-[55px]">
           We are <span className="text-[#479DDE]">Frontier Vista</span>, and the
@@ -389,10 +389,6 @@ export default function Hello() {
           path="/who-we-are?active=1#accordion"
           className="mx-auto mt-18 flex h-[55px] w-fit"
         />
-
-        {/* <button className="mx-auto mt-18 flex h-[55px] w-fit items-center rounded-[10px] bg-[#479DDE] px-6 font-normal text-white hover:bg-[#479DDE] focus:outline-none">
-          Discover How We Drive Growth <LuMoveRight className="ml-5 text-2xl" />
-        </button> */}
       </div>
 
       <div className="mb-5 w-full px-4 md:px-0">
@@ -698,7 +694,7 @@ export default function Hello() {
           </div>
         </div>
       </div>
-    </Suspense>
+    </div>
   );
 }
 

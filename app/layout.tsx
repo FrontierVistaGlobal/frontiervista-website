@@ -3,7 +3,7 @@ import { Public_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "./_components/Navbar";
 import Footer from "./_components/Footer";
-// import MobileNav from "./_components/MobileNav";
+import { Suspense } from "react";
 
 const publicSans = Public_Sans({
   subsets: ["latin"],
@@ -23,15 +23,12 @@ export default function RootLayout({
     <html lang="en" className={publicSans.className}>
       <body>
         <div>
-        {/* <div className="hidden lg:block"> */}
           <Navbar />
         </div>
-        {/* <div className="block lg:hidden ">
-            <MobileNav />
-        </div> */}
-       
-        <div className="min-h-[80vh]">{children}</div>
 
+        <div className="min-h-[80vh]">
+          <Suspense>{children}</Suspense>
+        </div>
         <Footer />
       </body>
     </html>
