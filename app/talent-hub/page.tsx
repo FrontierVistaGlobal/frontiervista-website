@@ -61,7 +61,7 @@ export default function TalentHub() {
         <p>Phone: ${formData.phone}</p>
         <p>LinkedIn/Portfolio: ${formData.link}</p>
       `,
-      receivers: ["info@frontiervista.com", "iclasschima@gmail.com"],
+      receivers: ["hr@frontiervista.com", "iclasschima@gmail.com"],
       ...(formData.file && { file: formData.file }),
     }).finally(() => {
       setSending(false);
@@ -86,7 +86,7 @@ export default function TalentHub() {
         }}
       >
         <div className="wrap flex">
-          <div className="flex md:w-1/2 flex-col justify-center p-14">
+          <div className="flex flex-col justify-center p-14 md:w-1/2">
             <h4 className="mb-3 text-5xl font-semibold text-white">
               Vista Talent Hub
             </h4>
