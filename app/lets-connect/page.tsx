@@ -4,12 +4,12 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Button from "../_components/Button";
 import sendEmail from "../_util/emailSend";
-import {
-  InlineWidget,
-  PopupButton,
-  PopupModal,
-  PopupWidget,
-} from "react-calendly";
+
+import dynamic from "next/dynamic";
+
+const CalendlyModal = dynamic(() => import("../_components/CalendlyModal"), {
+  ssr: false,
+});
 
 export default function LetsConnect() {
   const [activeTab, setActiveTab] = useState("job");
@@ -169,12 +169,7 @@ export default function LetsConnect() {
                 that meets your needs and is future-proof.
               </p>
 
-              <PopupModal
-                url="https://calendly.com/info-a8b5"
-                rootElement={document.body}
-                open={isOpen}
-                onModalClose={() => setIsOpen(false)}
-              />
+              <CalendlyModal isOpen={isOpen} setIsOpen={setIsOpen} />
               <button
                 className="mt-5 cursor-pointer rounded-xl border-[2px] border-[#479DDE] p-3 text-[#479DDE]"
                 onClick={() => setIsOpen(true)}
