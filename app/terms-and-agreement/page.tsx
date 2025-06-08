@@ -6,15 +6,13 @@ export default function TermsOfUse() {
       <div className="space-y-6">
         <div>
             <p>
-         These Terms of Use ("Terms") constitute a legally binding agreement between you and Frontier Vista Global Inc.  This agreement is formed when you access any part of www.frontiervista.com or any other sites that link to these terms ("Website"). Your continued use of the website after any changes to these Terms signifies your acceptance of those changes.
-    
-          This Website is intended solely for business-to-business use and is not for consumer, private, or household purposes.
-
-          By accessing the Website, you confirm that you are at least 18 years old and possess the legal authority to agree to these Terms on your own behalf or on behalf of the business you represent.
+            These Terms of Use ("Terms") constitute a legally binding agreement between you and Frontier Vista Global Inc.  
+            This agreement is formed when you access any part of www.frontiervista.com or any other sites that link to these terms ("Website"). Your continued use of the website after any changes to these Terms signifies your acceptance of those changes.
+            This Website is intended solely for business-to-business use and is not for consumer, private, or household purposes.
+            By accessing the Website, you confirm that you are at least 18 years old and possess the legal authority to agree to these Terms on your own behalf or on behalf of the business you represent.
             </p>
-       
-        </div>
-      </div>
+    </div>
+     </div>
 
       <div className="mt-10">
         <h2 className="text-2xl font-semibold mb-4">Who We Are and How to Contact Us</h2>
@@ -24,14 +22,15 @@ export default function TermsOfUse() {
         </p>
       </div>
 
-      <section className="mt-10 space-y-6">
+      <div className="mt-10 space-y-6">
         <h2 className="text-2xl font-semibold mb-4">Website Availability and Modifications</h2>
         <p>
-          We cannot guarantee that our website or any content on it will always be available or uninterrupted. We reserve the right to suspend, withdraw, or restrict access to all or any part of our website for operational and business reasons.
+          We cannot guarantee that our website or any content on it will always be available or uninterrupted.
+           We reserve the right to suspend, withdraw, or restrict access to all or any part of our website for 
+           operational and business reasons.
         </p>
-      </section>
+      </div>
 
-      {/* You can continue adding more sections here following the same pattern */}
 
       <div className="mt-10 space-y-6">
         <h2 className="text-2xl font-semibold mb-4">Effective Date</h2>
@@ -53,7 +52,7 @@ export default function TermsOfUse() {
     <li>Tampering with, hacking, modifying, or otherwise corrupting or breaching security or authentication measures.</li>
     <li>Introducing or transmitting material containing viruses, Trojan horses, worms, time bombs, logic bombs, cancelbots, or other technologically malicious or harmful computer programming routines or engines with the intent or effect of damaging, destroying, disrupting, or otherwise impairing a computer's functionality or the Website's operation.</li>
     <li>Interfering with, intercepting, or expropriating any system, data, or information.</li>
-    <li>Interfering with service to any user, host, or network, including, but not limited to, by means of overloading, "flooding," "mailbombing," or "crashing" any system, subsystem, or network related to the Website.</li>
+    <li>Interfering with service to any user, host, or network, including, but not limited to, by means of overloading, `&quot;` "flooding," "mailbombing," or "crashing" any system, subsystem, or network related to the Website.</li>
     <li>Attacking the Website via a denial-of-service attack or a distributed denial-of-service attack.</li>
   </ul>
   </div>
@@ -65,8 +64,6 @@ export default function TermsOfUse() {
       To the extent permitted by law, we do not guarantee that the website's functions will be uninterrupted or error-free, that the website or its server will be free of viruses or other harmful components, or that defects will be corrected even if we are aware of them. You are responsible for configuring your information technology, computer programs, and platform to access our website, including implementing your own virus protection software.
     </p>
   </div>
-
-  {/* Information Accuracy Disclaimer */}
   <div>
     <h2 className="text-2xl font-semibold mb-4">Information Accuracy Disclaimer</h2>
     <p className="text-gray-700 leading-relaxed">
