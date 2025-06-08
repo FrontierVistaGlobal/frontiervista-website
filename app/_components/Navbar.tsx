@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { FaBars, FaXmark } from "react-icons/fa6";
-
+import Button from "./Button";
 
 const Navbar = () => {
   const pathname = usePathname();
@@ -21,12 +21,11 @@ const Navbar = () => {
     { label: "Lets Connect", path: "/lets-connect" },
   ];
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  // const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
 
-  const toggleMenu = () => setIsMenuOpen(!isMenuOpen)
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const closeMenu = () => {
-  setIsMenuOpen(false); // Hide the mobile menu
-};
+    setIsMenuOpen(false); // Hide the mobile menu
+  };
 
   const [activeDropdown, setActiveDropdown] = useState("");
   const dropdownRef = useRef<HTMLDivElement>(null);
@@ -139,13 +138,13 @@ const Navbar = () => {
   ];
 
   return (
-    <div className="sticky top-0 z-50 bg-white shadow-md w-full lg:px-16  px-6   flex">
-      <div className="md:mx-auto flex w-screen md:max-w-[1200px] items-center justify-between px-3 py-5">
-        <div className="md:text-4xl text-3xl ">
+    <div className="sticky top-0 z-50 flex w-full bg-white px-6 shadow-md lg:px-16">
+      <div className="flex w-screen items-center justify-between px-3 py-5 md:mx-auto md:max-w-[1200px]">
+        <div className="text-3xl md:text-4xl">
           <Image src="/logo.svg" alt="Logo" width={150} height={50} />
         </div>
         <div>
-          <ul className="lg:flex justify-center gap-7 hidden items-center">
+          <ul className="hidden items-center justify-center gap-7 lg:flex">
             {menuItems.map((item) => (
               <li
                 key={item.path}
@@ -198,48 +197,53 @@ const Navbar = () => {
             ))}
           </ul>
         </div>
-        <div>
-          <button className="h-[45px] justify-center items-center rounded-md bg-[#479DDE] px-6 py-2 text-sm font-medium text-white
-          lg:flex hidden
-          ">
-            Get Started
-          </button>
-         
-        </div>
-         </div>
-        { /* Mobile Menu start here */}
-         <div className="flex justify-between items-center lg:hidden mt-3 " onClick={toggleMenu}>
-            {
-              isMenuOpen ? <FaXmark  className="text-blue-400 text-3xl cursor-pointer" /> :
-               <FaBars size={20} className="text-[#479DDE] text-3xl cursor-pointer" /> 
-            }
-        </div>
-     
-      <div className={`${isMenuOpen ? "flex" : "hidden"} flex-col  bg-white text-[#23557a]
-         w-full  p-4 absolute top-[65px] left-0 `} onClick={closeMenu}>
-        <ul className="flex flex-col gap-2 w-full  ">
-            {menuItems.map(({label, path}) => (
-              <Link
-                key={path}
-                href={path}
-               className="text-[#23557a] font-semibold cursor-pointer p-2 rounded-lg
-               w-full  hover:bg-transparent"
-              >
-               {label}
-              </Link>
-            ))}
 
-        </ul>
-       <div className="px">
-         <button className="h-[45px] rounded-md bg-[#479DDE] px-6 py-2 text-sm font-medium text-white
-          flex 
-          ">
-            Get Started
-          </button>
-       </div>
+        <Button
+          text="Get Started"
+          className="!mt-0 hidden !h-[45px] md:flex"
+          showArrow={false}
+          path="/lets-connect"
+        />
       </div>
- 
-     
+      {/* Mobile Menu start here */}
+      <div
+        className="mt-3 flex items-center justify-between lg:hidden"
+        onClick={toggleMenu}
+      >
+        {isMenuOpen ? (
+          <FaXmark className="cursor-pointer text-3xl text-blue-400" />
+        ) : (
+          <FaBars
+            size={20}
+            className="cursor-pointer text-3xl text-[#479DDE]"
+          />
+        )}
+      </div>
+
+      <div
+        className={`${isMenuOpen ? "flex" : "hidden"} absolute top-[65px] left-0 w-full flex-col bg-white p-4 text-[#23557a]`}
+        onClick={closeMenu}
+      >
+        <ul className="flex w-full flex-col gap-2">
+          {menuItems.map(({ label, path }) => (
+            <Link
+              key={path}
+              href={path}
+              className="w-full cursor-pointer rounded-lg p-2 font-semibold text-[#23557a] hover:bg-transparent"
+            >
+              {label}
+            </Link>
+          ))}
+        </ul>
+        <div className="px">
+          <Button
+            text="Get Started"
+            className="mt-[4px] !h-[45px] !text-sm"
+            showArrow={false}
+            path="/lets-connect"
+          />
+        </div>
+      </div>
     </div>
   );
 };

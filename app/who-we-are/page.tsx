@@ -8,14 +8,12 @@ import Button from "../_components/Button";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 
-
-
-
 export default function Hello() {
   const searchParams = useSearchParams();
-  const active = searchParams.get('active');
-  const [activeAccordion, setActiveAccordion] = React.useState<number>(active ? parseInt(active as string) : 0);
-  console.log( active);
+  const active = searchParams.get("active");
+  const [activeAccordion, setActiveAccordion] = React.useState<number>(
+    active ? parseInt(active as string) : 0
+  );
   const accordionData = [
     {
       id: "core-values",
@@ -381,17 +379,16 @@ export default function Hello() {
   return (
     <div>
       <div className="wrap flex min-h-[35rem] flex-col items-center justify-center text-center">
-        <p className="max-w-[80%] w-full  leading-9 text-3xl lg:text-5xl lg:leading-[55px] md:text-4xl font-medium text-[#000000]">
+        <p className="w-full max-w-[80%] text-3xl leading-9 font-medium text-[#000000] md:text-4xl lg:text-5xl lg:leading-[55px]">
           We are <span className="text-[#479DDE]">Frontier Vista</span>, and the
           vision is to unlock new frontiers and accelerate sustainable growth.
         </p>
-     
-        <Button text="Discover How We Drive Growth" path="/who-we-are?active=1#accordion" className="mx-auto mt-18 flex h-[55px] w-fit"/>
 
-
-        {/* <button className="mx-auto mt-18 flex h-[55px] w-fit items-center rounded-[10px] bg-[#479DDE] px-6 font-normal text-white hover:bg-[#479DDE] focus:outline-none">
-          Discover How We Drive Growth <LuMoveRight className="ml-5 text-2xl" />
-        </button> */}
+        <Button
+          text="Discover How We Drive Growth"
+          path="/who-we-are?active=1#accordion"
+          className="mx-auto mt-18 flex h-[55px] w-fit"
+        />
       </div>
 
       <div className="mb-5 w-full px-4 md:px-0">
@@ -404,19 +401,23 @@ export default function Hello() {
         />
       </div>
 
-      <div className="wrap my-[5rem] rounded-lg md:p-12 py-10 px-4">
+      <div className="wrap my-[5rem] rounded-lg px-4 py-10 md:p-12">
         <div className="mb-20 flex flex-col gap-12 md:flex-row md:gap-30">
           <div className="flex-1">
-            <h4 className="md:text-3xl text-2xl font-medium text-[#122231]">Our Vision</h4>
-            <p className="mt-5 md:text-lg text-base font-extralight text-[#3D4F60]">
+            <h4 className="text-2xl font-medium text-[#122231] md:text-3xl">
+              Our Vision
+            </h4>
+            <p className="mt-5 text-base font-extralight text-[#3D4F60] md:text-lg">
               Driving business transformation through collaborative innovation
               and cutting-edge technology to unlock new frontiers and accelerate
               sustainable growth.
             </p>
           </div>
           <div className="flex-1">
-            <h4 className="md:text-3xl text-2xl font-medium text-[#122231]">Our Mission</h4>
-            <p className="mt-5 text-base md:text-lg font-extralight text-[#3D4F60]">
+            <h4 className="text-2xl font-medium text-[#122231] md:text-3xl">
+              Our Mission
+            </h4>
+            <p className="mt-5 text-base font-extralight text-[#3D4F60] md:text-lg">
               We empower businesses by fostering collaborative innovation and
               leveraging cutting-edge technology to drive transformation,
               enhance efficiency, and achieve sustainable growth.
@@ -424,7 +425,11 @@ export default function Hello() {
           </div>
         </div>
 
-            <Button text="Discover Our Core Values" path="/who-we-are?active=0#accordion" className="mx-auto mt-18 flex h-[55px] w-fit"/>
+        <Button
+          text="Discover Our Core Values"
+          path="/who-we-are?active=0#accordion"
+          className="mx-auto mt-18 flex h-[55px] w-fit"
+        />
 
         {/* <button className="mx-auto mt-18 flex h-[55px] w-fit items-center rounded-[10px] bg-[#479DDE] px-6 font-normal text-white hover:bg-[#479DDE] focus:outline-none">
           Discover Our Core Values <LuMoveRight className="ml-5 text-2xl" />
@@ -462,35 +467,39 @@ export default function Hello() {
           </p>
         </div>
 
-        <div className="relative my-18 min-h-[95vh] ">
+        <div className="relative my-18 flex h-full flex-col gap-4 md:min-h-[95vh]">
           {/* Vertical Timeline Line */}
-          <div className="mty-12 left-6 min-h-[80vh] w-0.5 bg-white"></div>
-          <div
-            className={`absolute top-0 left-[-8px] z-10 flex h-5 w-5 items-center justify-center rounded-full border-2 border-white bg-[#479DDE]`}
-          >
-            <div className={`h-3 w-3 rounded-full`}></div>
+          <div className="left-6 hidden min-h-[80vh] w-0.5 bg-white md:flex"></div>
+          <div className="hidden md:flex">
+            <div
+              className={`top-0 left-[-8px] z-10 flex h-5 w-5 items-center justify-center rounded-full border-2 border-white bg-[#479DDE] md:absolute`}
+            >
+              <div className={`h-3 w-3 rounded-full`}></div>
+            </div>
+
+            <div
+              className={`top-[10rem] left-[-8px] z-10 flex h-5 w-5 items-center justify-center rounded-full border-2 border-white bg-[#FF9314] md:absolute`}
+            >
+              <div className={`h-3 w-3 rounded-full`}></div>
+            </div>
+
+            <div
+              className={`top-[20rem] left-[-8px] z-10 flex h-5 w-5 items-center justify-center rounded-full border-2 border-white bg-[#54B862] md:absolute`}
+            >
+              <div className={`h-3 w-3 rounded-full`}></div>
+            </div>
+
+            <div
+              className={`top-[33rem] left-[-8px] z-10 flex h-5 w-5 items-center justify-center rounded-full border-2 border-white bg-[#9354B8] md:absolute`}
+            >
+              <div className={`h-3 w-3 rounded-full`}></div>
+            </div>
           </div>
 
-          <div
-            className={`absolute top-[10rem] left-[-8px] z-10 flex h-5 w-5 items-center justify-center rounded-full border-2 border-white bg-[#FF9314]`}
-          >
-            <div className={`h-3 w-3 rounded-full`}></div>
-          </div>
-
-          <div
-            className={`absolute top-[20rem] left-[-8px] z-10 flex h-5 w-5 items-center justify-center rounded-full border-2 border-white bg-[#54B862]`}
-          >
-            <div className={`h-3 w-3 rounded-full`}></div>
-          </div>
-
-          <div
-            className={`absolute top-[33rem] left-[-8px] z-10 flex h-5 w-5 items-center justify-center rounded-full border-2 border-white bg-[#9354B8]`}
-          >
-            <div className={`h-3 w-3 rounded-full`}></div>
-          </div>
-
-          <div className="absolute top-0 left-[-20rem] flex flex-col">
-            <p className="mb-3 text-right text-white">NOV 2022</p>
+          <div className="top-0 left-[-20rem] flex flex-col md:absolute">
+            <p className="mb-3 text-center text-white md:text-right">
+              NOV 2022
+            </p>
             <div className="w-[300px] rounded-md bg-[#EFF6FF] p-6 shadow-md">
               <h3 className="font-semibold text-[#011D31]">Launch</h3>
 
@@ -502,8 +511,8 @@ export default function Hello() {
             </div>
           </div>
 
-          <div className="absolute top-[10rem] left-8 flex flex-col">
-            <p className="text- mb-3 text-white">JUN 2023</p>
+          <div className="top-[-25rem] left-[-20rem] flex flex-col md:absolute md:top-[10rem] md:left-8">
+            <p className="mb-3 text-center text-white md:text-left">JUN 2023</p>
             <div className="w-[300px] rounded-md bg-[#FFEAD0] p-6 shadow-md">
               <h3 className="font-semibold text-[#011D31]">
                 Digital & Cloud Solutions
@@ -518,8 +527,10 @@ export default function Hello() {
             </div>
           </div>
 
-          <div className="absolute top-[20rem] left-[-20rem] flex flex-col">
-            <p className="mb-3 text-right text-white">JAN 2024</p>
+          <div className="top-[20rem] left-[-20rem] flex flex-col md:absolute">
+            <p className="mb-3 text-center text-white md:text-right">
+              JAN 2024
+            </p>
             <div className="w-[300px] rounded-md bg-[#EFFFEF] p-6 shadow-md">
               <h3 className="font-semibold text-[#011D31]">
                 Data analytics & AI
@@ -534,8 +545,8 @@ export default function Hello() {
             </div>
           </div>
 
-          <div className="absolute top-[33rem] left-8 flex flex-col">
-            <p className="text- mb-3 text-white">JAN 2025</p>
+          <div className="top-[33rem] left-8 flex flex-col md:absolute">
+            <p className="mb-3 text-center text-white md:text-left">JAN 2025</p>
             <div className="w-[300px] rounded-md bg-[#F7E8FF] p-6 shadow-md">
               <h3 className="font-semibold text-[#011D31]">
                 Frontier AI Agent
@@ -558,13 +569,19 @@ export default function Hello() {
         </button>
         </Link> */}
 
-         <Button text=" Explore Our Expertise " path="/what-we-do"  className="mx-auto mt-48 flex h-[55px] w-fit items-center px-6 py-6 font-normal"/>
-       
+        <Button
+          text=" Explore Our Expertise "
+          path="/what-we-do"
+          className="mx-auto flex h-[55px] w-fit items-center px-6 py-6 font-normal md:mt-48"
+        />
       </div>
 
-      <div className={`${accordionData[activeAccordion].theme?.bg}`} id="accordion">
+      <div
+        className={`${accordionData[activeAccordion].theme?.bg}`}
+        id="accordion"
+      >
         <div className="wrap min-h-[80vh] py-12">
-          <div className="flex justify-between">
+          <div className="flex justify-between gap-4 overflow-x-scroll">
             {accordionData.map((item, index) => (
               <div key={item.header} onClick={() => setActiveAccordion(index)}>
                 <h4
@@ -572,7 +589,7 @@ export default function Hello() {
                     activeAccordion === index
                       ? `${item.theme?.color}`
                       : "text-[#011D31]"
-                  } flex cursor-pointer text-lg font-medium transition-all duration-300 ease-in-out`}
+                  } flex cursor-pointer text-lg font-medium whitespace-nowrap transition-all duration-300 ease-in-out`}
                 >
                   {item.header}
                 </h4>
@@ -659,15 +676,14 @@ export default function Hello() {
                   </div>
                 </div>
 
-              <Link href="/lets-connect#contact">
-               <button className="mx-auto my-18 flex h-[55px] w-fit items-center rounded-[10px] bg-[#5D0059] px-6 py-6 font-normal text-white hover:bg-[#479DDE] focus:outline-none">
-                  Partner With Us On CSR Intiatives{" "}
-                  <LuMoveRight className="ml-5 text-2xl" />
-                </button>
-              </Link>
+                <Link href="/lets-connect#contact">
+                  <button className="mx-auto my-18 flex h-[55px] w-fit items-center rounded-[10px] bg-[#5D0059] px-6 py-6 font-normal text-white hover:bg-[#479DDE] focus:outline-none">
+                    Partner With Us On CSR Intiatives{" "}
+                    <LuMoveRight className="ml-5 text-2xl" />
+                  </button>
+                </Link>
 
-               {/* <Button text=" Partner With Us On CSR Intiatives" path="/lets-connect#contact" className="mx-auto my-18 flex h-[55px] w-fit items-center  bg-[#5D0059] px-6 py-6 font-normal text-white hover:bg-[#479DDE] focus:outline-none"/> */}
-               
+                {/* <Button text=" Partner With Us On CSR Intiatives" path="/lets-connect#contact" className="mx-auto my-18 flex h-[55px] w-fit items-center  bg-[#5D0059] px-6 py-6 font-normal text-white hover:bg-[#479DDE] focus:outline-none"/> */}
               </div>
             ) : (
               <Accordion
@@ -745,7 +761,7 @@ const Accordion = ({ data }: AccordionProps) => {
             }`}
           >
             <div className="flex">
-              <div className="w-1/2">
+              <div className="hidden w-1/2 md:flex">
                 <Image
                   src={item.image || ""}
                   width={1000}
@@ -755,7 +771,7 @@ const Accordion = ({ data }: AccordionProps) => {
                 />
               </div>
               <div
-                className={`relative flex min-h-[250px] w-1/2 items-center ${data.theme.cardBg}`}
+                className={`relative flex min-h-[250px] items-center md:w-1/2 ${data.theme.cardBg}`}
               >
                 <div className="px-8">
                   <h4

@@ -2,7 +2,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { FiArrowUpRight } from "react-icons/fi";
 import {
   FaFacebookF,
   FaInstagram,
@@ -16,33 +15,39 @@ export default function Footer() {
     {
       title: "Corporate",
       items: [
-        { name: "About Us", link: "/about-us" },
-        { name: "Our Services", link: "/services" },
-        { name: "Lets Connect", link: "/connect" },
+        { name: "About Us", link: "/who-are-we" },
+        { name: "Our Services", link: "/our-solutions" },
+        { name: "Lets Connect", link: "/lets-connect" },
       ],
     },
     {
       title: "Our Solutions",
       items: [
-        { name: "Data Analytics and Management", link: "/" },
-        { name: "Intelligent Chat Agent", link: "/" },
-        { name: "Retail Solution API", link: "/" },
+        {
+          name: "Data Analytics and Management",
+          link: "/data-intelligence-advanced-analytics",
+        },
+        {
+          name: "Intelligent Chat Agent",
+          link: "/data-intelligence-advanced-analytics",
+        },
+        { name: "Retail Solution API", link: "/digital-solutions" },
       ],
     },
     {
       title: "Career",
       items: [
-        { name: "Find Talent", link: "/" },
-        { name: "Search Job Opportunities", link: "/" },
-        { name: "Why Join Frontier Vista", link: "/" },
+        { name: "Find Talent", link: "/talent-hub" },
+        { name: "Search Job Opportunities", link: "/talent-hub" },
+        { name: "Why Join Frontier Vista", link: "/what-we-do" },
       ],
     },
     {
       title: "Legal",
       items: [
-        { name: "Terms and Conditions", link: "/" },
-        { name: "Privacy Policy", link: "/" },
-        { name: "Security", link: "/" },
+        { name: "Terms and Conditions", link: "/terms-and-agreement" },
+        { name: "Privacy Policy", link: "/terms-and-agreement" },
+        { name: "Security", link: "/terms-and-agreement" },
       ],
     },
     {
@@ -57,12 +62,12 @@ export default function Footer() {
   return (
     <div className="bg-[#011D31]">
       <div className="wrap mx-auto flex flex-col px-3 pt-[5rem] pb-8">
-        <div className="mb-[50px] flex w-full gap-[5rem]">
-          <div className="w-[100px]">
+        <div className="mb-[50px] flex w-full flex-col gap-[5rem] md:flex-row">
+          <div className="hidden w-[100px] md:flex">
             <Image src="/logo-icon.svg" alt="Logo" width={100} height={100} />
           </div>
 
-          <div className="grid grid-cols-6 gap-3">
+          <div className="grid grid-cols-2 gap-3 lg:grid-cols-6">
             {footerData.map((section, index) => (
               <div key={index} className="pl-5">
                 <p className="font-semibold text-[#479DDE]">{section.title}</p>
@@ -79,8 +84,8 @@ export default function Footer() {
             ))}
           </div>
         </div>
-        <div className="flex w-full items-end justify-between">
-          <div>
+        <div className="flex w-full flex-col justify-between md:flex-row lg:items-end">
+          {/* <div>
             <p className="mb-4 text-xl text-white">
               Subscribe to our newsletter
             </p>
@@ -95,7 +100,7 @@ export default function Footer() {
                 Get started <FiArrowUpRight className="ml-2 text-xl" />
               </button>
             </div>
-          </div>
+          </div> */}
 
           <div className="mt-6 flex gap-5 text-white">
             <Link href="#" target="_blank">

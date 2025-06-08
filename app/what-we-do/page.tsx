@@ -5,7 +5,6 @@ import React from "react";
 import Button from "../_components/Button";
 import Link from "next/link";
 
-
 export default function page() {
   const services = [
     {
@@ -43,27 +42,26 @@ export default function page() {
   return (
     <div>
       <div
-        className="relative flex h-[500px] flex-col items-center justify-center bg-cover bg-center"
+        className="relative flex h-[500px] flex-col items-center justify-center bg-cover bg-center px-3"
         style={{ backgroundImage: "url('/wedo.png')" }}
       >
-        <h4 className="w-[40%] text-center font-semibold text-white lg:text-5xl">
+        <h4 className="text-center text-3xl font-semibold text-white md:w-[40%] md:text-5xl">
           Transforming Businesses with Bold, Customized Tech Solutions
         </h4>
-{/* 
-         <button className="mx-auto mt-18 flex h-[55px] w-fit items-center rounded-[10px] bg-[#479DDE] px-6 py-6 font-normal text-white hover:bg-[#479DDE] focus:outline-none">
-          Discover How We Can Transform Your Business{" "}
-          <LuMoveRight className="ml-5 text-2xl" />
-        </button>  */}
-         
-            <Button text="Discover How We Can Transform Your Business" path="/#support" className="mx-auto mt-18 flex h-[55px] w-fit items-center"/>
+
+        <Button
+          text="Discover How We Can Transform Your Business"
+          path="/#support"
+          className="mx-auto mt-18 flex h-[55px] w-fit items-center"
+        />
       </div>
 
-      <div className="wrap my-30 flex flex-col md:flex-row items-center justify-between px-4 py-12 gap-10 md:gap-0  ">
-        <div className="md:w-1/2 md:px-10 w-full ">
-          <h5 className="md:mb-8 mb-6 md:text-5xl text-3xl  font-extralight text-[#011D31]">
+      <div className="wrap my-30 flex flex-col items-center justify-between gap-10 px-4 py-12 md:flex-row md:gap-0">
+        <div className="w-full md:w-1/2 md:px-10">
+          <h5 className="mb-6 text-3xl font-extralight text-[#011D31] md:mb-8 md:text-5xl">
             Understanding your needs is at the heart of what we do.{" "}
           </h5>
-          <p className="md:mb-10 mb-6 text-base md:text-lg text-[#3D4F60]">
+          <p className="mb-6 text-base text-[#3D4F60] md:mb-10 md:text-lg">
             We customize our approach to design, build, and deliver solutions
             that align with your goals. Through collaboration, we create lasting
             partnerships that drive sustainable impact.
@@ -74,10 +72,12 @@ export default function page() {
             Discover More <LuMoveRight className="ml-5 text-2xl" />
           </button>
           </Link> */}
-          <Button text="Discover More" path="/who-we-are#what-makes-us-different" />
-         
+          <Button
+            text="Discover More"
+            path="/who-we-are#what-makes-us-different"
+          />
         </div>
-        <div className="md:w-1/2 w-full">
+        <div className="w-full md:w-1/2">
           <Image
             src="/wedo1.png"
             alt="We Do"
@@ -99,38 +99,39 @@ export default function page() {
               innovation, and drive sustainable growth for lasting impact.
             </p>
 
-            <div className="mt-[2rem] grid w-full grid-cols-1 gap-6 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
+            <div className="mt-[2rem] grid w-full grid-cols-1 gap-6 px-4 md:grid-cols-2 md:gap-y-10 lg:grid-cols-3">
               {services.map((service, index) => (
-                <Link key={index}
-                    href={service.link}
-                    className="relative overflow-hidden rounded-md shadow-md transition-shadow duration-300 hover:shadow-lg">
-                 <div>
-                  <Image
-                    src={service.image}
-                    alt={service.title}
-                    className="h-60 w-full object-cover transition-opacity duration-300 hover:opacity-80"
-                    width={500}
-                    height={500}
-                  />
-                  <div className="absolute bottom-0 left-0 h-22 w-full bg-black p-4 opacity-20"></div>
-                  <h3 className="absolute bottom-0 z-10 w-2/3 p-4 text-left text-lg font-extralight text-white">
-                    {service.title}
-                  </h3>
-                  <a
-                    href="#"
-                    className="absolute top-0 left-0 h-full w-full focus:outline-none"
-                  >
-                    <span className="sr-only">
-                      Learn more about {service.title}
-                    </span>
-                  </a>
-                </div>
+                <Link
+                  key={index}
+                  href={service.link}
+                  className="relative overflow-hidden rounded-md shadow-md transition-shadow duration-300 hover:shadow-lg"
+                >
+                  <div>
+                    <Image
+                      src={service.image}
+                      alt={service.title}
+                      className="h-60 w-full object-cover transition-opacity duration-300 hover:opacity-80"
+                      width={500}
+                      height={500}
+                    />
+                    <div className="absolute bottom-0 left-0 h-22 w-full bg-black p-4 opacity-20"></div>
+                    <h3 className="absolute bottom-0 z-10 p-4 text-left text-lg font-extralight text-white md:w-2/3">
+                      {service.title}
+                    </h3>
+                    <a
+                      href="#"
+                      className="absolute top-0 left-0 h-full w-full focus:outline-none"
+                    >
+                      <span className="sr-only">
+                        Learn more about {service.title}
+                      </span>
+                    </a>
+                  </div>
                 </Link>
-               
               ))}
             </div>
 
-            <p className="mt-26 w-2/3 text-3xl font-[400] text-[#011D31]">
+            <p className="mt-26 px-3 text-lg font-[400] text-[#011D31] md:w-2/3 md:text-3xl">
               Our tailored solutions are delivered through a flexible service
               approach encompassing both industry-specific Vertical Services,
               cross-industry Horizontal Services, and integrated Hybrid
@@ -148,11 +149,15 @@ export default function page() {
 
 const ServiceCategories = () => {
   return (
-    <div className="wrap flex flex-col items-center justify-center py-[10rem]">
-      <h4 className="mb-1 text-5xl leading-12 font-semibold text-[#122231]">
+    <div className="wrap flex flex-col items-center justify-center px-3 py-14 md:py-[10rem]">
+      <h4 className="text-center text-3xl font-semibold text-[#122231] md:hidden">
+        Our Service Approach Tailored Expertise for Your Success at Frontier
+        Vista
+      </h4>
+      <h4 className="mb-1 hidden text-5xl leading-12 font-semibold text-[#122231] md:flex">
         Our Service Approach
       </h4>
-      <h4 className="mb-4 w-2/3 text-center text-5xl leading-14 font-semibold text-[#122231]">
+      <h4 className="mb-4 hidden w-2/3 text-center text-5xl leading-14 font-semibold text-[#122231] md:flex">
         Tailored Expertise for Your Success at Frontier Vista
       </h4>
       <p className="mt-5 mb-28 text-center text-xl font-extralight text-[#3D4F60] lg:w-2/3">
@@ -164,8 +169,8 @@ const ServiceCategories = () => {
         integrated hybrid services
       </p>
 
-      <div className="flex w-full items-center">
-        <div className="relative w-1/2">
+      <div className="flex w-full flex-col items-center md:flex-row">
+        <div className="relative md:w-1/2">
           <Image
             width={500}
             height={500}
@@ -174,7 +179,7 @@ const ServiceCategories = () => {
             className="h-[400px] w-full rounded object-cover"
           />
         </div>
-        <div className="relative h-fit w-1/2 bg-[#F8ECFF] px-10 pt-[3rem] pb-10">
+        <div className="relative h-fit bg-[#F8ECFF] px-10 pt-[3rem] pb-10 md:w-1/2">
           <div className="absolute top-[-25px] w-fit rounded bg-[#9354B8] px-8 py-4">
             <h3 className="text-xl font-light text-white">Vertical Services</h3>
           </div>
@@ -190,8 +195,8 @@ const ServiceCategories = () => {
         </div>
       </div>
 
-      <div className="mt-30 flex w-full items-center">
-        <div className="relative h-fit w-1/2 bg-[#FFEAD091] px-10 pt-[3rem] pb-10">
+      <div className="my-10 flex w-full flex-col items-center md:mt-30 md:flex-row">
+        <div className="relative order-2 h-fit bg-[#FFEAD091] px-10 pt-[3rem] pb-10 md:order-1 md:w-1/2">
           <div className="absolute top-[-25px] w-fit rounded bg-[#FF9314] px-8 py-4">
             <h3 className="text-xl font-light text-white">
               Horizontal Services
@@ -207,7 +212,7 @@ const ServiceCategories = () => {
             regardless of your industry.
           </p>
         </div>
-        <div className="relative w-1/2">
+        <div className="relative order-1 md:w-1/2 lg:order-2">
           <Image
             width={500}
             height={500}
@@ -218,8 +223,8 @@ const ServiceCategories = () => {
         </div>
       </div>
 
-      <div className="mt-30 flex w-full items-center">
-        <div className="relative w-1/2">
+      <div className="flex w-full flex-col items-center md:flex-row">
+        <div className="relative md:w-1/2">
           <Image
             width={500}
             height={500}
@@ -228,7 +233,7 @@ const ServiceCategories = () => {
             className="h-[400px] w-full rounded object-cover"
           />
         </div>
-        <div className="? relative h-fit w-1/2 bg-[#EFF6FF] px-10 pt-[3rem] pb-10">
+        <div className="? relative h-fit bg-[#EFF6FF] px-10 pt-[3rem] pb-10 md:w-1/2">
           <div className="absolute top-[-25px] w-fit rounded bg-[#23557A] px-8 py-4">
             <h3 className="text-xl font-light text-white">Hybrid Services</h3>
           </div>
@@ -373,9 +378,9 @@ const ServiceSpectrum = () => {
     },
   ];
   return (
-    <div className="border-b-[5px] border-[#eee] bg-[#011D31] py-[10rem]">
+    <div className="border-b-[5px] border-[#eee] bg-[#011D31] py-[5rem] md:py-[10rem]">
       <div className="wrap flex flex-col items-center justify-center">
-        <h4 className="mb-4 text-5xl font-semibold text-white">
+        <h4 className="mb-4 text-3xl font-semibold text-white md:text-5xl">
           Our Service Spectrum
         </h4>
         <p className="mb-28 text-center text-xl font-extralight text-white lg:w-[60%]">
@@ -385,8 +390,8 @@ const ServiceSpectrum = () => {
           your business
         </p>
 
-        <div className="flex w-full flex-col gap-2">
-          <div className="flex w-full items-center gap-2">
+        <div className="flex w-full flex-col gap-2 px-3">
+          <div className="flex w-full flex-col items-center gap-2 md:flex-row">
             {serviceTags.slice(0, 3).map((tag, index) => (
               <div
                 key={index}
@@ -404,7 +409,7 @@ const ServiceSpectrum = () => {
               </div>
             ))}
           </div>
-          <div className="mx-auto flex w-[95%] items-center gap-2">
+          <div className="mx-auto flex w-full flex-col items-center gap-2 md:w-[95%] md:flex-row">
             {serviceTags.slice(3, 6).map((tag, index) => (
               <div
                 key={index}
@@ -421,7 +426,7 @@ const ServiceSpectrum = () => {
             ))}
           </div>
 
-          <div className="mx-auto flex w-[90%] items-center gap-2">
+          <div className="mx-auto flex w-full flex-col items-center gap-2 md:w-[90%] md:flex-row">
             {serviceTags.slice(6, 9).map((tag, index) => (
               <div
                 key={index}
@@ -437,7 +442,7 @@ const ServiceSpectrum = () => {
               </div>
             ))}
           </div>
-          <div className="mx-auto flex w-[80%] items-center gap-2">
+          <div className="mx-auto flex w-full flex-col items-center gap-2 md:w-[80%] md:flex-row">
             {serviceTags.slice(9, 11).map((tag, index) => (
               <div
                 key={index}
@@ -454,7 +459,7 @@ const ServiceSpectrum = () => {
             ))}
           </div>
 
-          <div className="mx-auto flex w-[70%] items-center gap-2">
+          <div className="mx-auto flex w-full flex-col items-center gap-2 md:w-[70%] md:flex-row">
             {serviceTags.slice(11, 13).map((tag, index) => (
               <div
                 key={index}
@@ -471,7 +476,7 @@ const ServiceSpectrum = () => {
             ))}
           </div>
 
-          <div className="mx-auto flex w-[60%] items-center gap-2">
+          <div className="mx-auto flex w-full flex-col items-center gap-2 md:w-[60%] md:flex-row">
             {serviceTags.slice(13, 15).map((tag, index) => (
               <div
                 key={index}
@@ -487,7 +492,7 @@ const ServiceSpectrum = () => {
               </div>
             ))}
           </div>
-          <div className="mx-auto flex w-[40%] items-center gap-2">
+          <div className="mx-auto flex w-full flex-col items-center gap-2 md:w-[40%] md:flex-row">
             {serviceTags.slice(15).map((tag, index) => (
               <div
                 key={index}

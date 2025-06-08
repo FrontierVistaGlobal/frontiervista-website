@@ -8,24 +8,30 @@ export default function Button({
   onClick,
   showArrow = true,
   path = "/",
+  loading = false,
+  type = "button",
 }: {
   text?: string;
   className?: string;
-  onClick?: () => void;
+  onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
   showArrow?: boolean;
   path?: string;
+  loading?: boolean;
+  type?: "button" | "submit" | "reset";
 }) {
   const router = useRouter();
   return (
     <button
-      onClick={() => {
-        if (path) {
+      onClick={(e) => {
+        if (onClick) {
+          onClick(e);
+        } else {
           router.push(path);
-        } else if (onClick) {
-          onClick();
         }
       }}
-      className={`mt-5 flex h-[55px] w-fit cursor-pointer items-center rounded-[10px] bg-[#479DDE] px-6 font-normal text-white focus:outline-none ${className}`}
+      type={type}
+      disabled={loading}
+      className={`mt-5 ${loading ? "cursor-not-allowed" : "cursor-pointer"} flex h-[55px] w-fit items-center rounded-[10px] bg-[#479DDE] px-6 font-normal text-white focus:outline-none ${className}`}
     >
       {text}
       {showArrow && <LuMoveRight className="ml-5 text-2xl" />}
