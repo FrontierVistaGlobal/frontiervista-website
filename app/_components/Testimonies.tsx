@@ -119,27 +119,32 @@ const CarouselTestimonials = () => {
           initial="initial"
           animate="animate"
           exit="exit"
-          className="absolute top-0 left-0 flex min-h-[350px] w-full flex-col items-center justify-center rounded-xl bg-[#EFF6FF] px-[10%] text-center"
+          className="absolute top-0 left-0 flex min-h-[350px] w-full flex-col items-center justify-center rounded-xl bg-[#EFF6FF] px-4 md:px-[10%] text-center"
         >
           <Image
             src="/quote.svg"
             alt=""
-            height={100}
-            width={100}
-            className="absolute top-18 left-20 z-0"
+              height={60}
+            width={60}
+            className="absolute top-4 left-4 md:top-18 md:left-20 sm:top-6 sm:left-6 "
+            // height={100}
+            // width={100}
+            // // className="absolute top-18 left-20 z-0"
+            
+            // className="absolute  top-5 left-5 md:top-18 md:left-20 "
           />
 
-          <span className="z-10 text-xl font-light">
+          <span className="z-10 text-base md:text-xl font-light">
             {testimonials[currentIndex].text}
           </span>
 
-          <p className="text-md z-10 mt-8 text-xl font-semibold text-gray-800">
+          <p className=" z-10 mt-10 md:mt-8 text-lg md:text-xl font-semibold text-gray-800">
             {testimonials[currentIndex].author}
           </p>
         </motion.div>
       </AnimatePresence>
 
-      <div className="absolute top-1/2 left-6 z-10 -translate-y-1/2 transform">
+      <div className="absolute top-1/2 left-4 md:left-6 z-10 -translate-y-1/2 transform">
         <button
           onClick={goToPrevious}
           className="cursor-pointer rounded-full bg-white p-2 text-gray-500 hover:bg-gray-200"

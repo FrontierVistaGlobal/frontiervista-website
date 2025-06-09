@@ -577,10 +577,10 @@ export default function Hello() {
       </div>
 
       <div
-        className={`${accordionData[activeAccordion].theme?.bg}`}
+        className={`${accordionData[activeAccordion].theme?.bg} `}
         id="accordion"
       >
-        <div className="wrap min-h-[80vh] py-12">
+        <div className="wrap min-h-[80vh] py-12 md:px-0 px-2">
           <div className="flex justify-between gap-4 overflow-x-scroll">
             {accordionData.map((item, index) => (
               <div key={item.header} onClick={() => setActiveAccordion(index)}>
@@ -589,7 +589,7 @@ export default function Hello() {
                     activeAccordion === index
                       ? `${item.theme?.color}`
                       : "text-[#011D31]"
-                  } flex cursor-pointer text-lg font-medium whitespace-nowrap transition-all duration-300 ease-in-out`}
+                  } flex cursor-pointer text-base md:text-lg font-medium whitespace-nowrap transition-all duration-300 ease-in-out`}
                 >
                   {item.header}
                 </h4>
@@ -601,19 +601,19 @@ export default function Hello() {
             <h4
               className={`${
                 accordionData[activeAccordion].theme?.subHeader
-              } mt-12 text-xl font-medium`}
+              } mt-12 text-lg md:text-xl font-medium`}
             >
               {accordionData[activeAccordion].subTitle}
             </h4>
-            <p className="mt-3 text-[#122C3F] lg:w-[80%]">
+            <p className="mt-3 text-[#122C3F]  lg:w-[80%]">
               {accordionData[activeAccordion].description}
             </p>
           </div>
 
           <div className="mt-4">
             {activeAccordion === 3 ? (
-              <div className="flex flex-col">
-                <div>
+              <div className="flex flex-col ">
+                <div className="mb-8 ">
                   <span className="!text-[#011D31]">
                     At Frontier Vista, driven by integrity and
                     customer-centricity, we leverage our tech expertise for
@@ -623,13 +623,17 @@ export default function Hello() {
                   </span>
                 </div>
 
-                <div className="mx-auto flex w-[80%] flex-col gap-6">
-                  <div className="mt-8 flex items-center justify-between rounded !bg-white p-6">
-                    <h4 className="text-6xl text-[#5D0059]">20</h4>
-                    <span className="w-1/3 text-xl font-light text-[#5D0059]">
+                {/* <div className="flex flex-col px-4 md:px-8 "> */}
+                  <div className="mx-auto flex w-full max-w-6xl flex-col md:gap-6 ">
+                  <div className="mt-8 flex flex-col md:items-center md:justify-between md:flex-row rounded shadow-md !bg-white p-6  ">
+                    <div className="flex items-center justify-between md:w-1/3 w-full ">
+                     <h4 className="md:text-6xl text-5xl text-[#5D0059]">20</h4>
+                    <span className="md:w-1/2 w-[75%] mx-auto text-lg md:text-xl font-light text-[#5D0059] ">
                       Grants for Digital Literacy Program
                     </span>
-                    <span className="w-1/4 text-[#011D31]">
+                    </div>
+                    
+                    <span className="md:w-1/4 w-full text-[#011D31]">
                       We grant resources to EdTech to support digital skills
                       training in underserved communities.
                     </span>
@@ -638,15 +642,19 @@ export default function Hello() {
                       alt="Logo"
                       width={60}
                       height={60}
+                      className="hidden md:block"
                     />
                   </div>
 
-                  <div className="mt-8 flex items-center justify-between rounded !bg-white p-6">
-                    <h4 className="text-6xl text-[#5D0059]">16</h4>
-                    <span className="w-1/3 text-xl font-light text-[#5D0059]">
+                  <div className="mt-8 flex md:items-center md:justify-between rounded  !bg-white p-6 shadow-md md:flex-row flex-col">
+                    <div className="flex items-center justify-between md:w-1/3 w-full">
+                      <h4 className="md:text-6xl text-5xl text-[#5D0059]">16</h4>
+                        <span className="md:w-1/2 w-[75%] mx-auto text-lg md:text-xl font-light text-[#5D0059] ">
                       Research Grant for Health Research Program
                     </span>
-                    <span className="w-1/4 text-[#011D31]">
+                    </div>
+                  
+                    <span className="md:w-1/4 w-full text-[#011D31]">
                       We fund tech-driven research to advance medical knowledge
                       and improve healthcare across 4 institutions.
                     </span>
@@ -655,15 +663,21 @@ export default function Hello() {
                       alt="Logo"
                       width={50}
                       height={50}
+                      className="hidden md:block"
                     />
                   </div>
 
-                  <div className="mt-8 flex items-center justify-between rounded !bg-white p-6">
-                    <h4 className="text-6xl text-[#5D0059]">50</h4>
-                    <span className="w-1/3 text-xl font-light text-[#5D0059]">
-                      Women Empowerment in Tech
+                    <div className="mt-8 flex md:items-center md:justify-between rounded  !bg-white p-6 shadow-md md:flex-row flex-col">
+
+                       <div className="flex items-center justify-between md:w-1/3 w-full">
+                      <h4 className="md:text-6xl text-5xl text-[#5D0059]">50</h4>
+                        <span className="md:w-1/2 w-[75%] mx-auto text-lg md:text-xl font-light text-[#5D0059] ">
+                     Women Empowerment in Tech
                     </span>
-                    <span className="w-1/4 text-[#011D31]">
+                    </div>
+
+                  
+                    <span className="md:w-1/4 w-full text-[#011D31]">
                       Empowering 50 women with essential tech skills through
                       scholarships, mentorship and Networking.
                     </span>
@@ -672,6 +686,7 @@ export default function Hello() {
                       alt="Logo"
                       width={50}
                       height={50}
+                       className="hidden md:block"
                     />
                   </div>
                 </div>

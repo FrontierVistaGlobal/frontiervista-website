@@ -34,34 +34,34 @@ export default function page() {
       </div>
 
       <div
-        className="py-[10rem]"
+        className="md:py-[10rem] py-20"
         style={{
           background:
             "linear-gradient(180deg, #ffffff 0%, #DBF6FF 60.5%, #d5f5ff 100%)",
         }}
       >
-        <div className="wrap">
-          <div className="flex w-full justify-end">
-            <h4 className="w-1/2 text-5xl leading-[60px] font-extralight text-[#3990A5]">
+        <div className="wrap px-4 md:px-8">
+          <div className="flex w-full justify-center md:justify-end">
+            <h4 className="md:w-1/2 w-full  md:text-5xl text-2xl md:leading-[60px] leading-8 font-extralight text-[#3990A5]">
               Effective IT strategies are the foundation of any successful
               digital transformation.
             </h4>
           </div>
 
           <div>
-            <h4 className="mt-36 mb-14 flex items-center gap-2 text-5xl font-semibold text-[#011D31]">
+            <h4 className="md:mt-36 mt-20 mb:10 md:mb-14 flex flex-wrap items-center gap-2 text-3xl sm:text-4xl md:text-5xl font-semibold text-[#011D31]">
               Our service
               <span
-                className={`${coveredByYourGrace.className} text-5xl text-[#3990A5]`}
+                className={`${coveredByYourGrace.className}  text-[#3990A5]`}
               >
                 Offerings
               </span>
             </h4>
 
-            <div className="grid grid-cols-1 gap-8 px-8 md:grid-cols-2">
+            <div className="grid grid-cols-1 md:gap-8 gap-6 md:px-8 md:grid-cols-2">
               {/* Service 1: IT Strategy Consulting */}
-              <div className="flex gap-6 rounded-lg p-6 px-8">
-                <div className="mb-2 text-5xl font-extralight text-[#3990A5]">
+              <div className="flex gap-4 md:gap-6  rounded-lg md:p-6 md:px-8 p-4">
+                <div className="mb-2 md:text-5xl text-4xl font-extralight text-[#3990A5] "> 
                   <svg
                     width="70"
                     height="70"
@@ -78,10 +78,10 @@ export default function page() {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="mb-2 text-xl font-medium text-[#011D31]">
+                  <h3 className="mb-2 text-lg md:text-xl font-medium text-[#011D31]">
                     IT Strategy Consulting
                   </h3>
-                  <p className="font-light text-[#011D31]">
+                  <p className="font-light text-[#011D31] text-sm md:text-base">
                     We develop tailored strategies, identify technology
                     opportunities, and create actionable roadmaps to guide your
                     IT investments.
@@ -90,8 +90,8 @@ export default function page() {
               </div>
 
               {/* Service 2: Business Strategy */}
-              <div className="flex gap-6 rounded-lg p-6 px-8">
-                <div className="mb-2 text-5xl font-extralight text-[#3990A5]">
+              <div className="flex gap-4 md:gap-6  rounded-lg md:p-6 p-4 md:px-8 ">
+                <div className="mb-2 text-4xl md:text-5xl font-extralight text-[#3990A5]">
                   <svg
                     width="50"
                     height="42"
@@ -107,11 +107,11 @@ export default function page() {
                     />
                   </svg>
                 </div>
-                <div>
-                  <h3 className="mb-2 text-xl font-medium text-[#011D31]">
+                <div className="">
+                  <h3 className="mb-2 text-lg md:text-xl font-medium text-[#011D31]">
                     Business Strategy
                   </h3>
-                  <p className="font-light text-[#011D31]">
+                  <p className="font-light text-[#011D31] text-sm md:text-base">
                     We create business strategies that optimize your operations,
                     lower costs, and improve performance, while addressing
                     future challenges.
@@ -122,9 +122,10 @@ export default function page() {
 
             <hr className="my-8 border-[#011D31]" />
 
-            <div className="grid grid-cols-1 gap-8 px-8 md:grid-cols-2">
-              <div className="flex gap-6 rounded-lg p-6 px-8">
-                <div className="mb-2 text-5xl font-extralight text-[#3990A5]">
+
+            <div className="grid grid-cols-1 gap-6 md:gap-8 md:px-8 md:grid-cols-2">
+              <div className="flex gap-4 md:gap-6  rounded-lg md:p-6 md:px-8 p-4">
+                <div className="mb-2 text-4xl md:text-5xl font-extralight text-[#3990A5]">
                   <svg
                     width="48"
                     height="50"
@@ -141,10 +142,10 @@ export default function page() {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="mb-2 text-xl font-medium text-[#011D31]">
+                  <h3 className="mb-2 text-lg  md:text-xl font-medium text-[#011D31] ">
                     Project Planning & Delivery{" "}
                   </h3>
-                  <p className="font-light text-[#011D31]">
+                  <p className="font-light text-sm md:text-base text-[#011D31]">
                     From initial planning to final delivery, we create detailed
                     plans, manage risks, and ensure that all deliverables align
                     with your business objectives. We facilitate successful
@@ -152,9 +153,8 @@ export default function page() {
                   </p>
                 </div>
               </div>
-
-              <div className="flex gap-6 rounded-lg p-6 px-8">
-                <div className="mb-2 text-5xl font-extralight text-[#3990A5]">
+              <div className="flex gap-4 md:gap-6  rounded-lg md:p-6 p-4 md:px-8 ">
+                 <div className="mb-2 text-4xl md:text-5xl font-extralight text-[#3990A5]">
                   <svg
                     width="58"
                     height="58"
@@ -171,10 +171,10 @@ export default function page() {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="mb-2 text-xl font-medium text-[#011D31]">
+                  <h3 className="mb-2 text-lg md:text-xl font-medium text-[#011D31]">
                     Solution Architecture Consulting
                   </h3>
-                  <p className="font-light text-[#011D31]">
+                   <p className="font-light text-[#011D31] text-sm md:text-base">
                     Our tailored architecture ensures your systems are
                     optimized, well-integrated, and future-ready. We focus on
                     developing flexible, high-performing infrastructures that
@@ -186,9 +186,9 @@ export default function page() {
 
             <hr className="my-8 border-[#011D31]" />
 
-            <div className="grid grid-cols-1 gap-8 px-8 md:grid-cols-2">
-              <div className="flex gap-6 rounded-lg p-6 px-8">
-                <div className="mb-2 text-5xl font-extralight text-[#3990A5]">
+           <div className="grid grid-cols-1 md:gap-8 gap-6 md:px-8 md:grid-cols-2">
+              <div className="flex gap-4 md:gap-6  rounded-lg md:p-6 md:px-8 p-4">
+                <div className="mb-2 text-4xl md:text-5xl font-extralight text-[#3990A5]">
                   <svg
                     width="52"
                     height="60"
@@ -205,10 +205,10 @@ export default function page() {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="mb-2 text-xl font-medium text-[#011D31]">
+                  <h3 className="mb-2 md:text-xl text-lg font-medium text-[#011D31]">
                     IT Risk Management & Compliance
                   </h3>
-                  <p className="font-light text-[#011D31]">
+                  <p className="font-light text-[#011D31] text-sm md:text-base">
                     We develop tailored security strategies to mitigate
                     vulnerabilities, allowing you to focus on growth while
                     minimizing risks. Trust our experts to handle compliance, so
@@ -217,8 +217,8 @@ export default function page() {
                 </div>
               </div>
 
-              <div className="flex gap-6 rounded-lg p-6 px-8">
-                <div className="mb-2 text-5xl font-extralight text-[#3990A5]">
+           <div className="flex gap-4 md:gap-6  rounded-lg md:p-6 p-4 md:px-8 ">
+                <div className="mb-2 text-4xl md:text-5xl font-extralight text-[#3990A5]">
                   <svg
                     width="54"
                     height="60"
@@ -235,10 +235,10 @@ export default function page() {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="mb-2 text-xl font-medium text-[#011D31]">
+                  <h3 className="mb-2 text-lg md:text-xl font-medium text-[#011D31]">
                     Change Management
                   </h3>
-                  <p className="font-light text-[#011D31]">
+                  <p className="font-light text-[#011D31] text-sm md:text-base">
                     Our tailored architecture ensures your systems are
                     optimized, well-integrated, and future-ready. We focus on
                     developing flexible, high-performing infrastructures that
@@ -252,25 +252,25 @@ export default function page() {
       </div>
 
       <div
-        className="relative flex h-[1100px] items-end bg-cover bg-center"
+        className="relative flex h-[1100px] md:h-[800px]  items-end bg-cover bg-center  bg-no-repeat"
         style={{ backgroundImage: "url('images/amazing.png')" }}
       >
-        <div className="absolute top-20 left-30 w-[400px] bg-[#D0F4FF] p-10">
-          <p className="text-4xl font-[200]">
+        <div className="absolute top-10 md:top-20 left-5 w-[90%] md:left-30 md:w-[400px]  bg-[#D0F4FF] p-6 md:p-10">
+          <p className="text-xl md:text-4xl font-[200] ">
             Change is inevitable, but the right approach can drive positive
             transformation”
           </p>
         </div>
 
-        <div className="flex h-[250px] w-full flex-col justify-end bg-[#D0F4FF] pb-8 text-white">
-          <div className="wrap relative lg:min-w-[1200px]">
-            <div className="flex w-full items-center justify-between">
-              <div className="w-1/2">
-                <p className="mb-3 text-[#011D31]">
+        <div className="flex h-[250px] w-full flex-col justify-end bg-[#D0F4FF] pb-8  px-4 md:px-0 text-white">
+          <div className="wrap relative max-w-[1200px] mx-auto w-full">
+            <div className="flex flex-col md:flex-row w-full items-start md:items-center justify-between">
+              <div className="md:w-1/2">
+                <p className="mb-3 text-[#011D31] text-base md:text-lg ">
                   We guide your organization through process and technological
                   transitions with minimal disruption.
                 </p>
-                <h4 className="mb-6 text-4xl font-semibold text-black">
+                <h4 className="mb-6 text-2xl md:text-4xl font-semibold text-black">
                   Let&apos;s Build Something Amazing Together
                 </h4>
               </div>

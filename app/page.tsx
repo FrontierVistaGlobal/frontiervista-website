@@ -201,8 +201,8 @@ export default function Home() {
       <HealthCare />
 
       <div className="wrap overflow-hidden pt-[5rem] pb-[8rem] text-center">
-        <h4 className="mb-3 text-4xl font-[500]">Our Clients</h4>
-        <p className="text-xl font-[200]">
+        <h4 className="mb-3 text-3xl md:text-4xl font-[500]">Our Clients</h4>
+        <p className=" text-lg md:text-xl font-[200]">
           We&apos;re proud to work with industry leaders across various sectors
         </p>
 
@@ -241,8 +241,8 @@ export default function Home() {
       </div>
 
       <div className="wrap pt-[5rem] pb-[8rem] text-center">
-        <h4 className="mb-3 text-4xl font-[500]">Testimonies</h4>
-        <p className="mx-auto mb-20 text-xl font-[200] lg:w-1/2">
+        <h4 className="mb-3 text-3xl md:text-4xl font-[500]">Testimonies</h4>
+        <p className="mx-auto mb-20 text-[18px] md:text-xl font-[200] lg:w-1/2">
           Real stories from satisfied customers who have experienced the quality
           and impact of our work firsthand.
         </p>
@@ -328,11 +328,11 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="wrap pt-[9rem] text-center">
-        <h4 className="mb-4 text-4xl font-[500]">
+      <div className="wrap pt-[5rem] md:pt-[9rem] text-center px-1 md:px-0">
+        <h4 className="mb-4 text-2xl md:text-4xl font-[500]">
           Certifications & Memberships
         </h4>
-        <p className="mx-auto mb-12 w-1/2 text-lg font-[200]">
+        <p className="mx-auto mb-12 md:w-1/2 w-full text-[16px] md:text-lg font-[200]">
           Backed by industry-recognized certifications, strategic partnerships,
           and extensive experience, Frontier Vista is committed to delivering
           trusted solutions that simplify IT challenges.

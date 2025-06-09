@@ -162,7 +162,7 @@ export default function page() {
                     <p className="md:text-5xl text-3xl  font-[300] text-[#011D31]">
                       Expert Knowledge, On Demand
                     </p>
-                    <p className="mt-4 font-extralight text-sm md:text-base">
+                    <p className="mt-4 font-extralight text-base">
                       Ensure you stay ahead of industry trend with engaging
                       webinars featuring industry thought Leaders discussing
                       real-world challenges and solutions in data strategy,
