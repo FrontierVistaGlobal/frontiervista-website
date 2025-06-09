@@ -44,7 +44,7 @@ export default function page() {
       image: "/images/res1.svg",
       color: "#F9FCFF",
       btn: "Consult an Expert",
-      link: "#",
+      link: "/lets-connect#contact",
     },
     {
       title: "Hardware Procurement & Maintenance",
@@ -53,7 +53,7 @@ export default function page() {
       image: "/images/res2.svg",
       color: "#FFEAD0",
       btn: "Discover Strategic Hardware Procurement",
-      link: "#",
+      link: "/lets-connect#contact",
     },
     {
       title: "Bid Packaging",
@@ -71,7 +71,7 @@ export default function page() {
       image: "/images/res4.svg",
       color: "#F1D9FF",
       btn: "Explore Software Procurement",
-      link: "#",
+      link: "/lets-connect#contact",
     },
 
     {
@@ -100,9 +100,9 @@ export default function page() {
         className="relative flex h-[700px] items-end bg-cover bg-center"
         style={{ backgroundImage: "url('images/resource-bg.png')" }}
       >
-        <div className="flex h-[350px] w-full flex-col justify-center bg-[#730A09BF] text-white">
-          <div className="wrap">
-            <h4 className="mb-6 text-4xl font-semibold">
+        <div className="flex w-full flex-col justify-center bg-[#730A09BF] py-10 text-white md:min-h-[350px]">
+          <div className="wrap px-4 md:px-0">
+            <h4 className="mb-6 text-2xl font-semibold md:text-4xl">
               Resource Management & Procurement
             </h4>
             <p className="mb-8 font-extralight lg:w-[60%]">
@@ -115,13 +115,13 @@ export default function page() {
         </div>
       </div>
 
-      <div className="py-[10rem]">
+      <div className="py-[5rem] md:py-[10rem]">
         <div className="wrap">
           <div className="flex justify-end">
-            <div className="flex w-full flex-col lg:w-1/2">
+            <div className="flex w-full flex-col px-5 md:px-0 lg:w-1/2">
               <h4 className="mb-5 text-5xl leading-[60px] font-extralight text-[#D55B5A]">
-                Maximize your organization’s efficiency & ROI with strategic
-                resource management.
+                Maximize your organization&apos;s efficiency & ROI with
+                strategic resource management.
               </h4>
 
               <Button
@@ -157,54 +157,53 @@ export default function page() {
             className="lg:w-[15rem]"
           />
         </div>
-        <div className="wrap py-[10rem] pb-[5rem]">
+        <div className="wrap py-[5rem] pb-[5rem] md:py-[10rem]">
           <div className="flex flex-col items-center justify-center text-center">
             <h4 className="text-5xl font-[500] lg:w-2/3">
               Unlock Efficiency and Savings with Our Expert Services
             </h4>
           </div>
 
-          <div className="mt-16 grid gap-4 md:grid-cols-2">
+          <div className="mt-16 grid gap-4 px-5 md:grid-cols-2 md:px-0">
             {supportItems.map((item) => (
               <div
                 key={item.title}
                 className="flex min-h-[200px] gap-8 rounded-lg bg-[#FFEEED] p-10"
               >
                 <div
-                  className={`flex h-[60px] w-[200px] items-center justify-center rounded bg-white p-3`}
+                  className={`hidden h-[60px] w-[100px] items-center justify-center rounded bg-white p-3 md:flex md:w-[200px]`}
                 >
                   <Image
                     src={item.image}
-                    width={100}
-                    height={100}
+                    width={1000}
+                    height={1000}
                     alt=""
                     className="h-[40px] w-[40px] object-contain"
                   />
                 </div>
-                <div>
+                <div className="flex flex-col">
                   <h5 className="mb-2 text-xl">{item.title}</h5>
                   <p className="font-[300]">{item.description}</p>
-                  <button className="mt-6 flex h-[55px] w-fit cursor-pointer items-center rounded-[10px] bg-[#479DDE] px-6 font-normal text-white hover:bg-[#479DDE] focus:outline-none">
-                    {item.btn} <LuMoveRight className="ml-5 text-2xl" />
-                  </button>
+
+                  <Button text={item.btn} path={item.link} />
                 </div>
               </div>
             ))}
           </div>
 
-          <p className="mt-20 text-5xl font-light text-[#D55B5A] lg:w-1/2">
+          <p className="mt-20 px-5 text-5xl font-light text-[#D55B5A] md:px-0 lg:w-1/2">
             Partner with Us for Smarter Resource Management
           </p>
         </div>
       </div>
 
-      <div className="bg-[#011D31] py-[8rem]">
-        <div className="wrap flex flex-col justify-center">
-          <h4 className="mx-auto mb-6 text-center text-5xl font-medium text-white lg:w-1/2">
+      <div className="bg-[#011D31] py-[5rem] md:py-[8rem]">
+        <div className="wrap flex flex-col justify-center px-5 md:px-0">
+          <h4 className="mx-auto mb-6 text-center text-4xl font-medium text-white md:text-5xl lg:w-1/2">
             Why Frontier Vista is the ideal choice
           </h4>
 
-          <div className="mt-10 grid grid-cols-2 gap-3">
+          <div className="md:grid-cols-2 mt-10 grid gap-3">
             {whyItems.map((item, index) => (
               <div
                 key={index}
@@ -251,16 +250,16 @@ export default function page() {
         className="relative flex h-[1100px] flex-col justify-end bg-cover bg-center"
         style={{ backgroundImage: "url('images/res7.png')" }}
       >
-        <div className="flex h-[350px] w-full flex-col justify-center bg-[#D0F4FF] pt-10 pb-8 text-white">
-          <div className="wrap relative lg:min-w-[1200px]">
-            <div className="flex w-full items-center justify-between gap-10">
-              <div className="w-[40%]">
+        <div className="min:h-[350px] flex w-full flex-col justify-center bg-[#D0F4FF] pt-10 pb-8 text-white">
+          <div className="wrap relative px-5 md:px-0 lg:min-w-[1200px]">
+            <div className="flex w-full flex-col items-center justify-between md:flex-row md:gap-10">
+              <div className="md:w-[40%]">
                 <h4 className="mb-6 text-4xl font-normal text-[#011D31]">
                   Take Control of Your Resources and Drive Business Success
                 </h4>
               </div>
 
-              <div className="w-1/2">
+              <div className="md:w-1/2">
                 <p className="text-[#011D31]">
                   Streamline asset management, optimize procurement processes,
                   and scale teams with confidence through Frontier Vista&apos;s

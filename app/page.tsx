@@ -106,34 +106,34 @@ export default function Home() {
 
           <div className="mt-[4rem] grid w-full grid-cols-2 justify-between md:grid-cols-4">
             <div className="flex flex-col items-center text-center">
-              <p className="text-[50px] font-[100] lg:text-[60px]">
+              <p className="text-[40px] font-[100] lg:text-[60px]">
                 <CountUp start={0} end={67} duration={2.5} suffix="%" />
               </p>
-              <p className="w-2/3 text-center text-sm">
+              <p className="w-2/3 text-center md:text-sm text-[12px]">
                 REVENUE GROWTH RATE FOR OUR CLIENTS
               </p>
             </div>
             <div className="text-center">
-              <p className="text-[50px] font-[100] lg:text-[60px]">
+              <p className="text-[40px] font-[100] lg:text-[60px]">
                 <CountUp start={0} end={400} duration={2.5} suffix="%" />
               </p>
-              <p className="w-[80%] text-center text-sm">
+              <p className="w-[80%] text-center  md:text-sm text-[12px]">
                 GROWTH IN CLIENT BASE
               </p>
             </div>
             <div className="min-w-[140px] text-center">
-              <p className="text-[50px] font-[100] lg:text-[60px]">
+              <p className="text-[40px] font-[100] lg:text-[60px]">
                 <CountUp start={0} end={90} duration={2.5} suffix="%" />
               </p>
-              <p className="w-[80%] text-center text-sm">
+              <p className="w-[80%] text-center  md:text-sm text-[12px]">
                 CLIENT SATISFACTION (NPS)
               </p>
             </div>
             <div className="text-center">
-              <p className="w-[80%] text-[50px] font-[100] lg:text-[60px]">
+              <p className="w-[80%] text-[40px] font-[100] lg:text-[60px]">
                 <CountUp start={0} end={5} duration={2.5} />
               </p>
-              <p className="w-[80%] text-center text-sm">NEW MARKET ENTERED</p>
+              <p className="w-[80%] text-center md:text-sm text-[12px]">NEW MARKET ENTERED</p>
             </div>
           </div>
         </div>
@@ -262,7 +262,7 @@ export default function Home() {
         />
       </div>
 
-      <div className="mt-[3rem] bg-[#D0F4FF]">
+      <div className="mt-[20px] bg-[#D0F4FF]">
         <div className="wrap py-[6rem]">
           <h4 className="mb-[4rem] text-center text-4xl font-[500]">
             Trending Insights
@@ -277,14 +277,13 @@ export default function Home() {
                     IT Strategy & Governance
                   </p>
                 </div>
-                <p className="text-xs text-[#479DDE]">January 8, 2025</p>
+                <p className="text-xs text-[#479DDE]">June 4, 2025</p>
               </div>
 
               <p className="mt-8 text-xl font-medium text-[#23557A]">
                 Key Drivers of Scalable, Secure, and Future-Ready IT Solutions
               </p>
 
-              <p className="mt-2 text-xl text-[#479DDE] underline">Read More</p>
             </div>
 
             <div className="flex flex-col">
@@ -295,30 +294,30 @@ export default function Home() {
                     Operationalizing AI with DevSecFinOps
                   </p>
                 </div>
-                <p className="text-xs text-[#479DDE]">January 8, 2025</p>
+                
+            <p  className="text-xs text-[#479DDE]">march 15, 2025</p>
               </div>
 
               <p className="mt-8 text-xl font-medium text-[#23557A]">
                 Balancing Risk, Cost, and Innovation
               </p>
 
-              <p className="mt-2 text-xl text-[#479DDE] underline">Read More</p>
             </div>
 
             <div className="flex flex-col">
               <Image src="/insight3.png" alt="" width={400} height={200} />
               <div className="mt-2 flex items-center justify-between">
                 <div className="rounded-3xl bg-white px-4 py-1">
-                  <p className="text-xs text-[#479DDE]">New & Noteworthy</p>
+                  <p className="text-xs text-[#479DDE]">Cybersecurity And It Governance</p>
                 </div>
-                <p className="text-xs text-[#479DDE]">January 8, 2025</p>
+                <p className="text-xs text-[#479DDE]">June 4, 2025</p>
               </div>
 
               <p className="mt-8 text-xl font-medium text-[#23557A]">
                 Cybersecurity in the Age of Digital Transformation Read More
               </p>
 
-              <p className="mt-2 text-xl text-[#479DDE] underline">Read More</p>
+             
             </div>
           </div>
 

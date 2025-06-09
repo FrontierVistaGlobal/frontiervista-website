@@ -11,10 +11,12 @@ export default function page() {
         className="relative flex min-h-[700px] items-end bg-cover bg-center"
         style={{ backgroundImage: "url('images/SOL1.png')" }}
       >
-        <div className="flex min-h-[350px] py-[3rem] w-full flex-col justify-center bg-[#190F54CC] text-white">
+        <div className="flex min-h-[200px] w-full flex-col justify-center bg-[#190F54CC] py-10 text-white md:py-[3rem]">
           <div className="wrap px-4 md:px-10">
-            <h4 className="mb-2 text-4xl font-semibold">Our Solutions</h4>
-            <p className="mb-3 text-2xl font-[100]">
+            <h4 className="mb-2 text-2xl font-semibold md:text-4xl">
+              Our Solutions
+            </h4>
+            <p className="mb-3 md:text-2xl md:font-[100]">
               Drive growth with Intelligent Technology
             </p>
             <p className="mb-8 font-extralight lg:w-[60%]">
@@ -24,14 +26,13 @@ export default function page() {
               explore
             </p>
             <div className="my-5">
-                <Button text="Discover Our Solutions Now" />
+              <Button text="Discover Our Solutions Now" />
             </div>
-           
           </div>
         </div>
       </div>
 
-      <div className="py-[10rem]">
+      <div className="px-4 py-[6rem] md:py-[10rem]">
         <div className="wrap">
           <div className="flex justify-center">
             <div className="flex flex-col items-center text-center lg:w-1/2">
@@ -71,7 +72,7 @@ export default function page() {
           />
         </div>
 
-        <div className="wrap mb-20 flex flex-col px-4 ">
+        <div className="wrap mb-20 flex flex-col px-4">
           <h4 className="text-3xl font-medium">Data Analytics & Management</h4>
           <p className="my-2 text-xl font-[400]">
             Unlock Actionable Insights with Our Data Analytics & Management
@@ -83,7 +84,7 @@ export default function page() {
           </p>
 
           <div className="mt-5">
-            <div className="grid md:grid-cols-2 grid-cols-1 gap-5">
+            <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
               <div>
                 <Image
                   src={"/images/SOL2.png"}
@@ -115,9 +116,9 @@ export default function page() {
                 <Image
                   src={"/images/SOL3.png"}
                   width={1000}
-                  height={100}
+                  height={1000}
                   alt=""
-                  className="h-[200px] w-full"
+                  className="w-full object-cover md:h-[200px]"
                 />
 
                 <div className="bg-[#E8E6FF] p-8">
@@ -141,9 +142,9 @@ export default function page() {
               <Image
                 src={"/images/SOL4.png"}
                 width={1000}
-                height={100}
+                height={1000}
                 alt=""
-                className="h-[200px] w-full"
+                className="h-48 w-full object-cover md:h-[200px]"
               />
 
               <div className="bg-[#E8E6FF] p-8">
@@ -164,11 +165,11 @@ export default function page() {
           </div>
         </div>
 
-        <div className="wrap mb-20 flex flex-col lg:px-0 px-4"> 
-          <h4 className="md:text-3xl text-2xl font-medium">
+        <div className="wrap mb-20 flex flex-col px-4 lg:px-0">
+          <h4 className="text-2xl font-medium md:text-3xl">
             Intelligent Chat Agent Solutions
           </h4>
-          <p className="my-2 md:text-xl font-[400] text-lg">
+          <p className="my-2 text-lg font-[400] md:text-xl">
             Enhance Customer Engagement with Intelligent Chat Agents
           </p>
 
@@ -179,12 +180,14 @@ export default function page() {
                 width={1000}
                 height={100}
                 alt=""
-                className="h-[200px] w-full   "
+                className="h-[200px] w-full object-cover"
               />
 
               <div className="bg-[#E8E6FF] p-8">
-                <h5 className="mb-4 md:text-xl text-lg font-semibold ">Chat Agents </h5>
-                <p className="lg:mb-10 font-[200] text-sm mb-3 ">
+                <h5 className="mb-4 text-lg font-semibold md:text-xl">
+                  Chat Agents{" "}
+                </h5>
+                <p className="mb-3 text-sm font-[200] lg:mb-10">
                   Revolutionize your customer interactions with Frontier Vista
                   Global&apos;s AI-powered chat agents. Automate support,
                   deliver instant and personalized responses across multiple
@@ -203,34 +206,34 @@ export default function page() {
         </div>
 
         <div className="wrap mb-20 flex flex-col px-4 lg:px-0">
-          <h4 className="md:text-3xl font-medium text-2xl">
+          <h4 className="text-2xl font-medium md:text-3xl">
             Retail Solutions & Marketing Solutions
           </h4>
-          <p className="my-2 text-lg md:text-xl font-[400] ">
+          <p className="my-2 text-lg font-[400] md:text-xl">
             Transform Your Retail and Marketing Strategies
           </p>
-          <p className="font-[100] ">
+          <p className="font-[100]">
             Drive sales, enhance customer loyalty, and personalize your
             marketing efforts with Frontier Vista Global&apos;s innovative
             retail solutions and marketing solutions.
           </p>
 
           <div className="mt-5 space-y-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 ">
+            <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
               <div>
                 <Image
                   src={"/images/SOL6.png"}
                   width={1000}
                   height={100}
                   alt=""
-                  className="md:h-[200px] h-48 w-full"
+                  className="h-48 w-full md:h-[200px]"
                 />
 
                 <div className="bg-[#E8E6FF] p-6 md:p-8">
                   <h5 className="mb-4 text-lg md:text-xl">
                     Retail APIs (Wallet API, Bill Pay API)
                   </h5>
-                  <p className="md:mb-10 mb-8 font-[200]">
+                  <p className="mb-8 font-[200] md:mb-10">
                     Integrate secure payment solutions effortlessly. Our retail
                     APIs power digital wallets, bill payments, and seamless fund
                     transfers, enabling frictionless transactions for retailers
@@ -253,11 +256,11 @@ export default function page() {
                   className="h-[200px] w-full"
                 />
 
-                <div className="bg-[#E8E6FF] p-6 md:p-8 ">
+                <div className="bg-[#E8E6FF] p-6 md:p-8">
                   <h5 className="mb-4 text-lg md:text-xl">
                     Digital Loyalty & Rewards Platform
                   </h5>
-                  <p className="md:mb-10 mb-8 font-[200] ">
+                  <p className="mb-8 font-[200] md:mb-10">
                     Boost customer retention with our Digital Loyalty & Rewards
                     Platform. Create custom rewards programs, track customer
                     engagement, and increase brand loyalty with personalized
@@ -274,11 +277,11 @@ export default function page() {
                 width={1000}
                 height={100}
                 alt=""
-                className="md:h-[200px] w-full h-48 object-cover"
+                className="h-48 w-full object-cover md:h-[200px]"
               />
 
               <div className="bg-[#E8E6FF] p-6 md:p-8">
-                <h5 className=" text-lg md:text-xl  ">
+                <h5 className="text-lg md:text-xl">
                   Retail AI Solutions for Marketing
                 </h5>
                 <p className="mb-10 font-[200]">
@@ -299,28 +302,29 @@ export default function page() {
         className="relative flex min-h-[1100px] flex-col justify-end bg-cover bg-center"
         style={{ backgroundImage: "url('images/SOL9.png')" }}
       >
-        <div className="flex min-h-[300px] w-full flex-col justify-center bg-[#E8E6FF] pt-10 pb-8 md:px-20 px-4 text-white">
-          <div className=" max-w-7xl mx-auto"> 
+        <div className="flex min-h-[300px] w-full flex-col justify-center bg-[#E8E6FF] px-4 pt-10 pb-8 text-white md:px-20">
+          <div className="mx-auto max-w-7xl">
             {/* wrap relative lg:min-w-[1200px] */}
-            <div className="flex flex-col lg:flex-row w-full lg:items-center lg:justify-between gap-10 ">
+            <div className="flex w-full flex-col gap-10 lg:flex-row lg:items-center lg:justify-between">
               <div className="lg:w-[40%]">
-                <h4 className=" md:mt-20 text-xl md:text-2xl font-normal text-[#011D31]">
+                <h4 className="text-lg font-normal text-[#011D31] md:text-2xl">
                   We offer a powerful suite of solutions, all designed to drive
                   efficiency, enhance customer engagement, and fuel growth.
                   However, our expertise doesn&apos;t end there.{" "}
                 </h4>
               </div>
 
-              <div className=" lg:w-[50%]">
-                 {/* w-1/2 */}
-
-                <p className="text-xl font-[300] text-[#011D31]">
+              <div className="lg:w-[50%]">
+                <p className="font-[300] text-[#011D31] md:text-xl">
                   Don&apos;t see exactly what you&apos;re looking for?
                   Let&apos;s discuss your unique requirements and build the
                   perfect solution together.
                 </p>
-            
-                <Button text="Schedule a Free Consultation on Your Resource Strategy" />
+
+                <Button
+                  text="Schedule a Free Custom Solution Consultation Today"
+                  path="/lets-connect"
+                />
               </div>
             </div>
           </div>

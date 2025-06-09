@@ -13,15 +13,15 @@ export default function page() {
   return (
     <div className="w-full">
       <div
-        className="relative flex h-[700px] items-end bg-cover bg-center"
+        className="relative flex h-[600px]  md:h-[700px] items-end bg-cover bg-center  bg-no-repeat"
         style={{ backgroundImage: "url('images/it-strategy-bg.png')" }}
       >
-        <div className="flex h-[350px] w-full flex-col justify-center bg-[#02303BE5] text-white">
-          <div className="wrap">
-            <h4 className="mb-6 text-4xl font-semibold">
+        <div className="flex h-[400px] md:h-[350px] w-full flex-col justify-center bg-[#02303BE5] px-4 md:px-8 text-white">
+          <div className="wrap max-w-[1200px] mx-auto w-full">
+            <h4 className="mb-4 md:mb-6 text-2xl md:text-4xl font-semibold">
               IT Strategy and Consulting{" "}
             </h4>
-            <p className="mb-8 font-extralight lg:w-[60%]">
+            <p className="md:mb-8 mb-6 text-sm md:text-base font-extralight lg:w-[60%] md:w-[80%]">
               We become your dedicated IT advisor, crafting winning strategies,
               actionable roadmaps, and detailed implementation plans to achieve
               your business goals. Our client-focused approach ensures we are
@@ -34,7 +34,7 @@ export default function page() {
       </div>
 
       <div
-        className="md:py-[10rem] py-20"
+        className="md:py-[5rem] py-20"
         style={{
           background:
             "linear-gradient(180deg, #ffffff 0%, #DBF6FF 60.5%, #d5f5ff 100%)",
@@ -49,7 +49,7 @@ export default function page() {
           </div>
 
           <div>
-            <h4 className="md:mt-36 mt-20 mb:10 md:mb-14 flex flex-wrap items-center gap-2 text-3xl sm:text-4xl md:text-5xl font-semibold text-[#011D31]">
+            <h4 className="md:mt-36 mt-20 mb-10 md:mb-14 flex flex-wrap items-center gap-2 text-3xl sm:text-4xl md:text-5xl font-semibold text-[#011D31]">
               Our service
               <span
                 className={`${coveredByYourGrace.className}  text-[#3990A5]`}
@@ -63,9 +63,9 @@ export default function page() {
               <div className="flex gap-4 md:gap-6  rounded-lg md:p-6 md:px-8 p-4">
                 <div className="mb-2 md:text-5xl text-4xl font-extralight text-[#3990A5] "> 
                   <svg
-                    width="70"
-                    height="70"
-                    viewBox="0 0 70 70"
+                    width="50"
+                    height="50"
+                    viewBox="0 0 50 42"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                   >
@@ -252,7 +252,7 @@ export default function page() {
       </div>
 
       <div
-        className="relative flex h-[1100px] md:h-[800px]  items-end bg-cover bg-center  bg-no-repeat"
+        className="relative flex min-h-screen md:h-[800px]  items-end bg-cover bg-center  bg-no-repeat"
         style={{ backgroundImage: "url('images/amazing.png')" }}
       >
         <div className="absolute top-10 md:top-20 left-5 w-[90%] md:left-30 md:w-[400px]  bg-[#D0F4FF] p-6 md:p-10">
@@ -262,11 +262,11 @@ export default function page() {
           </p>
         </div>
 
-        <div className="flex h-[250px] w-full flex-col justify-end bg-[#D0F4FF] pb-8  px-4 md:px-0 text-white">
-          <div className="wrap relative max-w-[1200px] mx-auto w-full">
+        <div className="flex w-full flex-col justify-end bg-[#D0F4FF] py-6 px-4 md:px-8 text-white">
+          <div className=" relative  max-w-[1200px] mx-auto w-full">
             <div className="flex flex-col md:flex-row w-full items-start md:items-center justify-between">
               <div className="md:w-1/2">
-                <p className="mb-3 text-[#011D31] text-base md:text-lg ">
+                <p className="mb-3 text-[#011D31] font-light text-base md:text-lg ">
                   We guide your organization through process and technological
                   transitions with minimal disruption.
                 </p>

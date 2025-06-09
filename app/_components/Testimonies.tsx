@@ -129,9 +129,7 @@ const CarouselTestimonials = () => {
             className="absolute top-4 left-4 md:top-18 md:left-20 sm:top-6 sm:left-6 "
             // height={100}
             // width={100}
-            // // className="absolute top-18 left-20 z-0"
-            
-            // className="absolute  top-5 left-5 md:top-18 md:left-20 "
+           
           />
 
           <span className="z-10 text-base md:text-xl font-light">
@@ -162,7 +160,7 @@ const CarouselTestimonials = () => {
         </button>
       </div>
 
-      <div className="absolute bottom-1 left-[46%] z-20 mt-4 flex justify-center space-x-2">
+      <div className="absolute bottom-1 left-[38%] md:left-[46%] z-20 mt-4 flex justify-center space-x-2">
         {testimonials.map((_, index) => (
           <button
             key={index}
