@@ -191,7 +191,7 @@ export default function LetsConnect() {
                   </label>
                   <input
                     placeholder="Enter your name"
-                    className="h-[50px] w-full rounded border border-[#0000001A] bg-white p-2"
+                    className="h-[50px] w-full rounded border border-[#0000001A] bg-white p-2 text-sm"
                     value={formData.fullname}
                     onChange={handleChange}
                     name="fullname"
@@ -204,8 +204,8 @@ export default function LetsConnect() {
                       Email Address <span className="text-red-500">*</span>
                     </label>
                     <input
-                      placeholder="Enter your email address"
-                      className="h-[50px] w-full rounded border border-[#0000001A] bg-white p-2"
+                      placeholder="Enter email address"
+                      className="h-[50px] w-full rounded border border-[#0000001A] bg-white p-2 text-sm"
                       value={formData.email}
                       onChange={handleChange}
                       name="email"
@@ -217,8 +217,8 @@ export default function LetsConnect() {
                       Phone Number <span className="text-red-500">*</span>
                     </label>
                     <input
-                      placeholder="Enter your phone number"
-                      className="h-[50px] w-full rounded border border-[#0000001A] bg-white"
+                      placeholder="Enter phone number"
+                      className="h-[50px] w-full rounded border border-[#0000001A] bg-white pl-[10px] text-sm"
                       name="phone"
                       type="tel"
                       value={formData.phone}
@@ -237,7 +237,7 @@ export default function LetsConnect() {
                     placeholder="Enter company name"
                     value={formData.company}
                     onChange={handleChange}
-                    className="h-[50px] w-full rounded border border-[#0000001A] bg-white p-2"
+                    className="h-[50px] w-full rounded border border-[#0000001A] bg-white p-2 text-sm"
                   />
                 </div>
 
@@ -251,7 +251,7 @@ export default function LetsConnect() {
                     placeholder="Enter project overview"
                     value={formData.message}
                     onChange={handleChange}
-                    className="h-[100px] w-full rounded border border-[#0000001A] bg-white p-2"
+                    className="h-[100px] w-full rounded border border-[#0000001A] bg-white p-2 text-sm"
                   />
                 </div>
 
@@ -273,7 +273,7 @@ export default function LetsConnect() {
                         handleFileChange(e);
                       }
                     }}
-                    className="h-[50px] w-full rounded border border-dashed border-[#479DDE] bg-white p-2"
+                    className="h-[50px] w-full rounded border border-dashed border-[#479DDE] bg-white p-2 text-sm"
                   />
                 </div>
 

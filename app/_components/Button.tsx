@@ -10,6 +10,7 @@ export default function Button({
   path = "/",
   loading = false,
   type = "button",
+  hideMobileArrow = false,
 }: {
   text?: string;
   className?: string;
@@ -18,6 +19,7 @@ export default function Button({
   path?: string;
   loading?: boolean;
   type?: "button" | "submit" | "reset";
+  hideMobileArrow?: boolean;
 }) {
   const router = useRouter();
   return (
@@ -31,10 +33,14 @@ export default function Button({
       }}
       type={type}
       disabled={loading}
-      className={`mt-5 ${loading ? "cursor-not-allowed" : "cursor-pointer"} flex h-[55px] w-fit items-center rounded-[10px] bg-[#479DDE] px-6 font-normal text-white focus:outline-none ${className}`}
+      className={`md:text-md mt-5 text-sm ${loading ? "cursor-not-allowed" : "cursor-pointer"} flex min-h-[55px] w-fit items-center rounded-[10px] bg-[#479DDE] px-6 py-3 font-normal text-white focus:outline-none ${className}`}
     >
       {text}
-      {showArrow && <LuMoveRight className="ml-5 text-2xl" />}
+      {showArrow && (
+        <LuMoveRight
+          className={`ml-5 text-2xl ${hideMobileArrow ? "hidden md:flex" : ""}`}
+        />
+      )}
     </button>
   );
 }

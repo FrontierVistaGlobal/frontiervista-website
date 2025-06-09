@@ -93,8 +93,8 @@ export default function page() {
               "linear-gradient(358.6deg, rgba(3, 2, 20, 0.8) 10.69%, rgba(100, 0, 81, 0.8) 98.84%)",
           }}
         >
-          <div className="wrap w-full">
-            <h4 className="mb-6 text-4xl font-semibold">
+          <div className="wrap w-full px-5 md:px-0">
+            <h4 className="mb-6 text-2xl font-semibold md:text-4xl">
               Data Intelligence & Advanced Analytics
             </h4>
             <p className="mb-8 font-extralight lg:w-[60%]">
@@ -107,7 +107,7 @@ export default function page() {
         </div>
       </div>
 
-      <div className="bg-[#030214] py-[10rem]">
+      <div className="bg-[#030214] px-5 py-[5rem] md:px-0 md:py-[10rem]">
         <div className="wrap">
           <div className="flex justify-end">
             <div className="flex w-full flex-col lg:w-1/2">
@@ -126,7 +126,7 @@ export default function page() {
       </div>
 
       <div className="bg-[#030214]">
-        <div className="wrap py-[10rem] pb-[4rem]">
+        <div className="wrap px-5 py-[5rem] pb-[4rem] md:px-0 md:py-[10rem]">
           <div className="flex flex-col items-center justify-center text-center">
             <h4 className="text-5xl font-[500] text-white lg:w-2/3">
               Our Expertise in Data Intelligence & Analytics
@@ -137,10 +137,10 @@ export default function page() {
             {supportItems.map((item) => (
               <div
                 key={item.title}
-                className="mb-10 flex min-h-[200px] flex-col overflow-hidden rounded-lg rounded-tl-[20px] rounded-tr-[20px] border border-[#454176] bg-[#030214]"
+                className="mb-5 flex min-h-[200px] flex-col overflow-hidden rounded-lg rounded-tl-[20px] rounded-tr-[20px] border border-[#454176] bg-[#030214] md:mb-10"
               >
                 <div
-                  className="flex h-[60px] w-full items-center pl-8"
+                  className="flex min-h-[60px] w-full items-center py-4 pl-8"
                   style={{
                     background: item.color,
                   }}
@@ -177,12 +177,12 @@ export default function page() {
           </div>
 
           <div
-            className="relative my-18 h-[600px]"
+            className="relative my-18 flex min-h-[600px] items-center justify-center px-5"
             style={{ backgroundImage: "url('images/DIA5.png')" }}
           >
-            <div className="absolute top-18 right-30 flex w-[500px] flex-col">
+            <div className="flex flex-col md:absolute md:top-18 md:right-30 md:w-[500px]">
               <div className="h-[90px] rounded bg-[#7166E2] p-3 text-white">
-                <p className="w-[350px] text-2xl">
+                <p className="text-2xl md:w-[350px]">
                   Artificial Intelligence (AI) & Machine Learning (ML)
                 </p>
               </div>
@@ -212,13 +212,13 @@ export default function page() {
         </div>
       </div>
 
-      <div className="bg-[#030214] py-[8rem]">
+      <div className="bg-[#030214] px-5 py-[5rem] md:px-0 md:py-[8rem]">
         <div className="wrap flex flex-col justify-center">
           <h4 className="mb-6 text-center text-5xl font-medium text-white">
             Why businesses trust us
           </h4>
 
-          <div className="mt-10 grid grid-cols-2 gap-3">
+          <div className="mt-10 grid gap-3 md:grid-cols-2">
             {whyItems.map((item, index) => (
               <div
                 key={index}
@@ -250,7 +250,7 @@ export default function page() {
           </div>
 
           <div className="my-20">
-            <p className="w-1/2 font-[100] text-white lg:text-5xl">
+            <p className="w-1/2 text-3xl font-[100] text-white lg:text-5xl">
               Optimize Your Business with Data Intelligence
             </p>
           </div>

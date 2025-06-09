@@ -41,9 +41,9 @@ export default function page() {
         className="relative flex h-[700px] items-end bg-cover bg-center"
         style={{ backgroundImage: "url('images/op-excel.png')" }}
       >
-        <div className="flex h-[350px] w-full flex-col justify-center bg-[#012724BF] text-white">
+        <div className="flex w-full flex-col justify-center bg-[#012724BF] px-5 py-10 text-white md:min-h-[350px]">
           <div className="wrap">
-            <h4 className="mb-6 text-4xl font-semibold">
+            <h4 className="mb-6 text-2xl font-semibold md:text-4xl">
               Operational Excellence
             </h4>
             <p className="mb-8 font-extralight lg:w-[60%]">
@@ -56,7 +56,7 @@ export default function page() {
         </div>
       </div>
 
-      <div className="py-[10rem]">
+      <div className="px-5 py-[5rem] md:px-0 md:py-[10rem]">
         <div className="wrap">
           <div className="flex justify-end">
             <div className="flex w-full flex-col lg:w-1/2">
@@ -105,9 +105,9 @@ export default function page() {
             className="lg:w-[20rem]"
           />
         </div>
-        <div className="wrap">
+        <div className="wrap px-5 md:px-0">
           <div className="flex w-full gap-4 lg:w-1/2">
-            <p className="text-8xl text-[#479DDE33]"> 01</p>
+            <p className="text-5xl text-[#479DDE33] md:text-8xl"> 01</p>
             <div className="flex flex-col">
               <h4 className="mb-3 text-3xl font-extralight text-[#16A99D]">
                 IT Support and Managed Services
@@ -119,14 +119,17 @@ export default function page() {
                 updates and consistent maintenance, maximizing uptime and
                 minimizing disruptions to your productivity.
               </p>
-              <Button text="Talk to our Experts" path="/who-we-are?active=1#accordion"/>
+              <Button
+                text="Talk to our Experts"
+                path="/who-we-are?active=1#accordion"
+              />
             </div>
           </div>
         </div>
 
-        <div className="wrap flex justify-end">
+        <div className="wrap flex justify-end px-5 md:px-0">
           <div className="flex w-full gap-4 lg:w-1/2">
-            <p className="text-8xl text-[#479DDE33]"> 02</p>
+            <p className="text-5xl text-[#479DDE33] md:text-8xl"> 02</p>
             <div className="flex flex-col">
               <h4 className="text-3xl font-extralight text-[#16A99D]">
                 Network and System Administration
@@ -143,9 +146,9 @@ export default function page() {
           </div>
         </div>
 
-        <div className="wrap">
+        <div className="wrap px-5 md:px-0">
           <div className="flex w-full gap-4 lg:w-1/2">
-            <p className="text-8xl text-[#479DDE33]"> 03</p>
+            <p className="text-5xl text-[#479DDE33] md:text-8xl"> 03</p>
             <div className="flex flex-col">
               <h4 className="text-3xl font-extralight text-[#16A99D]">
                 IT System Management
@@ -162,9 +165,9 @@ export default function page() {
           </div>
         </div>
 
-        <div className="wrap flex justify-end">
+        <div className="wrap flex justify-end px-5 md:px-0">
           <div className="flex w-full gap-4 lg:w-1/2">
-            <p className="text-8xl text-[#479DDE33]"> 04</p>
+            <p className="text-5xl text-[#479DDE33] md:text-8xl"> 04</p>
             <div className="flex flex-col">
               <h4 className="text-3xl font-extralight text-[#16A99D]">
                 Performance Monitoring and Optimization
@@ -181,9 +184,9 @@ export default function page() {
           </div>
         </div>
 
-        <div className="wrap">
+        <div className="wrap px-5 md:px-0">
           <div className="flex w-full gap-4 lg:w-1/2">
-            <p className="text-8xl text-[#479DDE33]"> 05</p>
+            <p className="text-5xl text-[#479DDE33] md:text-8xl"> 05</p>
             <div className="flex flex-col">
               <h4 className="text-3xl font-extralight text-[#16A99D]">
                 Process and Workflow Automation
@@ -203,9 +206,9 @@ export default function page() {
           </div>
         </div>
 
-        <div className="wrap flex justify-end">
+        <div className="wrap flex justify-end px-5 md:px-0">
           <div className="flex w-full gap-4 lg:w-1/2">
-            <p className="text-8xl text-[#479DDE33]"> 06</p>
+            <p className="text-5xl text-[#479DDE33] md:text-8xl"> 06</p>
             <div className="flex flex-col">
               <h4 className="text-3xl font-extralight text-[#16A99D]">
                 Disaster Recovery Planning
@@ -222,20 +225,20 @@ export default function page() {
           </div>
         </div>
 
-        <div className="wrap mt-10 w-full">
+        <div className="wrap mt-10 w-full px-5 md:px-0">
           <p className="text-5xl font-[100] text-[#16A99D] lg:w-2/3">
             Optimize with Confidence - Your Partner for Seamless IT.
           </p>
         </div>
       </div>
 
-      <div className="bg-[#011D31] py-[8rem]">
+      <div className="bg-[#011D31] px-5 py-[5rem] md:px-0 md:py-[8rem]">
         <div className="wrap flex flex-col justify-center">
           <h4 className="mx-auto mb-6 text-center text-5xl font-medium text-white lg:w-1/2">
             Why Choose Us for Operational Excellence?
           </h4>
 
-          <div className="mt-10 grid grid-cols-2 gap-3">
+          <div className="mt-10 grid gap-3 md:grid-cols-2">
             {supportItems.map((item, index) => (
               <div
                 key={index}
@@ -272,17 +275,17 @@ export default function page() {
         className="relative flex h-[1100px] flex-col justify-end bg-cover bg-center"
         style={{ backgroundImage: "url('images/opex5.png')" }}
       >
-        <div className="flex h-[350px] w-full flex-col justify-center bg-[#D0F4FF] pt-10 pb-8 text-white">
+        <div className="flex w-full flex-col justify-center bg-[#D0F4FF] pt-10 pb-8 text-white md:min-h-[350px]">
           <div className="wrap relative lg:min-w-[1200px]">
-            <div className="flex w-full items-center justify-between gap-10">
-              <div className="w-[40%]">
-                <h4 className="mb-6 text-4xl font-normal text-[#011D31]">
+            <div className="flex w-full flex-col items-center justify-between px-5 md:flex-row md:gap-10 md:px-0">
+              <div className="md:w-[40%]">
+                <h4 className="mb-6 text-2xl md:text-4xl font-normal text-[#011D31]">
                   Achieve Uninterrupted Operations and a Resilient IT
                   Environment{" "}
                 </h4>
               </div>
 
-              <div className="w-1/2">
+              <div className="md:w-1/2">
                 <p className="text-[#011D31]">
                   Transform your business with the Frontier Vista Cloud
                   Innovation Hub. From strategic cloud adoption to proactive
