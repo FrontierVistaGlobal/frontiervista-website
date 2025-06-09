@@ -106,34 +106,34 @@ export default function Home() {
 
           <div className="mt-[4rem] grid w-full grid-cols-2 justify-between md:grid-cols-4">
             <div className="flex flex-col items-center text-center">
-              <p className="text-[50px] font-[100] lg:text-[60px]">
+              <p className="text-[40px] font-[100] lg:text-[60px]">
                 <CountUp start={0} end={67} duration={2.5} suffix="%" />
               </p>
-              <p className="w-2/3 text-center text-sm">
+              <p className="w-2/3 text-center md:text-sm text-[12px]">
                 REVENUE GROWTH RATE FOR OUR CLIENTS
               </p>
             </div>
             <div className="text-center">
-              <p className="text-[50px] font-[100] lg:text-[60px]">
+              <p className="text-[40px] font-[100] lg:text-[60px]">
                 <CountUp start={0} end={400} duration={2.5} suffix="%" />
               </p>
-              <p className="w-[80%] text-center text-sm">
+              <p className="w-[80%] text-center  md:text-sm text-[12px]">
                 GROWTH IN CLIENT BASE
               </p>
             </div>
             <div className="min-w-[140px] text-center">
-              <p className="text-[50px] font-[100] lg:text-[60px]">
+              <p className="text-[40px] font-[100] lg:text-[60px]">
                 <CountUp start={0} end={90} duration={2.5} suffix="%" />
               </p>
-              <p className="w-[80%] text-center text-sm">
+              <p className="w-[80%] text-center  md:text-sm text-[12px]">
                 CLIENT SATISFACTION (NPS)
               </p>
             </div>
             <div className="text-center">
-              <p className="w-[80%] text-[50px] font-[100] lg:text-[60px]">
+              <p className="w-[80%] text-[40px] font-[100] lg:text-[60px]">
                 <CountUp start={0} end={5} duration={2.5} />
               </p>
-              <p className="w-[80%] text-center text-sm">NEW MARKET ENTERED</p>
+              <p className="w-[80%] text-center md:text-sm text-[12px]">NEW MARKET ENTERED</p>
             </div>
           </div>
         </div>
@@ -201,8 +201,8 @@ export default function Home() {
       <HealthCare />
 
       <div className="wrap overflow-hidden pt-[5rem] pb-[8rem] text-center">
-        <h4 className="mb-3 text-4xl font-[500]">Our Clients</h4>
-        <p className="text-xl font-[200]">
+        <h4 className="mb-3 text-3xl md:text-4xl font-[500]">Our Clients</h4>
+        <p className=" text-lg md:text-xl font-[200]">
           We&apos;re proud to work with industry leaders across various sectors
         </p>
 
@@ -241,8 +241,8 @@ export default function Home() {
       </div>
 
       <div className="wrap pt-[5rem] pb-[8rem] text-center">
-        <h4 className="mb-3 text-4xl font-[500]">Testimonies</h4>
-        <p className="mx-auto mb-20 text-xl font-[200] lg:w-1/2">
+        <h4 className="mb-3 text-3xl md:text-4xl font-[500]">Testimonies</h4>
+        <p className="mx-auto mb-20 text-[18px] md:text-xl font-[200] lg:w-1/2">
           Real stories from satisfied customers who have experienced the quality
           and impact of our work firsthand.
         </p>
@@ -262,7 +262,7 @@ export default function Home() {
         />
       </div>
 
-      <div className="mt-[3rem] bg-[#D0F4FF]">
+      <div className="mt-[20px] bg-[#D0F4FF]">
         <div className="wrap py-[6rem]">
           <h4 className="mb-[4rem] text-center text-4xl font-[500]">
             Trending Insights
@@ -277,14 +277,13 @@ export default function Home() {
                     IT Strategy & Governance
                   </p>
                 </div>
-                <p className="text-xs text-[#479DDE]">January 8, 2025</p>
+                <p className="text-xs text-[#479DDE]">June 4, 2025</p>
               </div>
 
               <p className="mt-8 text-xl font-medium text-[#23557A]">
                 Key Drivers of Scalable, Secure, and Future-Ready IT Solutions
               </p>
 
-              <p className="mt-2 text-xl text-[#479DDE] underline">Read More</p>
             </div>
 
             <div className="flex flex-col">
@@ -295,30 +294,30 @@ export default function Home() {
                     Operationalizing AI with DevSecFinOps
                   </p>
                 </div>
-                <p className="text-xs text-[#479DDE]">January 8, 2025</p>
+                
+            <p  className="text-xs text-[#479DDE]">march 15, 2025</p>
               </div>
 
               <p className="mt-8 text-xl font-medium text-[#23557A]">
                 Balancing Risk, Cost, and Innovation
               </p>
 
-              <p className="mt-2 text-xl text-[#479DDE] underline">Read More</p>
             </div>
 
             <div className="flex flex-col">
               <Image src="/insight3.png" alt="" width={400} height={200} />
               <div className="mt-2 flex items-center justify-between">
                 <div className="rounded-3xl bg-white px-4 py-1">
-                  <p className="text-xs text-[#479DDE]">New & Noteworthy</p>
+                  <p className="text-xs text-[#479DDE]">Cybersecurity And It Governance</p>
                 </div>
-                <p className="text-xs text-[#479DDE]">January 8, 2025</p>
+                <p className="text-xs text-[#479DDE]">June 4, 2025</p>
               </div>
 
               <p className="mt-8 text-xl font-medium text-[#23557A]">
                 Cybersecurity in the Age of Digital Transformation Read More
               </p>
 
-              <p className="mt-2 text-xl text-[#479DDE] underline">Read More</p>
+             
             </div>
           </div>
 
@@ -328,11 +327,11 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="wrap pt-[9rem] text-center">
-        <h4 className="mb-4 text-4xl font-[500]">
+      <div className="wrap pt-[5rem] md:pt-[9rem] text-center px-1 md:px-0">
+        <h4 className="mb-4 text-2xl md:text-4xl font-[500]">
           Certifications & Memberships
         </h4>
-        <p className="mx-auto mb-12 w-1/2 text-lg font-[200]">
+        <p className="mx-auto mb-12 md:w-1/2 w-full text-[16px] md:text-lg font-[200]">
           Backed by industry-recognized certifications, strategic partnerships,
           and extensive experience, Frontier Vista is committed to delivering
           trusted solutions that simplify IT challenges.

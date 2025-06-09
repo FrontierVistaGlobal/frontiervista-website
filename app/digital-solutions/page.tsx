@@ -8,21 +8,21 @@ export default function page() {
   return (
     <div className="w-full">
       <div
-        className="relative flex h-[800px] items-end bg-cover bg-center"
+        className="relative flex  min-h-[80vh] md:h-[800px] items-end bg-cover bg-center"
         style={{ backgroundImage: "url('images/digital-sol-bg.png')" }}
       >
         <div
-          className="flex h-[350px] w-full flex-col justify-center bg-[#502D0599] text-white"
+          className="flex min-h-[350px] w-full flex-col justify-center bg-[#502D0599] text-white py-12 px-4 md:px-12"
           style={{
             background:
               "linear-gradient(0deg, rgba(80, 45, 5, 0.6), rgba(80, 45, 5, 0.6)), linear-gradient(270deg, rgba(240, 66, 66, 0.6) 0%, rgba(174, 97, 6, 0.6) 100%)",
           }}
         >
-          <div className="wrap">
-            <h4 className="mb-6 text-4xl font-semibold">
+          <div className="wrap w-full">
+            <h4 className="mb-6 text-2xl w-full  md:text-4xl text-balance text-wrap leading-snug font-semibold">
               Digital Solutions & Development
             </h4>
-            <p className="mb-8 font-extralight lg:w-[60%]">
+            <p className="mb-8 text-sm md:text-base font-extralight md:w-[60%] w-full">
               At Frontier Vista, we create cutting-edge digital solutions that
               empower your business to thrive and achieve its goals in the
               digital landscape. From custom software to mobile apps and
@@ -37,17 +37,17 @@ export default function page() {
         </div>
       </div>
 
-      <div className="py-[10rem]">
+      <div className="md:py-[10rem] py-20 px-4">
         <div className="wrap">
-          <div className="flex w-full justify-end">
-            <h4 className="w-[45%] text-5xl leading-[60px] font-extralight text-[#FF9314]">
+          <div className="flex md:w-full justify-end">
+            <h4 className="md:w-[45%] w-full sm:w-[80%] text-2xl md:text-5xl  leading-snug md:leading-[60px] font-extralight text-[#FF9314]">
               “Technology is best when it brings people together.” -{" "}
-              <span className="text-3xl italic">Matt Mullenweg</span>
+              <span className="text-xl md:text-3xl italic">Matt Mullenweg</span>
             </h4>
           </div>
 
           <div>
-            <div className="mt-24 grid gap-1 md:grid-cols-2 lg:grid-cols-3">
+            <div className="mt-12 md:mt-24 grid gap-4 md:gap-1 grid-cols-1  md:grid-cols-2 lg:grid-cols-3">
               <div
                 className="flex h-[450px] flex-col items-center justify-center rounded px-8 text-white"
                 style={{
@@ -55,10 +55,10 @@ export default function page() {
                     "linear-gradient(180deg, #FF4848 0%, #FF9314 100%)",
                 }}
               >
-                <h5 className="mb-5 text-5xl font-light">
+                <h5 className="mb-5 text-3xl md:text-5xl font-light ">
                   Digital Branding & Product Design
                 </h5>
-                <p className="font-extralight">
+                <p className="font-extralight text-sm md:text-base tex">
                   We craft intuitive and visually compelling digital experiences
                   that enhance your brand identity and product engagement. From
                   brand design to UI/UX design to interactive prototypes, we

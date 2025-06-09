@@ -37,7 +37,7 @@ export default function page() {
 
   const supportItems = [
     {
-      title: "Asset Management",
+      title: "Data Analytics Consulting",
       description:
         "Navigate the complexities of your data landscape with our data analytics consulting. We transform your raw information into actionable strategies that drive revenue growth, streamline operations, and give you a clear edge over your competitors. We help you identify hidden opportunities and make smarter decisions faster.",
       image: "/images/DIA1.png",
@@ -181,7 +181,7 @@ export default function page() {
             style={{ backgroundImage: "url('images/DIA5.png')" }}
           >
             <div className="flex flex-col md:absolute md:top-18 md:right-30 md:w-[500px]">
-              <div className="h-[90px] rounded bg-[#7166E2] p-3 text-white">
+              <div className="min-h-[90px] rounded bg-[#7166E2] p-3 text-white">
                 <p className="text-2xl md:w-[350px]">
                   Artificial Intelligence (AI) & Machine Learning (ML)
                 </p>
@@ -205,7 +205,7 @@ export default function page() {
             </div>
           </div>
 
-          <p className="mt-20 text-5xl font-[100] text-white lg:w-[70%]">
+          <p className="mt-20 text-2xl md:text-5xl font-[100] text-white lg:w-[70%]">
             At Frontier Vista we&apos;re more than just data experts. We&apos;re
             your partners in achieving data-driven success.
           </p>
@@ -225,7 +225,7 @@ export default function page() {
                 className="flex w-full items-center justify-center gap-6 rounded-lg bg-[#DCEAFD] p-8 text-center"
               >
                 <div
-                  className="mb-6 h-[60px] w-[80px] rounded p-4"
+                  className="mb-6 h-[60px] w-[80px] rounded p-4 hidden md:flex "
                   style={{ backgroundColor: item.color }}
                 >
                   <Image
@@ -250,7 +250,7 @@ export default function page() {
           </div>
 
           <div className="my-20">
-            <p className="w-1/2 text-3xl font-[100] text-white lg:text-5xl">
+            <p className="md:w-1/2  text-3xl font-[100] text-white lg:text-5xl">
               Optimize Your Business with Data Intelligence
             </p>
           </div>
@@ -258,19 +258,21 @@ export default function page() {
       </div>
 
       <div
-        className="relative flex h-[1100px] flex-col justify-end bg-cover bg-center"
+        className="relative flex min-h-[900px] flex-col justify-end bg-cover bg-center"
         style={{ backgroundImage: "url('images/DIA6.png')" }}
       >
-        <div className="flex h-[350px] w-full flex-col justify-center bg-[#030214] pt-10 pb-8 text-white">
-          <div className="wrap relative lg:min-w-[1200px]">
-            <div className="flex w-full items-center justify-between gap-18">
-              <div className="mt-[-200px] w-[50%] rounded bg-[#030214] p-18">
-                <div className="mb-5">
-                  <p className="text-4xl font-[100] text-[#FFFFFF]">
+        {/* <div className="flex h-[350px] w-full flex-col justify-center bg-[#030214] pt-10 pb-8 text-white">
+         */}
+           <div className="flex flex-col items-center justify-center bg-[#030214]/90 px-4 py-10 text-white md:h-[400px] md:flex-row md:justify-between md:px-12">
+          <div className="wrap relative max-w-7xl">
+            <div className="flex flex-col  w-full md:flex-row  md:items-center md:justify-between gap-10 md:gap-18">
+              <div className="mt-[-200px] w-full md:w-[50%] rounded bg-[#030214] p-6 md:p-18">
+                <div className="mb-5 max-w-xl text-center md:text-left">
+                  <p className="md:text-4xl text-2xl mb-4 text-[#FFFFFF]">
                     Ready to transform your business with the power of data?
                   </p>
                 </div>
-
+                
                 <h4 className="mb-6 text-xl font-[200] text-[#D9D9D9]">
                   Stay ahead of the competition with our data intelligence,
                   advanced analytics, and AI solutions. Discover growth
@@ -279,7 +281,7 @@ export default function page() {
                 </h4>
               </div>
 
-              <div className="w-1/2">
+              <div className="md:w-1/2 ">
                 <Button
                   text="Get in Touch Today for a Free Assessment"
                   path="/lets-connect#contact"

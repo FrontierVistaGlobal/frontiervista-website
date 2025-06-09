@@ -46,7 +46,7 @@ export default function TermsOfUse() {
         </p>
       </div>
 
-      <section className="mt-10 space-y-6">
+      <div className="mt-10 space-y-6">
         <h2 className="mb-4 text-2xl font-semibold">
           Website Availability and Modifications
         </h2>
@@ -56,9 +56,8 @@ export default function TermsOfUse() {
           withdraw, or restrict access to all or any part of our website for
           operational and business reasons.
         </p>
-      </section>
+      </div>
 
-      {/* You can continue adding more sections here following the same pattern */}
 
       <div className="mt-10 space-y-6">
         <h2 className="mb-4 text-2xl font-semibold">Effective Date</h2>
@@ -159,5 +158,6 @@ export default function TermsOfUse() {
         </div>
       </div>
     </div>
+    
   );
 }
