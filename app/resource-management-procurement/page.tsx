@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import { LuMoveRight } from "react-icons/lu";
 import Image from "next/image";
 import Button from "../_components/Button";
 
