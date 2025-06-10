@@ -16,7 +16,7 @@ const HealthCare = () => {
               </div>
             </div>
 
-            <div className={`absolute top-0 left-[40%] w-full text-sm`}>
+            <div className={`absolute top-0 left-[50%] w-full text-sm`}>
               <div className="flex items-center overflow-hidden rounded">
                 <div className="font-bold` bg-[#77D7A8] p-3 px-6">TI</div>
                 <div className={`bg-[#EFF6FF] p-3 pr-7`}>
@@ -25,14 +25,14 @@ const HealthCare = () => {
               </div>
             </div>
 
-            <div className={`absolute w-full text-sm md:top-[60%]`}>
+            <div className={`absolute w-full text-sm md:top-[65%]`}>
               <div className="flex items-center overflow-hidden rounded">
                 <div className="font-bold` bg-[#FF9314] p-3 px-6">CF</div>
                 <div className={`bg-[#EFF6FF] p-3 pr-7`}>Cloud and FinOps</div>
               </div>
             </div>
 
-            <div className={`absolute top-[80%] left-[30%] w-full text-sm`}>
+            <div className={`absolute top-[85%] left-[34%] w-full text-sm`}>
               <div className="flex items-center overflow-hidden rounded">
                 <div className="font-bold` bg-[#FF4947] p-3 px-6">IS</div>
                 <div className={`bg-[#EFF6FF] p-3 pr-7`}>
