@@ -570,7 +570,7 @@ export default function Hello() {
         </Link> */}
 
         <Button
-          text=" Explore Our Expertise "
+          text="Explore Our Expertise "
           path="/what-we-do"
           className="mx-auto flex h-[55px] w-fit items-center px-6 py-6 font-normal md:mt-48"
         />

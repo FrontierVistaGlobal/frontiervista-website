@@ -9,14 +9,15 @@ import {
   FaTiktok,
   FaYoutube,
 } from "react-icons/fa";
+import { FiArrowUpRight } from "react-icons/fi";
 
 export default function Footer() {
   const footerData = [
     {
       title: "Corporate",
       items: [
-        { name: "About Us", link: "/who-are-we" },
-        { name: "Our Services", link: "/our-solutions" },
+        { name: "About Us", link: "/who-we-are" },
+        { name: "Our Services", link: "/what-we-do" },
         { name: "Lets Connect", link: "/lets-connect" },
       ],
     },
@@ -39,7 +40,7 @@ export default function Footer() {
       items: [
         { name: "Find Talent", link: "/talent-hub" },
         { name: "Search Job Opportunities", link: "/talent-hub" },
-        { name: "Why Join Frontier Vista", link: "/what-we-do" },
+        { name: "Why Join Frontier Vista", link: "/lets-connect" },
       ],
     },
     {
@@ -85,7 +86,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="flex w-full flex-col justify-between md:flex-row lg:items-end">
-          {/* <div>
+          <div>
             <p className="mb-4 text-xl text-white">
               Subscribe to our newsletter
             </p>
@@ -100,7 +101,7 @@ export default function Footer() {
                 Get started <FiArrowUpRight className="ml-2 text-xl" />
               </button>
             </div>
-          </div> */}
+          </div>
 
           <div className="mt-6 flex gap-5 text-white">
             <Link href="#" target="_blank">

@@ -51,14 +51,14 @@ export default function page() {
 
         <Button
           text="Discover How We Can Transform Your Business"
-          path="/#support"
+          path="/stay-informed"
           className="mx-auto mt-18 flex h-[55px] w-fit items-center"
         />
       </div>
 
-      <div className="wrap my-10  md:my-30 flex flex-col items-center justify-between gap-10 px-4 md:py-12 md:flex-row md:gap-0">
+      <div className="wrap my-10 flex flex-col items-center justify-between gap-10 px-4 md:my-30 md:flex-row md:gap-0 md:py-12">
         <div className="w-full md:w-1/2 md:px-10">
-          <h5 className="mb-6 text-3xl font-extralight text-[#011D31]  md:mb-8 md:text-5xl">
+          <h5 className="mb-6 text-3xl font-extralight text-[#011D31] md:mb-8 md:text-5xl">
             Understanding your needs is at the heart of what we do.{" "}
           </h5>
           <p className="mb-6 text-base text-[#3D4F60] md:mb-10 md:text-lg">
@@ -88,10 +88,10 @@ export default function page() {
         </div>
       </div>
 
-      <div className="bg-[#D0F4FF] md:py-[8rem] py-[5rem]">
+      <div className="bg-[#D0F4FF] py-[5rem] md:py-[8rem]">
         <div className="wrap">
           <div className="flex flex-col items-center text-center">
-            <h4 className="mb-4 text-3xl md:text-5xl font-semibold text-[#122231]">
+            <h4 className="mb-4 text-3xl font-semibold text-[#122231] md:text-5xl">
               Explore our services
             </h4>
             <p className="mb-10 text-xl font-extralight text-[#3D4F60] lg:w-1/2">
@@ -400,7 +400,7 @@ const ServiceSpectrum = () => {
               >
                 <div className="flex h-full items-center gap-3">
                   <div
-                    className={`${tag.tagColor} h-full p-4 px-6 font-bold text-black`}
+                    className={`${tag.tagColor} h-full w-[60px] p-4 px-6 font-bold text-black`}
                   >
                     {tag.code}
                   </div>
@@ -417,7 +417,9 @@ const ServiceSpectrum = () => {
                 // style={{ transform: `skewY(${tag.angle})` }}
               >
                 <div className="flex h-full items-center gap-3">
-                  <div className={`${tag.tagColor} h-full p-4 px-6 font-bold`}>
+                  <div
+                    className={`${tag.tagColor} h-full w-[60px] p-4 font-bold md:px-6`}
+                  >
                     {tag.code}
                   </div>
                   <div className={`${tag.textColor}`}>{tag.label}</div>
@@ -434,7 +436,9 @@ const ServiceSpectrum = () => {
                 // style={{ transform: `skewY(${tag.angle})` }}
               >
                 <div className="flex h-full items-center gap-3">
-                  <div className={`${tag.tagColor} h-full p-4 px-6 font-bold`}>
+                  <div
+                    className={`${tag.tagColor} h-full w-[60px] p-4 font-bold md:px-6`}
+                  >
                     {tag.code}
                   </div>
                   <div className={`${tag.textColor}`}>{tag.label}</div>
@@ -450,7 +454,9 @@ const ServiceSpectrum = () => {
                 // style={{ transform: `skewY(${tag.angle})` }}
               >
                 <div className="flex h-full items-center gap-3">
-                  <div className={`${tag.tagColor} h-full p-4 px-6 font-bold`}>
+                  <div
+                    className={`${tag.tagColor} h-full w-[60px] p-4 font-bold md:px-6`}
+                  >
                     {tag.code}
                   </div>
                   <div className={`${tag.textColor}`}>{tag.label}</div>
@@ -467,7 +473,9 @@ const ServiceSpectrum = () => {
                 // style={{ transform: `skewY(${tag.angle})` }}
               >
                 <div className="flex h-full items-center gap-3">
-                  <div className={`${tag.tagColor} h-full p-4 px-6 font-bold`}>
+                  <div
+                    className={`${tag.tagColor} h-full w-[60px] p-4 font-bold md:px-6`}
+                  >
                     {tag.code}
                   </div>
                   <div className={`${tag.textColor}`}>{tag.label}</div>
@@ -484,7 +492,9 @@ const ServiceSpectrum = () => {
                 // style={{ transform: `skewY(${tag.angle})` }}
               >
                 <div className="flex h-full items-center gap-3">
-                  <div className={`${tag.tagColor} h-full p-4 px-6 font-bold`}>
+                  <div
+                    className={`${tag.tagColor} h-full w-[60px] p-4 font-bold md:px-6`}
+                  >
                     {tag.code}
                   </div>
                   <div className={`${tag.textColor}`}>{tag.label}</div>
@@ -500,7 +510,9 @@ const ServiceSpectrum = () => {
                 // style={{ transform: `skewY(${tag.angle})` }}
               >
                 <div className="flex h-full items-center gap-3">
-                  <div className={`${tag.tagColor} h-full p-4 px-6 font-bold`}>
+                  <div
+                    className={`${tag.tagColor} h-full w-[60px] p-4 font-bold md:px-6`}
+                  >
                     {tag.code}
                   </div>
                   <div className={`${tag.textColor}`}>{tag.label}</div>

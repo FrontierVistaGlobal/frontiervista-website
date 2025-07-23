@@ -22,10 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={publicSans.className}>
       <body>
-        <div>
-          <Navbar />
-        </div>
-
+        <Navbar />
         <div className="min-h-[80vh]">
           <Suspense>{children}</Suspense>
         </div>

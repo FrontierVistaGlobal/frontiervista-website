@@ -100,7 +100,7 @@ export default function LetsConnect() {
       description: "Sign up for alerts to never miss an opportunity.",
       btn: "Sign up",
       image: "/images/JOB2.png",
-      path: "#",
+      path: "/stay-informed",
     },
     {
       title: "Join a Community of Talented Professionals and Employers",

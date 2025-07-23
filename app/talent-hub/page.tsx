@@ -8,6 +8,7 @@ import { LuFilter } from "react-icons/lu";
 import { IoSearchOutline } from "react-icons/io5";
 import Button from "../_components/Button";
 import sendEmail from "../_util/emailSend";
+import Link from "next/link";
 
 export default function TalentHub() {
   const [isFilterOpen, setIsFilterOpen] = useState(true);
@@ -95,12 +96,18 @@ export default function TalentHub() {
             </p>
 
             <div className="mt-10 flex gap-4">
-              <button className="rounded-xl bg-[#479DDE] px-5 py-3 text-white">
-                Search Job
-              </button>
-              <button className="rounded-xl bg-[#EFF6FF] px-5 py-3 text-[#479DDE]">
-                Find Talent
-              </button>
+              <Button
+                text="Search Job"
+                className="rounded-xl bg-[#479DDE] px-5 py-3 text-white"
+                showArrow={false}
+              />
+              <Link href="/lets-connect">
+                <Button
+                  text="Find Talent"
+                  className="!rounded-xl !bg-[#EFF6FF] !px-5 !py-3 !text-[#479DDE]"
+                  showArrow={false}
+                />
+              </Link>
             </div>
           </div>
 
