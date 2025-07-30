@@ -141,7 +141,9 @@ const Navbar = () => {
     <div className="sticky top-0 z-50 flex w-full bg-white px-6 shadow-md lg:px-16">
       <div className="flex w-screen items-center justify-between px-3 py-5 md:mx-auto md:max-w-[1200px]">
         <div className="text-3xl md:text-4xl">
-          <Image src="/logo.svg" alt="Logo" width={150} height={50} />
+          <Link href="/">
+            <Image src="/logo.svg" alt="Logo" width={150} height={50} />
+          </Link>
         </div>
         <div>
           <ul className="hidden items-center justify-center gap-7 lg:flex">
