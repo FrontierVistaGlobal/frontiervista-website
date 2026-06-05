@@ -19,6 +19,7 @@ const footerData = [
     items: [
       { name: "About Us", link: "/who-we-are" },
       { name: "Our Services", link: "/what-we-do" },
+      { name: "Blog", link: "/blog" },
       { name: "Lets Connect", link: "/lets-connect" },
     ],
   },
