@@ -1,11 +1,5 @@
 "use client";
 
-import axios from "axios";
-
-const API_KEY =
-  "REDACTED";
-const API_URL = "https://api.brevo.com/v3/smtp/email";
-
 const sendEmail = async ({
   subject,
   senderName,
@@ -24,7 +18,6 @@ const sendEmail = async ({
   try {
     const attachments = [];
 
-    // If a file is provided, convert it to base64 and add to attachments
     if (file) {
       const base64File = await new Promise<string>((resolve, reject) => {
         const reader = new FileReader();
@@ -35,7 +28,7 @@ const sendEmail = async ({
 
       attachments.push({
         name: file.name,
-        content: base64File.split(",")[1], // Remove the data URI prefix
+        content: base64File.split(",")[1],
       });
     }
 
@@ -44,27 +37,25 @@ const sendEmail = async ({
         name: senderName,
         email: senderEmail,
       },
-      to: receivers.map((email) => ({ email })), // Receivers should be an array of email addresses
-      subject: subject,
-      htmlContent: htmlContent,
+      to: receivers.map((email) => ({ email })),
+      subject,
+      htmlContent,
       attachment: attachments,
     };
-    console.log(payload);
 
-    const response = await axios({
+    const response = await fetch("/api/send-email", {
       method: "POST",
-      url: API_URL,
       headers: {
-        "api-key": API_KEY,
-        Accept: "application/json",
         "Content-Type": "application/json",
       },
-      data: payload,
+      body: JSON.stringify(payload),
     });
 
-    console.log(response);
+    if (!response.ok) {
+      throw new Error("Failed to send email");
+    }
 
-    return response.data;
+    return response.json();
   } catch (error) {
     console.log("Error sending email:", error);
   }

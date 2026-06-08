@@ -1,35 +1,24 @@
 "use client";
 
-import axios from "axios";
-
-const API_KEY =
-  "REDACTED";
-const API_URL = "https://api.brevo.com/v3/contacts";
-
 const addEmailToNewLetter = async (email: string) => {
   try {
-    const payload = {
-      email: email,
-      listIds: [2],
-    };
-
-    const response = await axios({
+    const response = await fetch("/api/newsletter", {
       method: "POST",
-      url: API_URL,
       headers: {
-        "api-key": API_KEY,
-        Accept: "application/json",
         "Content-Type": "application/json",
       },
-      data: payload,
+      body: JSON.stringify({ email }),
     });
 
-    return response.data;
+    if (!response.ok) {
+      throw new Error("Failed to subscribe to newsletter");
+    }
+
+    return response.json();
   } catch (error) {
     console.error("Error adding email to newsletter:", error);
     throw error;
   }
 };
-
 
 export default addEmailToNewLetter;
