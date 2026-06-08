@@ -16,7 +16,7 @@ export interface BlogPostFields {
   title: string;
   slug: string;
   excerpt: string;
-  content: any; // Contentful Rich Text Document
+  content: unknown;
   author: string;
   publishedDate: string;
   featuredImage?: {

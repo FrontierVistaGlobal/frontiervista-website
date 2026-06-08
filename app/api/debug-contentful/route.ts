@@ -14,11 +14,11 @@ export async function GET() {
         ? "No content types found. Make sure your Contentful space is configured correctly."
         : `Found ${contentTypes.length} content type(s)`,
     });
-  } catch (error: any) {
+  } catch (error) {
     return NextResponse.json(
       {
         success: false,
-        error: error.message,
+        error: error instanceof Error ? error.message : "Unknown error",
         contentTypes: [],
       },
       { status: 500 }
