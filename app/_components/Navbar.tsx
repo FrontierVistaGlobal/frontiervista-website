@@ -17,6 +17,7 @@ const Navbar = () => {
     { label: "Who We Are", path: "/who-we-are" },
     { label: "What We Do", path: "/what-we-do", hasDropdown: true },
     { label: "Our Solutions", path: "/our-solutions" },
+    { label: "Blog", path: "/blog" },
     { label: "Stay Informed", path: "/stay-informed" },
     { label: "Lets Connect", path: "/lets-connect" },
   ];
