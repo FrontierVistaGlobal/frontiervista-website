@@ -1,0 +1,7 @@
+#!/bin/sh
+set -e
+
+echo "Running pre-push build check..."
+pnpm install --frozen-lockfile
+pnpm build
+echo "Build passed. Pushing..."
