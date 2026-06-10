@@ -21,35 +21,44 @@ function getErrorMessage(error: unknown): string {
   return contentfulError.message || String(error);
 }
 
-// Contentful client configuration
-// These will be set via environment variables
-const getContentfulClient = () => {
+const BLOG_CONTENT_TYPE = process.env.CONTENTFUL_BLOG_CONTENT_TYPE || "blogPost";
+
+let contentfulClient: ReturnType<typeof createClient> | null = null;
+let hasLoggedMissingCredentials = false;
+
+function getContentfulClient() {
   const spaceId = process.env.CONTENTFUL_SPACE_ID;
   const accessToken = process.env.CONTENTFUL_ACCESS_TOKEN;
   const environment = process.env.CONTENTFUL_ENVIRONMENT || "master";
 
   if (!spaceId || !accessToken) {
-    console.warn(
-      "Contentful credentials not found. Please set CONTENTFUL_SPACE_ID and CONTENTFUL_ACCESS_TOKEN in your .env.local file"
-    );
+    if (!hasLoggedMissingCredentials) {
+      hasLoggedMissingCredentials = true;
+      console.warn(
+        "Contentful credentials not found. Set CONTENTFUL_SPACE_ID and CONTENTFUL_ACCESS_TOKEN in your environment (e.g. .env.local locally or Vercel project settings)."
+      );
+    }
+    return null;
   }
 
-  return createClient({
-    space: spaceId || "",
-    accessToken: accessToken || "",
-    environment: environment,
-  });
-};
+  if (!contentfulClient) {
+    contentfulClient = createClient({
+      space: spaceId,
+      accessToken,
+      environment,
+    });
+  }
 
-const contentfulClient = getContentfulClient();
-
-// Get the content type name from environment or use default
-const BLOG_CONTENT_TYPE = process.env.CONTENTFUL_BLOG_CONTENT_TYPE || "blogPost";
+  return contentfulClient;
+}
 
 // Utility function to list all available content types (for debugging)
 export async function getAvailableContentTypes(): Promise<string[]> {
+  const client = getContentfulClient();
+  if (!client) return [];
+
   try {
-    const response = await contentfulClient.getContentTypes();
+    const response = await client.getContentTypes();
     return response.items.map((ct) => ct.sys.id);
   } catch (error) {
     console.error("Error fetching content types:", error);
@@ -87,11 +96,14 @@ function transformEntry(entry: Entry): BlogPost {
 
 // Get all blog posts
 export async function getAllBlogPosts(): Promise<BlogPost[]> {
+  const client = getContentfulClient();
+  if (!client) return [];
+
   try {
     // Try with ordering first, fallback to no ordering if field doesn't exist
     let response;
     try {
-      response = await contentfulClient.getEntries({
+      response = await client.getEntries({
         content_type: BLOG_CONTENT_TYPE,
         order: ["-fields.publishedDate"],
       });
@@ -106,7 +118,7 @@ export async function getAllBlogPosts(): Promise<BlogPost[]> {
         contentfulError.details?.errors?.[0]?.name === "invalidOrder"
       ) {
         console.warn("⚠️  Could not order by publishedDate (field may not exist), fetching without ordering");
-        response = await contentfulClient.getEntries({
+        response = await client.getEntries({
           content_type: BLOG_CONTENT_TYPE,
         });
       } else {
@@ -122,7 +134,7 @@ export async function getAllBlogPosts(): Promise<BlogPost[]> {
       console.error(
         `\n❌ Content type "${BLOG_CONTENT_TYPE}" not found in Contentful.\n` +
         `   Available content types: ${availableTypes.join(", ") || "none"}\n` +
-        `   Please create a content type with API ID "${BLOG_CONTENT_TYPE}" or set CONTENTFUL_BLOG_CONTENT_TYPE in .env.local\n`
+        `   Please create a content type with API ID "${BLOG_CONTENT_TYPE}" or set CONTENTFUL_BLOG_CONTENT_TYPE in your environment\n`
       );
     } else {
       console.error("Error fetching blog posts:", getErrorMessage(error));
@@ -133,13 +145,16 @@ export async function getAllBlogPosts(): Promise<BlogPost[]> {
 
 // Get a single blog post by slug or entry ID
 export async function getBlogPostBySlug(slug: string): Promise<BlogPost | null> {
+  const client = getContentfulClient();
+  if (!client) return null;
+
   try {
     let response;
     
     // First, try to get by entry ID (in case slug field doesn't exist)
     if (slug.length === 22) { // Contentful entry IDs are typically 22 characters
       try {
-        const entry = await contentfulClient.getEntry(slug);
+        const entry = await client.getEntry(slug);
         if (entry.sys.contentType.sys.id === BLOG_CONTENT_TYPE) {
           return transformEntry(entry);
         }
@@ -150,7 +165,7 @@ export async function getBlogPostBySlug(slug: string): Promise<BlogPost | null> 
     
     // Try to get by slug field
     try {
-      response = await contentfulClient.getEntries({
+      response = await client.getEntries({
         content_type: BLOG_CONTENT_TYPE,
         "fields.slug": slug,
         limit: 1,
@@ -164,7 +179,7 @@ export async function getBlogPostBySlug(slug: string): Promise<BlogPost | null> 
       if (contentfulError.details?.errors?.[0]?.path?.includes("slug")) {
         console.warn("⚠️  Slug field not found, trying to fetch by entry ID");
         try {
-          const entry = await contentfulClient.getEntry(slug);
+          const entry = await client.getEntry(slug);
           if (entry.sys.contentType.sys.id === BLOG_CONTENT_TYPE) {
             return transformEntry(entry);
           }
@@ -192,10 +207,13 @@ export async function getBlogPostBySlug(slug: string): Promise<BlogPost | null> 
 
 // Get all blog post slugs (for static generation)
 export async function getAllBlogPostSlugs(): Promise<string[]> {
+  const client = getContentfulClient();
+  if (!client) return [];
+
   try {
     // Try to get slugs first
     try {
-      const response = await contentfulClient.getEntries({
+      const response = await client.getEntries({
         content_type: BLOG_CONTENT_TYPE,
         select: ["fields.slug"],
       });
@@ -207,7 +225,7 @@ export async function getAllBlogPostSlugs(): Promise<string[]> {
       const contentfulError = asContentfulError(slugError);
       if (contentfulError.details?.errors?.[0]?.path?.includes("slug")) {
         console.warn("⚠️  Slug field not found, using entry IDs for static generation");
-        const response = await contentfulClient.getEntries({
+        const response = await client.getEntries({
           content_type: BLOG_CONTENT_TYPE,
           select: ["sys.id"],
         });
